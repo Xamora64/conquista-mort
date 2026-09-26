@@ -2,15 +2,15 @@ class_name BiomeData
 extends Resource
 
 const RESOURCES = [
-	"res://resources/swamp.tres",
-	"res://resources/plain.tres",
-	"res://resources/forest.tres",
+	"res://resources/biomes/swamp.tres",
+	"res://resources/biomes/plain.tres",
+	"res://resources/biomes/forest.tres",
 ]
 
 # SWAMP = 20%, PLAIN = 40%, FOREST = 40%
 const WEIGHT = [0.2, 0.4, 0.4]
 enum TYPES { SWAMP, PLAIN, FOREST }
-@export var type = TYPES.PLAIN
+@export var type: TYPES = TYPES.PLAIN
 
 # Les effets sur les conquistador
 @export var negative = false

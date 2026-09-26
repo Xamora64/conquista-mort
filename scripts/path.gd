@@ -1,4 +1,4 @@
-class_name Path
+class_name PathDraw
 extends Node3D
 
 @export var event_from: Event
