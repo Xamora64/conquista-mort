@@ -2,7 +2,8 @@ extends Node3D
 
 var center = Vector3.ZERO
 var screen_size
-@export var LIMIT_ZOOM = [3.0, 12.0]
+@export var LIMIT_ZOOM = [1.0, 12.0]
+@export var LIMIT_ZONE = [Vector2(-5, 10), Vector2(-5, 10)]
 
 func _ready() -> void:
 	$Camera3D.position.y = 4.0
@@ -12,8 +13,8 @@ func _physics_process(delta: float) -> void:
 	camera_player_movement()
 	camera_player_zoom()
 	
-	if (Input.is_action_just_pressed("left click")):
-		print (get_mouse_world_position())
+	#if (Input.is_action_just_pressed("left click")):
+		#print (get_mouse_world_position())
 
 func camera_player_movement():
 	# Obtenir la position de la souris par rapport aux mondes
@@ -27,6 +28,8 @@ func camera_player_movement():
 		var distance_center_mouse = center - mouse_pos_world
 		$Camera3D.position.x += distance_center_mouse.x
 		$Camera3D.position.z += distance_center_mouse.z
+		$Camera3D.position.x = clamp($Camera3D.position.x, LIMIT_ZONE[0].x , LIMIT_ZONE[0].y)
+		$Camera3D.position.z = clamp($Camera3D.position.z, LIMIT_ZONE[1].x , LIMIT_ZONE[1].y)
 	elif (not dragging):
 		center = Vector3.ZERO
 
