@@ -128,8 +128,6 @@ sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
 
 [node name="Audio" type="Node2D" parent="." unique_id=839973120]
 
-[node name="ButtonAudioPlayer" type="AudioStreamPlayer" parent="Audio" unique_id=232772946 node_paths=PackedStringArray("sound_player")]
-script = ExtResource("1_yubou")
-sound_player = NodePath(".")
+[node name="ButtonAudioPlayer" type="AudioStreamPlayer" parent="Audio" unique_id=232772946]
 
 [node name="UIManager" type="Node2D" parent="." unique_id=1147072397]

@@ -4,3 +4,4 @@ extends TextureButton
 
 func _pressed() -> void:
 	sound_player.play()
+	
