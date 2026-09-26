@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://f5gt6bb6viw1" path="res://scenes/conquistador.tscn" id="6_tefeu"]
 [ext_resource type="AudioStream" uid="uid://b1vts3rcshm57" path="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://b78yselgsvxxh" path="res://scripts/background_music.gd" id="8_85g3d"]
-[ext_resource type="Script" uid="uid://dxp2pybg7pwc3" path="res://scripts/button_manager.gd" id="9_choun"]
 
 [node name="Main" type="Node" unique_id=2064521053]
 script = ExtResource("1_ig7tw")
@@ -26,15 +25,9 @@ indian_scene = null
 [node name="Conquistador" parent="." unique_id=2115321676 instance=ExtResource("6_tefeu")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1, 0, 0)
 
-[node name="SnippetPlayer" type="AudioStreamPlayer" parent="." unique_id=1892549386]
-
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1839215743 node_paths=PackedStringArray("sound_player")]
 stream = ExtResource("7_o6xl0")
 autoplay = true
 parameters/looping = true
 script = ExtResource("8_85g3d")
 sound_player = NodePath(".")
-
-[node name="AudioManager" type="Node2D" parent="." unique_id=140713150 node_paths=PackedStringArray("sound_player")]
-script = ExtResource("9_choun")
-sound_player = NodePath("../SnippetPlayer")
