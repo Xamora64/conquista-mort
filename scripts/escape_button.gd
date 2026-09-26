@@ -4,7 +4,6 @@ extends TextureButton
 @export var is_player_choice_button: bool
 @export var parentPopupWindow: PopupPanel
 @export var nextPopupWindow: PopupPanel
-
 @export var snippets: Array[AudioStreamOggVorbis]	
 
 func _pressed() -> void:
@@ -13,6 +12,6 @@ func _pressed() -> void:
 	parentPopupWindow.hide()
 	nextPopupWindow.show()
 	
-		
+	
 	
 	
