@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://yfu77mws733s"]
+
+[ext_resource type="Script" uid="uid://cb300e3rkwwpm" path="res://scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c5b3ssno3qjsc" path="res://scenes/map.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://beshh12linnpj" path="res://scenes/hud.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dw0jc5fh4411n" path="res://scenes/game_ui.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://yjpa04jof6bk" path="res://scenes/player.tscn" id="3_h2yge"]
+
+[node name="Main" type="Node" unique_id=2064521053]
+script = ExtResource("1_ig7tw")
+
+[node name="HUD" parent="." unique_id=1561272234 instance=ExtResource("2_lquwl")]
+
+[node name="GameUI" parent="." unique_id=2075735181 instance=ExtResource("3_7mycd")]
+
+[node name="Map" parent="." unique_id=2049311125 instance=ExtResource("2_0xm2m")]
+
+[node name="Player" parent="." unique_id=815405141 instance=ExtResource("3_h2yge")]

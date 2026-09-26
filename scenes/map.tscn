@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c5b3ssno3qjsc"]
+
+[ext_resource type="Texture2D" uid="uid://dyiw2b842pin3" path="res://assets/textures/US.jpg" id="1_c7s6e"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kwsvg"]
+
+[node name="Map" type="Node3D" unique_id=2049311125]
+
+[node name="Map2D" type="Sprite3D" parent="." unique_id=2106451994]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+texture = ExtResource("1_c7s6e")
+
+[node name="Node" type="Area3D" parent="." unique_id=328338387]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node" unique_id=960609839]
+shape = SubResource("SphereShape3D_kwsvg")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node" unique_id=1383250462]
