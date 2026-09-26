@@ -11,18 +11,15 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	camera_player_movement()
 	camera_player_zoom()
+	
+	if (Input.is_action_just_pressed("left click")):
+		print (get_mouse_world_position())
 
 func camera_player_movement():
-	var mouse_pos = get_viewport().get_mouse_position()
+	# Obtenir la position de la souris par rapport aux mondes
+	var mouse_pos_world = get_mouse_world_position()
 	
-	# Récupération de la position de la souris par rapport aux mondes
-	# En tirant un raycast
-	var camera = get_viewport().get_camera_3d()
-	var from = camera.project_ray_origin(mouse_pos)
-	var dir = camera.project_ray_normal(mouse_pos)
-	var mouse_pos_world = Plane(Vector3.UP, 0).intersects_ray(from, dir)
-	
-	var dragging = Input.is_action_pressed("dragging")
+	var dragging = Input.is_action_pressed("left click")
 	
 	if (dragging && center == Vector3.ZERO):
 		center = mouse_pos_world
@@ -40,3 +37,13 @@ func camera_player_zoom():
 		$Camera3D.position.y += 0.1
 	# Mettre une limite au zomm de la caméra
 	$Camera3D.position.y = clamp($Camera3D.position.y, LIMIT_ZOOM[0], LIMIT_ZOOM[1])
+	
+func get_mouse_world_position():
+	var mouse_pos = get_viewport().get_mouse_position()
+	
+	# Récupération de la position de la souris par rapport aux mondes
+	# En tirant un raycast
+	var camera = get_viewport().get_camera_3d()
+	var from = camera.project_ray_origin(mouse_pos)
+	var dir = camera.project_ray_normal(mouse_pos)
+	return Plane(Vector3.UP, 0).intersects_ray(from, dir)

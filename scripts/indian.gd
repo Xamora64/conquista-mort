@@ -14,6 +14,14 @@ func with_values(number: int, aggresion: int, fortification: bool) -> Indian:
 	self.fortification = fortification
 	return self
 
+# random
+func generate() -> Indian:
+	self.number = randf_range(LIMIT_NUMBER[0], LIMIT_NUMBER[1])
+	self.aggression = randf_range(LIMIT_AGGRESSION[0], LIMIT_AGGRESSION[1])
+	self.fortification = randi() % 2 == 0
+	return self
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

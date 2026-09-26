@@ -1,6 +1,14 @@
 class_name BiomeData
 extends Resource
 
+const RESOURCES = [
+	"res://resources/swamp.tres",
+	"res://resources/plain.tres",
+	"res://resources/forest.tres",
+]
+
+# SWAMP = 20%, PLAIN = 40%, FOREST = 40%
+const WEIGHT = [0.2, 0.4, 0.4]
 enum TYPES { SWAMP, PLAIN, FOREST }
 @export var type = TYPES.PLAIN
 
@@ -10,10 +18,10 @@ enum TYPES { SWAMP, PLAIN, FOREST }
 # Tout les évents possible dans ce biome
 @export var events = Array()
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+static func generate() -> BiomeData:
+	
+	# Génération parmis les ressources à partir du poids de chaqu'un
+	var random_index = RandomNumberGenerator.new().rand_weighted(WEIGHT)
+	var biome = load(RESOURCES[random_index]).duplicate()
+	
+	return biome
