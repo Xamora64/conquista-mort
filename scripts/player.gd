@@ -2,10 +2,10 @@ extends Node3D
 
 var center = Vector3.ZERO
 var screen_size
-@export var LIMIT_ZOOM = [1.0, 12.0]
+@export var LIMIT_ZOOM = [3.0, 12.0]
 
 func _ready() -> void:
-	$Camera3D.position.y = 2.0
+	$Camera3D.position.y = 4.0
 	screen_size = get_viewport().get_visible_rect().size
 
 func _physics_process(delta: float) -> void:

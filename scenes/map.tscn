@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dg5kigqjxhmf2" path="res://assets/textures/US.jpg" id="1_c7s6e"]
 [ext_resource type="Script" uid="uid://c80ms475rst3i" path="res://scripts/map.gd" id="1_paxxb"]
 [ext_resource type="Script" uid="uid://bf37hyqhsxwoq" path="res://scripts/map_places_creator.gd" id="4_0cso3"]
+[ext_resource type="PackedScene" uid="uid://cmq2oebxey5us" path="res://assets/meshes/map2.fbx" id="5_2klcf"]
 [ext_resource type="PackedScene" uid="uid://ebrcp5jd37fk" path="res://assets/meshes/map.fbx" id="6_2lpho"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwsvg"]
@@ -18,6 +19,7 @@ texture = ExtResource("1_c7s6e")
 
 [node name="map" parent="." unique_id=1585450268 instance=ExtResource("6_2lpho")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.95738375, -1.9953706, -4.806658)
+visible = false
 
 [node name="Cube" parent="map" index="0" unique_id=27669361]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 22.241533, 0, -99.99999, -2.6513974e-06, -5.693924, 0, 3.0166245)
@@ -34,11 +36,16 @@ area_attenuation = 2.0
 area_size = Vector2(3, 3)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=613796064]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 0)
-light_energy = 4.0
-omni_range = 13.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52211857, 7.1750956, 1.417057)
+light_energy = 12.055
+omni_range = 14.0
+omni_attenuation = 1.2
 
 [node name="MapEventsCreator" type="Node" parent="." unique_id=1529909047]
 script = ExtResource("4_0cso3")
 
+[node name="map2" parent="." unique_id=2102191850 instance=ExtResource("5_2klcf")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0657072, -1.9762135, -4.275607)
+
 [editable path="map"]
+[editable path="map2"]

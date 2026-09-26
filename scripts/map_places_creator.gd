@@ -23,7 +23,7 @@ func create_place(position: Vector3, additional_link: int) -> Place:
 	var limit_links: int = randi_range(Place.LINKS_LIMIT[0], Place.LINKS_LIMIT[1]) + additional_link
 	var biome: BiomeData = BiomeData.generate()
 	var tribe: Tribe = null
-	if (biome.type != BiomeData.TYPES.SWAMP):
+	if (biome.type != BiomeData.TYPES_BIOMES.SWAMP):
 		tribe = Tribe.new().generate()
 	
 	var place: Place = place_scene.instantiate().with_values(position, biome, tribe, [] as Array[Place], limit_links)
