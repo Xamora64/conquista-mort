@@ -91,4 +91,7 @@ material_override = ExtResource("5_7o0rv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26224914, -113.20437, -83.55615)
 material_override = ExtResource("5_7o0rv")
 
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2051463099]
+transform = Transform3D(0.31263828, 0, -0.94987226, 0, 1, 0, 0.94987226, 0, 0.31263828, -14.851568, 15.082958, -6.3018456)
+
 [editable path="Assets_01_JAM"]
