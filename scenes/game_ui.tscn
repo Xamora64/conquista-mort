@@ -1,3 +1,118 @@
 [gd_scene format=3 uid="uid://dw0jc5fh4411n"]
 
+[sub_resource type="Theme" id="Theme_a8s68"]
+
 [node name="GameUI" type="CanvasLayer" unique_id=2075735181]
+
+[node name="MainMenu" type="MarginContainer" parent="." unique_id=821187735]
+visible = false
+custom_maximum_size = Vector2(1600, 900)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 60
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu" unique_id=1493847881]
+custom_maximum_size = Vector2(1600, 900)
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer" unique_id=1361800130]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+
+[node name="Title" type="Label" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=1130196408]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_font_sizes/font_size = 45
+text = "CONQUISTA-MORTS"
+
+[node name="MenuOptions" type="VBoxContainer" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=1487515678]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="MainMenu/HBoxContainer/VBoxContainer/MenuOptions" unique_id=230032352]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TeamName" type="Label" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=198080488]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_font_sizes/font_size = 45
+text = "Sesterce Studios"
+
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu/HBoxContainer" unique_id=614139420]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/CenterContainer" unique_id=86191170]
+layout_mode = 2
+text = "(ILLUSTRATION)"
+
+[node name="TerrainActionDescription" type="PopupPanel" parent="." unique_id=849746673]
+oversampling_override = 1.0
+position = Vector2i(114, 22)
+size = Vector2i(900, 500)
+theme = SubResource("Theme_a8s68")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TerrainActionDescription" unique_id=1331336811]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 896.0
+offset_bottom = 496.0
+
+[node name="TextureRect" type="TextureRect" parent="TerrainActionDescription/VBoxContainer" unique_id=590702737]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Description" type="Label" parent="TerrainActionDescription/VBoxContainer" unique_id=1673071053]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="PlayerChoicePopup" type="PopupPanel" parent="." unique_id=1167401852]
+oversampling_override = 1.0
+position = Vector2i(114, 22)
+size = Vector2i(900, 500)
+theme = SubResource("Theme_a8s68")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerChoicePopup" unique_id=2033960642]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 896.0
+offset_bottom = 496.0
+
+[node name="TribeAttributes" type="HBoxContainer" parent="PlayerChoicePopup/VBoxContainer" unique_id=839533189]
+layout_mode = 2
+
+[node name="Aggressivity" type="TextureRect" parent="PlayerChoicePopup/VBoxContainer/TribeAttributes" unique_id=484578247]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Amount" type="ProgressBar" parent="PlayerChoicePopup/VBoxContainer/TribeAttributes" unique_id=1814389669]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Description" type="Label" parent="PlayerChoicePopup/VBoxContainer" unique_id=546250978]
+layout_mode = 2
+
+[node name="Choices" type="HBoxContainer" parent="PlayerChoicePopup/VBoxContainer" unique_id=1547599824]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Choice1" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=1079188775]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Choice2" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=429922488]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Choice3" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=396713551]
+layout_mode = 2
+size_flags_horizontal = 3
