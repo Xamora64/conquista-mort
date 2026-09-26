@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ch7s134abpgyd"
+path="res://.godot/imported/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg-c3e91eb7d68750fdbfea414c0b90ff0f.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg"
+dest_files=["res://.godot/imported/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg-c3e91eb7d68750fdbfea414c0b90ff0f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
