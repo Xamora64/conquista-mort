@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bf37hyqhsxwoq" path="res://scripts/map_places_creator.gd" id="4_0cso3"]
 [ext_resource type="PackedScene" uid="uid://cmq2oebxey5us" path="res://assets/meshes/map2.fbx" id="5_2klcf"]
 [ext_resource type="PackedScene" uid="uid://ebrcp5jd37fk" path="res://assets/meshes/map.fbx" id="6_2lpho"]
+[ext_resource type="Material" uid="uid://dhmiwi43v0c3w" path="res://assets/materials/M_Map.tres" id="6_nakos"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwsvg"]
 albedo_color = Color(0.49868584, 0.10165491, 0.24182004, 1)
@@ -36,16 +37,19 @@ area_attenuation = 2.0
 area_size = Vector2(3, 3)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=613796064]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52211857, 7.1750956, 1.417057)
-light_energy = 12.055
-omni_range = 14.0
-omni_attenuation = 1.2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52211857, 7.1750956, 15.043626)
+light_energy = 16.0
+omni_range = 25.0
+omni_attenuation = 2.008
 
 [node name="MapEventsCreator" type="Node" parent="." unique_id=1529909047]
 script = ExtResource("4_0cso3")
 
 [node name="map2" parent="." unique_id=2102191850 instance=ExtResource("5_2klcf")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0657072, -1.9762135, -4.275607)
+
+[node name="map" parent="map2" index="0" unique_id=1398547000]
+material_override = ExtResource("6_nakos")
 
 [editable path="map"]
 [editable path="map2"]

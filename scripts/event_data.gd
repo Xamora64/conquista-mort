@@ -1,7 +1,7 @@
 class_name EventData
 extends Resource
 
-const RESOURCES: Array = []
+static var event_resources: Array[EventData]
 
 # {tribe_name}, {biome_name}
 @export var text: String 
@@ -20,6 +20,21 @@ enum TYPES_TEXT { INTRO, INTRO_REACTION, CHOICE, EVENT_BIOME, ALL_DEAD}
 @export var calcul_wealth: String 
 
 static func generate() -> EventData:
-	var event_data = RESOURCES.pick_random()
+	var event_data = event_resources.pick_random()
 	
 	return event_data
+
+static func load_folder(path: String):
+	for file in ResourceLoader.list_directory(path):
+		var new_path = path + file
+		if (file.ends_with("/")):
+			load_folder(new_path)
+		else:
+			event_resources.append(load(new_path).duplicate())
+
+static func calcul_event(event: EventData):
+	#event.calcul_food
+	#event.calcul_troops
+	#event.calcul_trust
+	#event.calcul_wealth
+	pass

@@ -3,12 +3,11 @@ extends Node
 const place_scene: PackedScene = preload("res://scenes/place.tscn")
 const path_scene: PackedScene = preload("res://scenes/path_draw.tscn")
 
-@export var list_places: Array[Place] = []
-@export var list_paths: Array[PathDraw] = []
+var list_places: Array[Place] = []
+var list_paths: Array[PathDraw] = []
 
-func create_places(x1, z1, x2, z2, number_places, min_link, max_link):
+func create_places(x1, z1, x2, z2, number_places, min_link, max_link) -> Array[Place]:
 	for i in range(number_places):
-		
 		# Position
 		var position: Vector3 = get_position_place(x1, z1, x2, z2, number_places)
 		create_place(position, 1)
@@ -17,7 +16,8 @@ func create_places(x1, z1, x2, z2, number_places, min_link, max_link):
 	# All Links
 	for place in list_places:
 		add_paths_place(place)
-		
+	return list_places
+	
 # additional_link to add one link if it's not the start or end
 func create_place(position: Vector3, additional_link: int) -> Place:
 	var limit_links: int = randi_range(Place.LINKS_LIMIT[0], Place.LINKS_LIMIT[1]) + additional_link
@@ -94,7 +94,7 @@ func get_all_links_places():
 		
 		for near in nearest:
 			links.append(near.place)
-		print(links.size())
+		#print(links.size())
 		place.links = links
 		
 
