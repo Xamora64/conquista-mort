@@ -4,12 +4,15 @@
 [ext_resource type="Script" uid="uid://c80ms475rst3i" path="res://scripts/map.gd" id="1_paxxb"]
 [ext_resource type="PackedScene" uid="uid://sxjiai3gj67q" path="res://scenes/event.tscn" id="2_gldc4"]
 [ext_resource type="PackedScene" uid="uid://cjufafh5f14cc" path="res://scenes/indian.tscn" id="3_0cso3"]
+[ext_resource type="PackedScene" uid="uid://k5m00iwwau2m" path="res://scenes/path.tscn" id="4_2klcf"]
 
 [node name="Map" type="Node3D" unique_id=2049311125]
 script = ExtResource("1_paxxb")
 event_scene = ExtResource("2_gldc4")
 indian_scene = ExtResource("3_0cso3")
+path_scene = ExtResource("4_2klcf")
 
 [node name="Map2D" type="Sprite3D" parent="." unique_id=2106451994]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+visible = false
 texture = ExtResource("1_c7s6e")
