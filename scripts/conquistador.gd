@@ -5,10 +5,27 @@ const LIMIT_TROOPS = Vector2(0, 600)
 const LIMIT_TRUST = Vector2(0, 100)
 const LIMIT_WEALTH = Vector2(0, 100)
 
-@export var food = 1800
-@export var troops = 600
-@export var trust = 70
-@export var wealth = 0
+signal food_changed(value)
+signal trust_changed(value)
+signal troops_changed(value)
+signal wealth_changed(value)
+
+@export var food = 1800:
+	set(value):
+		food_changed.emit(value)
+		
+@export var troops = 600:
+	set(value):
+		troops_changed.emit(value)
+		
+@export var trust = 70:
+	set(value):
+		trust_changed.emit(value)
+		
+@export var wealth = 0:
+	set(value):
+		wealth_changed.emit(value)
+		
 var event_in # L'évenement où ils se trouve
 
 func with_values(food: int, troops: int, trust: int, wealth: int):
