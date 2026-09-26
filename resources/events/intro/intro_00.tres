@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://d3r2ja2tecgpe"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les {tribe_name} voient arriver d’étranges hommes sur d’énormes bêtes. Ils remontent la route de la {biome_name}."
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

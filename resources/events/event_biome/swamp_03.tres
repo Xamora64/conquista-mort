@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://bxp3jvmnwk1y5"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les Espagnols tournent et se fatiguent dans ces marais. Il faudra plusieurs jours avant de s’en sortir… et pour certains, ils ne les quitteront jamais."
+types_text = 3
+calcul_food = "- (2 * troops)"
+calcul_troops = "-randi_range(8, 12)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://c8ayk5kggkjg5"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "L’eau putride du marécage contamine les vivres. Les maladies ne tardent pas et la fièvre typhoïde fait des ravages. Il faut jeter ce qui est contaminé et abandonner les morts."
+types_text = 3
+calcul_food = "- troops"
+calcul_troops = "-randi_range(60, 80)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://c2qs5o1aidgjk"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Ces êtres semblent porteurs de mauvaise fortune, ils ne doivent pas rester."
+types_text = 1
+aggression = 0
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

@@ -4,8 +4,5 @@
 
 [resource]
 script = ExtResource("1_u2e4v")
-text = "test"
-types_text = 1
-biome = 1
-aggression = 2
+text = "Les {tribe_name} entendent un langage inconnu au loin, qui sont ces étrangers ?"
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

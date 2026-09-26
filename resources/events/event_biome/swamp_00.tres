@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://dn70y2mhkeefd"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Le marais s’infiltre partout. La boue sous les armures, les moustiques sous les vêtements et les maladies dans le sang. Les Espagnols tombent les uns après les autres à cause des fièvres intermittentes de la malaria."
+types_text = 3
+calcul_troops = "-randi_range(20, 30)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

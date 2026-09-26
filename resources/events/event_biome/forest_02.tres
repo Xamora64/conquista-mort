@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://5ako3cywh78l"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Alors que l’expédition traverse un torrent, un cheval se prend les pieds dans un trou d’eau. L’animal et son cavalier meurent de la chute, mais la viande chevaline rejoint les stocks espagnols."
+types_text = 3
+biome = 2
+calcul_food = "300"
+calcul_troops = "-1"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

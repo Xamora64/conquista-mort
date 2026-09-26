@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://cmj3d86a2l4ol"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "L’air est irrespirable et le terrain impraticable. Les Espagnols fatiguent sous le poids de leurs paquetages. Ils abandonnent ce qui n’est pas absolument nécessaire."
+types_text = 3
+calcul_wealth = "- (0.5 * wealth)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

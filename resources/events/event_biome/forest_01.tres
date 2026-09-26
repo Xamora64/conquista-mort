@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://3qfdr0j04wdd"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Un groupe est parti uriner la nuit dernière et n’est jamais revenu, que leur est-il arrivé ? Ont-ils dansé avec les loups ?"
+types_text = 3
+biome = 2
+calcul_troops = "-randi_range(4, 8)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

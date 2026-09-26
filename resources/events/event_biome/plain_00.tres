@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://b4atql5ase5wf"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "La plaine est balayée par un souffle continu qui ne porte que le bruit de la marche des Espagnols."
+types_text = 3
+biome = 1
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://bey6cnhl37krv"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Combien faut-il d’Espagnols pour tuer un ours ? Nous ne savons pas, mais la réponse dépasse le nombre de malheureux qui ont croisé la route d’un ursidé énervé aujourd’hui."
+types_text = 3
+biome = 2
+calcul_troops = "-randi_range(2, 5)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://dhexxljc4syck"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Au réveil du groupe, un Espagnol manque à l’appel. Il s’est enfui avec une esclave et des vivres."
+types_text = 3
+biome = 1
+calcul_food = "-20"
+calcul_troops = "-1"
+calcul_wealth = "-1"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

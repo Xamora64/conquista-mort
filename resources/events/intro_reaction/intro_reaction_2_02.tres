@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://da8yxw1n1dntj"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Une nouvelle arrivée se devrait d’être fêtée, le banquet semble une réponse appropriée."
+types_text = 1
+aggression = 2
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"
