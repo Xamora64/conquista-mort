@@ -1,8 +1,7 @@
 extends Node3D
 
-@export var event_scene: PackedScene
-@export var indian_scene: PackedScene
-@export var path_scene: PackedScene
+const event_scene: PackedScene = preload("res://scenes/event.tscn")
+const path_scene: PackedScene = preload("res://scenes/path.tscn")
 
 @export var list_events: Array[Event] = []
 @export var list_paths: Array[Path] = []
@@ -40,7 +39,7 @@ func create_event(position: Vector3, additional_link: int) -> Event:
 	var biome: BiomeData = BiomeData.generate()
 	var indian: Indian = null
 	if (biome.type != BiomeData.TYPES.SWAMP):
-		indian = indian_scene.instantiate().generate()
+		indian = Indian.new().generate()
 	
 	var event: Event = event_scene.instantiate().with_values(position, biome, indian, [] as Array[Event], limit_links)
 	list_events.append(event)

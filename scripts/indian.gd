@@ -8,7 +8,7 @@ const LIMIT_AGGRESSION = Vector2(-2, 2)
 @export var aggression = 0
 @export var fortification = false
 
-func with_values(number: int, aggresion: int, fortification: bool) -> Indian:
+func with_values(number: int, aggression: int, fortification: bool) -> Indian:
 	self.number = number
 	self.aggression = aggression
 	self.fortification = fortification
@@ -16,8 +16,8 @@ func with_values(number: int, aggresion: int, fortification: bool) -> Indian:
 
 # random
 func generate() -> Indian:
-	self.number = randf_range(LIMIT_NUMBER[0], LIMIT_NUMBER[1])
-	self.aggression = randf_range(LIMIT_AGGRESSION[0], LIMIT_AGGRESSION[1])
+	self.number = randi_range(LIMIT_NUMBER[0], LIMIT_NUMBER[1])
+	self.aggression = randi_range(LIMIT_AGGRESSION[0], LIMIT_AGGRESSION[1])
 	self.fortification = randi() % 2 == 0
 	return self
 
