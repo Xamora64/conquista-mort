@@ -26,7 +26,9 @@ signal wealth_changed(value)
 	set(value):
 		wealth_changed.emit(value)
 		
-var event_in # L'évenement où ils se trouve
+var event_in :# L'évenement où ils se trouve
+	set(value):
+		event_in.display_event_popup.emit(value)
 
 func with_values(food: int, troops: int, trust: int, wealth: int):
 	self.food = food

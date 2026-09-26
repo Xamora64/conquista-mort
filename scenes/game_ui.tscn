@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://dw0jc5fh4411n"]
 
+[ext_resource type="Script" uid="uid://dxp2pybg7pwc3" path="res://scripts/button_manager.gd" id="1_yubou"]
+
 [sub_resource type="Theme" id="Theme_a8s68"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=2075735181]
 
 [node name="MainMenu" type="MarginContainer" parent="." unique_id=821187735]
-visible = false
 custom_maximum_size = Vector2(1600, 900)
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,9 +38,11 @@ text = "CONQUISTA-MORTS"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextureButton" type="TextureButton" parent="MainMenu/HBoxContainer/VBoxContainer/MenuOptions" unique_id=230032352]
+[node name="TextureButton" type="TextureButton" parent="MainMenu/HBoxContainer/VBoxContainer/MenuOptions" unique_id=230032352 node_paths=PackedStringArray("sound_player")]
 layout_mode = 2
 size_flags_vertical = 3
+script = ExtResource("1_yubou")
+sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
 
 [node name="TeamName" type="Label" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=198080488]
 layout_mode = 2
@@ -57,15 +60,15 @@ text = "(ILLUSTRATION)"
 
 [node name="TerrainActionDescription" type="PopupPanel" parent="." unique_id=849746673]
 oversampling_override = 1.0
-position = Vector2i(114, 22)
-size = Vector2i(900, 500)
+size = Vector2i(1300, 700)
+visible = true
 theme = SubResource("Theme_a8s68")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TerrainActionDescription" unique_id=1331336811]
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 896.0
-offset_bottom = 496.0
+offset_right = 1296.0
+offset_bottom = 696.0
 
 [node name="TextureRect" type="TextureRect" parent="TerrainActionDescription/VBoxContainer" unique_id=590702737]
 layout_mode = 2
@@ -77,15 +80,15 @@ size_flags_vertical = 2
 
 [node name="PlayerChoicePopup" type="PopupPanel" parent="." unique_id=1167401852]
 oversampling_override = 1.0
-position = Vector2i(114, 22)
-size = Vector2i(900, 500)
+size = Vector2i(1300, 700)
+visible = true
 theme = SubResource("Theme_a8s68")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PlayerChoicePopup" unique_id=2033960642]
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 896.0
-offset_bottom = 496.0
+offset_right = 1296.0
+offset_bottom = 696.0
 
 [node name="TribeAttributes" type="HBoxContainer" parent="PlayerChoicePopup/VBoxContainer" unique_id=839533189]
 layout_mode = 2
@@ -105,14 +108,28 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Choice1" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=1079188775]
+[node name="Choice1" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=1079188775 node_paths=PackedStringArray("sound_player")]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("1_yubou")
+sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
 
-[node name="Choice2" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=429922488]
+[node name="Choice2" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=429922488 node_paths=PackedStringArray("sound_player")]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("1_yubou")
+sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
 
-[node name="Choice3" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=396713551]
+[node name="Choice3" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=396713551 node_paths=PackedStringArray("sound_player")]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("1_yubou")
+sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
+
+[node name="Audio" type="Node2D" parent="." unique_id=839973120]
+
+[node name="ButtonAudioPlayer" type="AudioStreamPlayer" parent="Audio" unique_id=232772946 node_paths=PackedStringArray("sound_player")]
+script = ExtResource("1_yubou")
+sound_player = NodePath(".")
+
+[node name="UIManager" type="Node2D" parent="." unique_id=1147072397]

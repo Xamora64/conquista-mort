@@ -9,6 +9,8 @@ const LINKS_LIMIT = Vector2(3, 4)
 @export var links: Array[Event] = []
 @export var links_limit: = 3
 
+signal display_event_popup()
+
 func with_values(position: Vector3, biome: BiomeData, indian: Indian, links: Array[Event], links_limit: int) -> Event:
 	self.position = position
 	self.biome = biome
