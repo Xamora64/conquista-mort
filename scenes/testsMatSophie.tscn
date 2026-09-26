@@ -9,6 +9,17 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbnx"]
 albedo_texture = ExtResource("4_7o0rv")
 
+[sub_resource type="Environment" id="Environment_dfipr"]
+background_mode = 2
+background_energy_multiplier = 1.99
+glow_enabled = true
+glow_intensity = 0.1
+glow_bloom = 0.12
+adjustment_enabled = true
+adjustment_brightness = 1.1
+adjustment_contrast = 0.915
+adjustment_saturation = 0.97
+
 [node name="Node3D" type="Node3D" unique_id=1155538843]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1315518064]
@@ -91,7 +102,7 @@ material_override = ExtResource("5_7o0rv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26224914, -113.20437, -83.55615)
 material_override = ExtResource("5_7o0rv")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=2051463099]
-transform = Transform3D(0.31263828, 0, -0.94987226, 0, 1, 0, 0.94987226, 0, 0.31263828, -14.851568, 15.082958, -6.3018456)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1892391484]
+environment = SubResource("Environment_dfipr")
 
 [editable path="Assets_01_JAM"]
