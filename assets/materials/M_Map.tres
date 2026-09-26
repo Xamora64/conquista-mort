@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dhmiwi43v0c3w"]
+
+[ext_resource type="Texture2D" uid="uid://d2cdlfuaqb6wm" path="res://assets/textures/meshes/DefaultMaterial_Base_color.png" id="1_utfrk"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.6400203, 0.93841994, 0.99259204, 1)
+albedo_texture = ExtResource("1_utfrk")
+roughness = 0.0
