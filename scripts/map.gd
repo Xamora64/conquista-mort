@@ -97,7 +97,7 @@ func get_all_links_events():
 			if (possible_link == event):
 				continue
 			var distance = event.position.distance_to(possible_link.position)
-			if (distance > 2):
+			if (distance > 1.8):
 				continue
 			
 			for i in range(event.links_limit):
