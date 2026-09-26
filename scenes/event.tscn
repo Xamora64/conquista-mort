@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://sxjiai3gj67q"]
+
+[ext_resource type="Script" uid="uid://dinyer1e8ed4u" path="res://scripts/event.gd" id="1_y83ao"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kwsvg"]
+
+[node name="Event" type="Area3D" unique_id=1860802587]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+script = ExtResource("1_y83ao")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1432115435]
+shape = SubResource("SphereShape3D_kwsvg")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=2039227542]
