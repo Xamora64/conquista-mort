@@ -20,7 +20,3 @@ func _populate_next_popup():
 	var current_place:Place=game_ui.conquistador.place_in
 	descriptionLabel.set_text(current_place.reaction)
 	
-	
-	
-	
-	

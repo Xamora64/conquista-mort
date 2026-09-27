@@ -1,5 +1,7 @@
 extends Node
 
+@export var guide: bool = false
+@export var map: Map
 @export var conquistador: Conquistador
 var current_popup: PopupPanel
 

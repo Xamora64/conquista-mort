@@ -13,7 +13,7 @@ static func get_tribe_reaction_place_data(place: Place)-> EventData:
 	return tribe_reaction_data
 
 static func get_biome_reaction_place_data(place: Place)-> EventData:
-	var biome_reaction_data: EventData= EventData.ask_possible_events(EventData.TYPES_TEXT.EVENT_BIOME).pick_random()
+	var biome_reaction_data: EventData= EventData.ask_possible_events(EventData.TYPES_TEXT.EVENT_BIOME, place.biome.type).pick_random()
 	return biome_reaction_data
 	
 static func fill_place_intro(place_data: EventData, place: Place)-> String:

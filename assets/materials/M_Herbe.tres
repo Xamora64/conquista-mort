@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://wmqjjwmha4l6" path="res://assets/textures/meshes/herbe_M_Herbe_BaseColor.jpg" id="1_4f3p2"]
 
 [resource]
+cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
 albedo_color = Color(0.9098039, 0.9372549, 0.99215686, 1)
