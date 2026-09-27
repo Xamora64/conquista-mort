@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://de2ce7wjk740i" path="res://scripts/buttons/start_game_button.gd" id="8_sdeak"]
 [ext_resource type="Script" uid="uid://b2xq7ovimes2i" path="res://scripts/buttons/front_button.gd" id="9_5kjus"]
 [ext_resource type="AudioStream" uid="uid://ccom0725phd2g" path="res://assets/sounds/Ui_AttackDecision_1.ogg" id="9_lab56"]
-[ext_resource type="AudioStream" uid="uid://ch7s134abpgyd" path="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg" id="9_wbo4m"]
+[ext_resource type="AudioStream" uid="uid://b1vts3rcshm57" path="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg" id="9_wbo4m"]
 [ext_resource type="Script" uid="uid://212thwlf4m0h" path="res://scripts/buttons/end_step_button.gd" id="10_8wu16"]
 [ext_resource type="AudioStream" uid="uid://ck6diexg3kqh1" path="res://assets/sounds/Ui_AttackDecision_2.ogg" id="10_gj1yn"]
 [ext_resource type="AudioStream" uid="uid://c5bhc5jlnut7q" path="res://assets/sounds/Ui_FuiteDecision_1.ogg" id="11_5kjus"]
@@ -164,7 +164,8 @@ layout_mode = 2
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
-text = "Les espagnols partent à l'expedition, vous devez contrer leur avancée !"
+text = "Les Espagnols débarquent dans le nouveau monde en quête de richesses ! Leur trajet ira de la Floride jusqu'au Mississippi qu'ils emprunteront pour rejoindre la côte avec leurs trésors et des informations pour de futures expéditions.
+Incarnez les chefferies amérindiennes et apprenez à ces envahisseurs que tout ne se passera pas comme ils souhaiteraient."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -201,7 +202,6 @@ vertical_alignment = 1
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(1400, 700)
-visible = true
 theme = SubResource("Theme_a8s68")
 theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 
@@ -209,6 +209,8 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1400.0
+offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -408,7 +410,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 uppercase = true
 
-[node name="NextButton" type="TextureButton" parent="ReactionDescriptionPopup/MarginContainer/VBoxContainer" unique_id=730427934 node_paths=PackedStringArray("parentPopupWindow", "nextPopupWindowIntro", "nextPopupWindowBiome", "game_ui")]
+[node name="NextButton" type="TextureButton" parent="ReactionDescriptionPopup/MarginContainer/VBoxContainer" unique_id=730427934 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindowIntro", "nextPopupWindowBiome", "game_ui")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -416,6 +418,7 @@ action_mode = 0
 texture_normal = ExtResource("5_djwj0")
 stretch_mode = 5
 script = ExtResource("10_8wu16")
+sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
 parentPopupWindow = NodePath("../../..")
 nextPopupWindowIntro = NodePath("../../../../PlaceIntroDescription")
 nextPopupWindowBiome = NodePath("../../..")
@@ -619,7 +622,7 @@ text = "Attaquer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FuirChoice2" type="TextureButton" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices" unique_id=429922488 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "game_ui")]
+[node name="FuirChoice2" type="TextureButton" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices" unique_id=429922488 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "descriptionLabel", "game_ui")]
 layout_mode = 2
 size_flags_horizontal = 3
 action_mode = 0
@@ -629,6 +632,7 @@ script = ExtResource("13_2yflp")
 sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
 parentPopupWindow = NodePath("../../../..")
 nextPopupWindow = NodePath("../../../../../ReactionDescriptionPopup")
+descriptionLabel = NodePath("../../../../../ReactionDescriptionPopup/MarginContainer/VBoxContainer/Description")
 game_ui = NodePath("../../../../..")
 snippets = Array[AudioStreamOggVorbis]([ExtResource("11_5kjus"), ExtResource("12_bj1rn"), ExtResource("13_36vcn"), ExtResource("14_2yflp")])
 
