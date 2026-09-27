@@ -18,6 +18,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.717433, 0, 7.5184)
 [node name="Conquistador" parent="." unique_id=2115321676 instance=ExtResource("6_tefeu")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1, 0, 0)
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Conquistador" unique_id=850475689]
+transform = Transform3D(10, 0, 0, 0, -4.371139e-07, 10, 0, -10, -4.371139e-07, 0, 15, 0)
+light_color = Color(1, 0.73333335, 0.3137255, 1)
+light_energy = 2.0
+spot_angle = 35.0
+
 [node name="HUD" parent="." unique_id=1561272234 instance=ExtResource("2_lquwl")]
 
 [node name="GameUI" parent="." unique_id=2075735181 node_paths=PackedStringArray("map", "conquistador") instance=ExtResource("3_7mycd")]

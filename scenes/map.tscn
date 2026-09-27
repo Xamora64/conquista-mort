@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://ebrcp5jd37fk" path="res://assets/meshes/map.fbx" id="6_2lpho"]
 [ext_resource type="Material" uid="uid://dhmiwi43v0c3w" path="res://assets/materials/M_Map.tres" id="6_nakos"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jh32y"]
+albedo_color = Color(0.37213257, 0.15919474, 0.03065409, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwsvg"]
 albedo_color = Color(0.49868584, 0.10165491, 0.24182004, 1)
 
@@ -15,6 +18,26 @@ albedo_color = Color(0.20470001, 0.49024174, 0.89, 1)
 
 [node name="Map" type="Node3D" unique_id=2049311125]
 script = ExtResource("1_paxxb")
+
+[node name="Bordure" type="CSGBox3D" parent="." unique_id=439695729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.54485, -0.641811, -14.950926)
+material_override = SubResource("StandardMaterial3D_jh32y")
+size = Vector3(49.125, 5, 200)
+
+[node name="Bordure2" type="CSGBox3D" parent="." unique_id=1515610021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.91557, -0.641811, -14.950926)
+material_override = SubResource("StandardMaterial3D_jh32y")
+size = Vector3(49.125, 5, 200)
+
+[node name="Bordure3" type="CSGBox3D" parent="." unique_id=595917793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.534298, -0.641811, -34.249817)
+material_override = SubResource("StandardMaterial3D_jh32y")
+size = Vector3(200, 5, 50)
+
+[node name="Bordure4" type="CSGBox3D" parent="." unique_id=2147101456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.534298, -0.641811, 40.041565)
+material_override = SubResource("StandardMaterial3D_jh32y")
+size = Vector3(200, 5, 50)
 
 [node name="Map2D" type="Sprite3D" parent="." unique_id=2106451994]
 transform = Transform3D(1.2, 0, 0, 0, -5.2453668e-08, 1.2, 0, -1.2, -5.2453668e-08, -0.585266, 0, -1.4327955)
@@ -25,27 +48,9 @@ texture = ExtResource("1_c7s6e")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.95738375, -1.9953706, -4.806658)
 visible = false
 
-[node name="Cube" parent="map" index="0" unique_id=27669361]
+[node name="Cube" parent="map" index="0" unique_id=386447168]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 22.241533, 0, -99.99999, -2.6513974e-06, -5.693924, 0, 3.0166245)
 surface_material_override/0 = SubResource("StandardMaterial3D_kwsvg")
-
-[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=940493086]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.255486, 9.68873, -0.8180523)
-visible = false
-light_energy = 8.516
-light_indirect_energy = 6.037
-light_volumetric_fog_energy = 9.593
-light_specular = 7.222
-area_range = 28.615
-area_attenuation = 2.0
-area_normalize_energy = false
-area_size = Vector2(3, 3)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=613796064]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52211857, 7.1750956, 15.043626)
-light_energy = 16.0
-omni_range = 41.547
-omni_attenuation = 2.008
 
 [node name="MapEventsCreator" type="Node" parent="." unique_id=1529909047]
 script = ExtResource("4_0cso3")
@@ -53,17 +58,49 @@ script = ExtResource("4_0cso3")
 [node name="map2" parent="." unique_id=2102191850 instance=ExtResource("5_2klcf")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0657072, -1.9762135, -4.275607)
 
-[node name="map" parent="map2" index="0" unique_id=1398547000]
+[node name="map" parent="map2" index="0" unique_id=405578828]
 material_override = ExtResource("6_nakos")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=605876444]
 transform = Transform3D(0.24999999, 0.8660254, 0.43301278, 0.4330126, -0.50000006, 0.75, 0.86602545, 0, -0.4999999, 17, 8, 0)
-light_energy = 1.489
+light_color = Color(1, 0.6039216, 0.4862745, 1)
+light_energy = 0.0
+light_indirect_energy = 0.33
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=251532882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10360718, -1.390358, -1.3583965)
 material_override = SubResource("StandardMaterial3D_lw4m4")
 size = Vector3(200, 1, 200)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1723001995]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 16.549, 20, -8.283)
+light_color = Color(1, 0.69411767, 0.5568628, 1)
+light_energy = 9.194
+spot_range = 61.434
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=41618501]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -16.355846, 20, -3.888174)
+light_color = Color(1, 0.69411767, 0.5568628, 1)
+light_energy = 9.194
+spot_range = 61.434
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1199862955]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -1.030302, 20, -11.15654)
+light_color = Color(1, 0.69411767, 0.5568628, 1)
+light_energy = 9.194
+spot_range = 61.434
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1220513561]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 16.485699, 20, 9.299641)
+light_color = Color(1, 0.69411767, 0.5568628, 1)
+light_energy = 9.194
+spot_range = 61.434
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=1740855902]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.908842, 20, 16.8065)
+light_color = Color(1, 0.69411767, 0.5568628, 1)
+light_energy = 9.194
+spot_range = 61.434
 
 [editable path="map"]
 [editable path="map2"]
