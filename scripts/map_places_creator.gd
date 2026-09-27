@@ -28,14 +28,15 @@ func init_place(position: Vector3, start_end: bool) -> Place:
 	if (not start_end):
 		limit_links = randi_range(Place.LINKS_LIMIT[0], Place.LINKS_LIMIT[1]) 
 	var biome: BiomeData = BiomeData.generate()
+	if (start_end):
+		biome = BiomeData.create(BiomeData.TYPES_BIOMES.PLAIN)
 	var tribe: Tribe = null
-	if (biome.type != BiomeData.TYPES_BIOMES.SWAMP):
+	if (biome.type != BiomeData.TYPES_BIOMES.SWAMP and not start_end):
 		if (randi_range(0, 100) >= 40):
 			tribe = Tribe.new().generate()
 	
 	var place: Place = place_scene.instantiate().with_values(position, biome, tribe, [] as Array[Link], limit_links)
 	return place
-	
 
 	
 func get_position_place(x1, z1, x2, z2, number_places, list_places) -> Vector3:

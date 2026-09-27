@@ -50,6 +50,7 @@ signal display_event_popup()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	current = node3d_plain
 	if (tribe != null):
 		if (tribe.fortification):
 			current = node3d_fortification
@@ -59,12 +60,14 @@ func _ready() -> void:
 			current = node3d_forest_tribe
 	else:
 		if (biome.type == biome.TYPES_BIOMES.PLAIN):
-			current = node3d_plain_tribe
+			current = node3d_plain
 		elif (biome.type == biome.TYPES_BIOMES.FOREST):
 			current = node3d_forest
 		elif (biome.type == biome.TYPES_BIOMES.SWAMP):
-			current = node3d_fortification
-		
+			current = node3d_swamp
+	if (current != null):
+		current.set_visible(true)
+		current.rotate_y(randf_range(0, 360))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

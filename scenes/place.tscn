@@ -25,7 +25,7 @@ node3d_plain = NodePath("plaine")
 node3d_forest_tribe = NodePath("foretTribu")
 node3d_forest = NodePath("foret")
 node3d_swamp = NodePath("marais")
-node3d_fortification = NodePath("marais")
+node3d_fortification = NodePath("fortificationTribu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1432115435]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -36,7 +36,7 @@ visible = false
 material = SubResource("StandardMaterial3D_tipki")
 
 [node name="plaineTribu" parent="." unique_id=1499276760 instance=ExtResource("2_jbleb")]
-transform = Transform3D(-0.05176381, 0, -0.1931852, 0, 0.20000002, 0, 0.1931852, 0, -0.05176381, 0.2421049, 0, -0.7180655)
+transform = Transform3D(-0.06470476, 0, -0.24148145, 0, 0.25, 0, 0.24148145, 0, -0.06470476, 0.2421049, 0, -0.7180655)
 visible = false
 
 [node name="maison_02_low_002" parent="plaineTribu" index="0" unique_id=1743422042]
@@ -142,7 +142,7 @@ material_override = ExtResource("4_41yoo")
 material_override = ExtResource("4_41yoo")
 
 [node name="plaine" parent="." unique_id=377367015 instance=ExtResource("5_hn5ta")]
-transform = Transform3D(0.20000002, 0, 0, 0, 0.20000002, 0, 0, 0, 0.20000002, 0, -0.3905112, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.22, 0, 0, 0, 0.5, 0, -0.3905112, 0)
 visible = false
 
 [node name="pCube12_001" parent="plaine" index="0" unique_id=1425581504]
@@ -215,7 +215,7 @@ material_override = ExtResource("4_41yoo")
 material_override = ExtResource("4_41yoo")
 
 [node name="foretTribu" parent="." unique_id=611567396 instance=ExtResource("6_jh388")]
-transform = Transform3D(0.0040677846, 0, 0.17995404, 0, 0.18, 0, -0.17995404, 0, 0.0040677846, 0.8943628, 0, -1.2168006)
+transform = Transform3D(0.0056497008, 0, 0.24993615, 0, 0.25, 0, -0.24993615, 0, 0.0056497008, 1.3020976, 0, -1.4794444)
 visible = false
 
 [node name="Arbre" parent="foretTribu" index="0" unique_id=2113643111]
@@ -246,7 +246,7 @@ material_override = ExtResource("3_1tupt")
 material_override = ExtResource("3_1tupt")
 
 [node name="foret" parent="." unique_id=738381844 instance=ExtResource("7_12vl7")]
-transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0.1565066, 0, 0.5155549)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.1565066, 0, 1.068227)
 visible = false
 
 [node name="Arbre" parent="foret" index="0" unique_id=1165183190]
@@ -268,7 +268,7 @@ material_override = ExtResource("3_1tupt")
 material_override = ExtResource("3_1tupt")
 
 [node name="marais" parent="." unique_id=1515179165 instance=ExtResource("8_6dkwy")]
-transform = Transform3D(0.20000002, 0, 0, 0, 0.20000002, 0, 0, 0, 0.20000002, 0, -0.65806556, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.09306036, -0.71916234, 0)
 visible = false
 
 [node name="Barque_01_low1" parent="marais/group2" parent_id_path=PackedInt32Array(1515179165, 2314456) index="0" unique_id=2064229846]
@@ -500,7 +500,7 @@ material_override = ExtResource("9_gyfyg")
 material_override = ExtResource("10_f55dr")
 
 [node name="fortificationTribu" parent="." unique_id=1986394794 instance=ExtResource("11_chsdv")]
-transform = Transform3D(-8.742278e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.742278e-09, 0, 0, 0)
+transform = Transform3D(-1.1364961e-08, 0, 0.26, 0, 0.26, 0, -0.26, 0, -1.1364961e-08, 0, 0, 0.23505688)
 visible = false
 
 [node name="Maison_Toit_001" parent="fortificationTribu" index="0" unique_id=1177871446]

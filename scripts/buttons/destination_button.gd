@@ -17,6 +17,8 @@ func _pressed() -> void:
 	var event_data: EventData
 	#var action_type=_determine_action_type(current_place.tribe, game_ui.conquistador)
 	#event_data=UIManager.get_guide_result(current_place, action_type[0], action_type[1])
+	var action_type=""
+	#event_data=UIManager.get_guide_result(current_place, action_type)
 	_show_result_window(event_data, current_place)
 	nextPopupWindow.popup()
 	game_ui.current_popup=nextPopupWindow
