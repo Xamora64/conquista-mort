@@ -44,7 +44,7 @@ const NAME_TRIBE = [
 	"Anilco"
 ]
 
-@export var tribe_name = "Tribe Test"
+@export var tribe_name = "NULL"
 @export var number = 400
 @export var aggression = 0
 @export var fortification = false
@@ -57,6 +57,7 @@ func with_values(number: int, aggression: int, fortification: bool) -> Tribe:
 
 # random
 func generate() -> Tribe:
+	self.tribe_name = NAME_TRIBE.pick_random()
 	self.number = randi_range(LIMIT_NUMBER[0], LIMIT_NUMBER[1])
 	self.aggression = randi_range(LIMIT_AGGRESSION[0], LIMIT_AGGRESSION[1])
 	self.fortification = randi() % 2 == 0

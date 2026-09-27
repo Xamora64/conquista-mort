@@ -29,4 +29,5 @@ static func fill_place_reaction(place_data: EventData, place: Place)-> String:
 	var reaction_result: String=EventData.apply_text_info_event(place_data.text, place.tribe, place.biome)
 	return reaction_result
 	
-	
+static func calcul_consequence(event_data: EventData, conquistador: Conquistador):
+	EventData.calcul_event(event_data, conquistador)

@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_food_changed(value: int)-> void:
+	print(value)
 	food_bar.set_value(clamp(value, 0, food_bar.max_value))
 	_set_color(food_bar)
 
@@ -45,6 +46,3 @@ func _set_color(bar: TextureProgressBar)->void:
 		bar.set_tint_progress(Color.ORANGE)
 	else:
 		bar.set_tint_progress(Color.GREEN)
-	
-	
-	

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://coy5tpk5lx5pw" path="res://assets/textures/sliders/logoNbSoldats.png" id="4_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://b4gwntjauxhiu" path="res://assets/textures/sliders/backgroundSlider(2).png" id="4_mphia"]
 [ext_resource type="Texture2D" uid="uid://byuci4ulx2k7y" path="res://assets/textures/sliders/logoConfiance.png" id="5_0i1j5"]
-[ext_resource type="Texture2D" uid="uid://dx0oi8056nww3" path="res://assets/textures/sliders/backgroundSlider(1).png" id="5_0m4u7"]
+[ext_resource type="Texture2D" uid="uid://b31yxd4nnfpaa" path="res://assets/textures/sliders/backgroundSlider(1).png" id="5_0m4u7"]
 [ext_resource type="Texture2D" uid="uid://dbq460yg21yhv" path="res://assets/textures/sliders/logoRichesses.png" id="6_mphia"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1561272234 node_paths=PackedStringArray("food_bar", "trust_bar", "troops_bar", "wealth_bar", "conquistador")]
@@ -45,7 +45,7 @@ texture = ExtResource("2_6fi6k")
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 3000.0
-value = 100.0
+value = 2000.0
 texture_under = ExtResource("3_0i1j5")
 texture_over = ExtResource("4_mphia")
 texture_progress = ExtResource("5_0m4u7")
