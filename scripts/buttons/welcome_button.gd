@@ -23,6 +23,6 @@ func _populate_next_popup():
 	for i in current_place.destinations:
 		var cloned_button=destination_button.duplicate()
 		var destination_label=destination_label.duplicate()
-		destination_set_text(i.text)
+		#destination_set_text(i.text)
 		cloned_button.add_child(destination_label)
 		flow_container.add_child(cloned_button)

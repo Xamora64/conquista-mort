@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://dw0jc5fh4411n"]
 
-[ext_resource type="Script" uid="uid://dxp2pybg7pwc3" path="res://scripts/button_manager.gd" id="1_yubou"]
+[ext_resource type="Script" uid="uid://dxp2pybg7pwc3" path="res://scripts/buttons/button_manager.gd" id="1_yubou"]
 [ext_resource type="FontFile" uid="uid://biw3sdcf71n3d" path="res://assets/fonts/GrenzeGotisch-Light.ttf" id="2_u001w"]
 [ext_resource type="Texture2D" uid="uid://ox02wxmjnk1y" path="res://assets/textures/bg2UI.png" id="3_u2dgd"]
 [ext_resource type="Texture2D" uid="uid://boepm6slg1a80" path="res://assets/textures/teteIndiens/indienNeutre.png" id="4_bt76a"]
-[ext_resource type="Script" uid="uid://dd25do15j28yh" path="res://scripts/destination_button.gd" id="4_lab56"]
+[ext_resource type="Script" uid="uid://dd25do15j28yh" path="res://scripts/buttons/destination_button.gd" id="4_lab56"]
 [ext_resource type="Script" uid="uid://daxilfx5uewe6" path="res://scripts/ui_manager.gd" id="4_u2dgd"]
 [ext_resource type="Texture2D" uid="uid://ub3sy1b117ov" path="res://assets/textures/bouton.png" id="5_djwj0"]
 [ext_resource type="AudioStream" uid="uid://d2lkt1wxminsg" path="res://assets/sounds/Conquistamort-Marche-des-espagnols.ogg" id="5_x8pta"]
 [ext_resource type="AudioStream" uid="uid://vdrb73nplws0" path="res://assets/sounds/Conquistamort-Attaque-guérilla.ogg" id="6_2rmtt"]
 [ext_resource type="AudioStream" uid="uid://c0tq5mpr8thrv" path="res://assets/sounds/Conquistamort-Attaque.ogg" id="7_0dnje"]
-[ext_resource type="Script" uid="uid://c8cche7vmk44o" path="res://scripts/guerilla_button.gd" id="7_gj1yn"]
-[ext_resource type="Script" uid="uid://b2xq7ovimes2i" path="res://scripts/front_button.gd" id="9_5kjus"]
+[ext_resource type="Script" uid="uid://c8cche7vmk44o" path="res://scripts/buttons/guerilla_button.gd" id="7_gj1yn"]
+[ext_resource type="Script" uid="uid://b2xq7ovimes2i" path="res://scripts/buttons/front_button.gd" id="9_5kjus"]
 [ext_resource type="AudioStream" uid="uid://c5bhc5jlnut7q" path="res://assets/sounds/Ui_FuiteDecision_1.ogg" id="11_5kjus"]
-[ext_resource type="Script" uid="uid://bwarwlhn70arq" path="res://scripts/attack_button.gd" id="12_36vcn"]
+[ext_resource type="Script" uid="uid://bwarwlhn70arq" path="res://scripts/buttons/attack_button.gd" id="12_36vcn"]
 [ext_resource type="AudioStream" uid="uid://5yd0dnob38am" path="res://assets/sounds/Ui_FuiteDecision_2.ogg" id="12_bj1rn"]
 [ext_resource type="Script" uid="uid://bh1gexbtolt5s" path="res://scripts/escape_button.gd" id="13_2yflp"]
 [ext_resource type="AudioStream" uid="uid://cxowqmjvew0ab" path="res://assets/sounds/Ui_FuiteDecision_3.ogg" id="13_36vcn"]
 [ext_resource type="AudioStream" uid="uid://cem6f6ycymhhe" path="res://assets/sounds/Conquistamort-Fuite.ogg" id="14_2yflp"]
-[ext_resource type="Script" uid="uid://b13u4h0iak2ie" path="res://scripts/welcome_button.gd" id="18_n74c5"]
+[ext_resource type="Script" uid="uid://b13u4h0iak2ie" path="res://scripts/buttons/welcome_button.gd" id="18_n74c5"]
 [ext_resource type="Texture2D" uid="uid://civonkggha1s6" path="res://assets/textures/teteIndiens/indienColere.png" id="19_0dnje"]
 [ext_resource type="Texture2D" uid="uid://drw1niqiei23m" path="res://assets/textures/teteIndiens/indienContent.png" id="20_lab56"]
 
@@ -45,6 +45,8 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1616.0
+offset_bottom = 708.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -413,10 +415,10 @@ vertical_alignment = 1
 
 [node name="UIManager" type="Node2D" parent="." unique_id=1147072397 node_paths=PackedStringArray("tribe_event_popup", "tribe_aggression_text_rect", "tribe_description_label", "biome_event_popup")]
 script = ExtResource("4_u2dgd")
-aggressive_icon = ExtResource("19_0dnje")
-neutral_icon = ExtResource("4_bt76a")
-welcoming_icon = ExtResource("20_lab56")
 tribe_event_popup = NodePath("../PlayerChoiceActionPopup")
 tribe_aggression_text_rect = NodePath("../PlayerChoiceActionPopup/MarginContainer/VBoxContainer/TribeAttributes/Aggressivity")
 tribe_description_label = NodePath("../PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Description")
+aggressive_icon = ExtResource("19_0dnje")
+neutral_icon = ExtResource("4_bt76a")
+welcoming_icon = ExtResource("20_lab56")
 biome_event_popup = NodePath("../TerrainActionDescription")

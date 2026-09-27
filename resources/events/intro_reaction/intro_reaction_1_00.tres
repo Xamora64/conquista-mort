@@ -6,5 +6,6 @@
 script = ExtResource("1_jccg5")
 text = "La curiosité diminue la crainte du chef, peut-être que les inviter est une bonne idée."
 types_text = 1
+biome = 3
 aggression = 1
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

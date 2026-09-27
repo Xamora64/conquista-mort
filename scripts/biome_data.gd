@@ -9,14 +9,8 @@ const RESOURCES = [
 
 # SWAMP = 20%, PLAIN = 40%, FOREST = 40%
 const WEIGHT = [0.2, 0.4, 0.4]
-enum TYPES_BIOMES { SWAMP, PLAIN, FOREST }
-@export var type: TYPES_BIOMES = TYPES_BIOMES.PLAIN
-
-# Les effets sur les conquistador
-@export var negative = false
-
-# Tout les évents possible dans ce biome
-@export var events = Array()
+enum TYPES_BIOMES { SWAMP, PLAIN, FOREST, NONE }
+@export var type: TYPES_BIOMES = TYPES_BIOMES.NONE
 
 static func generate() -> BiomeData:
 	

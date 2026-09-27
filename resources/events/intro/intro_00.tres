@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_jccg5")
 text = "Les {tribe_name} voient arriver d’étranges hommes sur d’énormes bêtes. Ils remontent la route de la {biome_name}."
+biome = 3
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

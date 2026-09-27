@@ -1,3 +1,4 @@
+class_name Conquistador
 extends Node3D
 
 const LIMIT_FOOD = Vector2(0, 3000)
@@ -12,23 +13,29 @@ signal wealth_changed(value)
 
 @export var food = 1800:
 	set(value):
+		food = value
 		food_changed.emit(value)
 		
 @export var troops = 600:
 	set(value):
+		troops = value
 		troops_changed.emit(value)
 		
 @export var trust = 70:
 	set(value):
+		trust = value
 		trust_changed.emit(value)
 		
 @export var wealth = 0:
 	set(value):
+		wealth = value
 		wealth_changed.emit(value)
-		
-var event_in :# L'évenement où ils se trouve
+
+# L'évenement où ils se trouve
+var place_in: Place:
 	set(value):
-		event_in.display_event_popup.emit(value)
+		place_in = value
+		#place_in.display_event_popup.emit(value)
 
 func with_values(food: int, troops: int, trust: int, wealth: int):
 	self.food = food
@@ -42,5 +49,10 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _physics_process(delta: float) -> void:
+	if place_in != null:
+		show()
+		position = place_in.position
+		position.y += 0.5
+	else:
+		hide()
