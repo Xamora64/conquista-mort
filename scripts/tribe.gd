@@ -4,6 +4,11 @@ extends Node
 const LIMIT_NUMBER = Vector2(0, 3000)
 const LIMIT_AGGRESSION = Vector2(-2, 2)
 
+const NAME_TRIBE = [
+	""
+]
+
+@export var tribe_name = "Tribe Test"
 @export var number = 400
 @export var aggression = 0
 @export var fortification = false

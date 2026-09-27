@@ -13,22 +13,22 @@ signal wealth_changed(value)
 
 @export var food = 1800:
 	set(value):
-		food = value
+		food = clamp(value, LIMIT_FOOD[0], LIMIT_TROOPS[1])
 		food_changed.emit(value)
 		
 @export var troops = 600:
 	set(value):
-		troops = value
+		troops = clamp(value, LIMIT_TROOPS[0], LIMIT_TROOPS[1])
 		troops_changed.emit(value)
 		
 @export var trust = 70:
 	set(value):
-		trust = value
+		trust = clamp(value, LIMIT_TRUST[0], LIMIT_TRUST[1])
 		trust_changed.emit(value)
 		
 @export var wealth = 0:
 	set(value):
-		wealth = value
+		wealth = clamp(wealth, LIMIT_WEALTH[0], LIMIT_WEALTH[1])
 		wealth_changed.emit(value)
 
 # L'évenement où ils se trouve

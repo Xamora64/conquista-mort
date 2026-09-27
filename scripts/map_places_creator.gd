@@ -18,17 +18,19 @@ func init_places(x1, z1, x2, z2, number_places, min_link, max_link) -> Array[Pla
 	for i in range(number_places):
 		# Position
 		var position: Vector3 = get_position_place(x1, z1, x2, z2, number_places, list_places)
-		list_places.append(init_place(position, 1))
+		list_places.append(init_place(position, false))
 	
 	return list_places
 	
-# additional_link to add one link if it's not the start or end
-func init_place(position: Vector3, additional_link: int) -> Place:
-	var limit_links: int = randi_range(Place.LINKS_LIMIT[0], Place.LINKS_LIMIT[1]) + additional_link
+func init_place(position: Vector3, start_end: bool) -> Place:
+	var limit_links: int = 1
+	if (not start_end):
+		limit_links = randi_range(Place.LINKS_LIMIT[0], Place.LINKS_LIMIT[1]) 
 	var biome: BiomeData = BiomeData.generate()
 	var tribe: Tribe = null
 	if (biome.type != BiomeData.TYPES_BIOMES.SWAMP):
-		tribe = Tribe.new().generate()
+		if (randi_range(0, 100) >= 40):
+			tribe = Tribe.new().generate()
 	
 	var place: Place = place_scene.instantiate().with_values(position, biome, tribe, [] as Array[Link], limit_links)
 	return place
@@ -74,7 +76,7 @@ func get_links_places(list_places: Array[Place]):
 			if (possible_link == place):
 				continue
 			var distance = place.position.distance_to(possible_link.position)
-			if (distance > 2.5):
+			if (distance > 2.5 && (not place.start || not place.end)):
 				continue
 			
 			for i in range(place.links_limit):

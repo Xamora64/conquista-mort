@@ -3,6 +3,7 @@ extends Resource
 
 static var event_resources: Array[EventData]
 const TYPES_BIOMES = BiomeData.TYPES_BIOMES
+const TYPES_BIOMES_TEXT = BiomeData.TYPES_BIOMES_TEXT
 
 # {tribe_name}, {biome_name}
 @export var text: String 
@@ -47,30 +48,45 @@ static func ask_possible_events(type_text: TYPES_TEXT,
 			event.aggression == aggression
 		):
 			list_possible_events.append(event)
-	print(list_possible_events.size())
+	#print(list_possible_events.size())
 	return list_possible_events
 
 # {tribe_name}, {biome_name}
-static func apply_text_info_event(text_event: String, tribe: Tribe, biome: BiomeData) -> String:
-	return text_event
+static func apply_text_info_event(text_event: String, tribe: Tribe = null, biome: BiomeData = null) -> String:
+	var replace: Dictionary[String, String] = {}
+	if (tribe != null):
+		replace["tribe_name"] = tribe.tribe_name
+	replace["biome_name"] = TYPES_BIOMES_TEXT[biome.type]
+	return text_event.format(replace)
 
 static var expression = Expression.new()
 
+# replace food, troops, trust, wealth
 static func calcul_event(event: EventData, conquis: Conquistador):
-	if expression.parse(event.calcul_food) != OK: 
-		print("ERROR CALCUL FOOD")
-		return
-	conquis.food += expression.execute()
-	if expression.parse(event.calcul_troops) != OK: 
-		print("ERROR CALCUL TROOPS")
-		return
-	conquis.troops += expression.execute()
-	if expression.parse(event.calcul_trust) != OK: 
-		print("ERROR CALCUL TRUST")
-		return
-	conquis.trust = expression.execute()
-	if expression.parse(event.calcul_wealth) != OK: 
-		print("ERROR CALCUL WEALTH")
-		return
-	conquis.wealth = expression.execute()
-	pass
+	var to_replace = {
+		"food": conquis.food,
+		"troops": conquis.troops,
+		"trust": conquis.trust,
+		"wealth": conquis.wealth
+	}
+	print(event.calcul_food)
+	if (not event.calcul_food.is_empty()):
+		if expression.parse(event.calcul_food, to_replace.keys()) != OK: 
+			print("ERROR CALCUL FOOD")
+			return
+		conquis.food += expression.execute(to_replace.values())
+	if (not event.calcul_troops.is_empty()):
+		if expression.parse(event.calcul_troops, to_replace.keys()) != OK: 
+			print("ERROR CALCUL TROOPS")
+			return
+		conquis.troops += expression.execute(to_replace.values())
+	if (not event.calcul_trust.is_empty()):
+		if expression.parse(event.calcul_trust, to_replace.keys()) != OK: 
+			print("ERROR CALCUL TRUST")
+			return
+		conquis.trust = expression.execute(to_replace.values())
+	if (not event.calcul_wealth.is_empty()):
+		if expression.parse(event.calcul_wealth, to_replace.keys()) != OK: 
+			print("ERROR CALCUL WEALTH")
+			return
+		conquis.wealth = expression.execute(to_replace.values())
