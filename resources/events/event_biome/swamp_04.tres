@@ -6,5 +6,6 @@
 script = ExtResource("1_jccg5")
 text = "Le manque d’hygiène des Espagnols dans ces marais permet aux poux et puces de se multiplier. Très vite, les premiers cas de typhus se déclarent et l’expédition laisse derrière elle une traînée de cadavres."
 types_text = 3
+biome = 0
 calcul_troops = "-randi_range(40, 60)"
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

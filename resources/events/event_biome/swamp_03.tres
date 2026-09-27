@@ -6,6 +6,7 @@
 script = ExtResource("1_jccg5")
 text = "Les Espagnols tournent et se fatiguent dans ces marais. Il faudra plusieurs jours avant de s’en sortir… et pour certains, ils ne les quitteront jamais."
 types_text = 3
+biome = 0
 calcul_food = "- (2 * troops)"
 calcul_troops = "-randi_range(8, 12)"
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

@@ -6,5 +6,6 @@
 script = ExtResource("1_jccg5")
 text = "L’air est irrespirable et le terrain impraticable. Les Espagnols fatiguent sous le poids de leurs paquetages. Ils abandonnent ce qui n’est pas absolument nécessaire."
 types_text = 3
+biome = 0
 calcul_wealth = "- (0.5 * wealth)"
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"
