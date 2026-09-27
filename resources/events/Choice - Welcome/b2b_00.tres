@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://i38764wmxhlj"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Le guide sait parfaitement où il va et laisse les Espagnols à la bordure de la chefferie, là où ses connaissances s’arrêtent."
+types_text = 2
+type_choice = "b2b"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

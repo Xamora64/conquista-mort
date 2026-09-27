@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://bvv40q77sudyl"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Au milieu du village {tribe_name}, les autochtones offrent un accueil chaleureux à l’expédition fatiguée. Les Espagnols en profitent pour recevoir nourriture et cadeaux, avant d’exiger un guide.Vers où ce brave {tribe_name} doit-il les emmener ?"
+types_text = 2
+type_choice = "b2"
+calcul_food = "(3 * troops)"
+calcul_trust = "20"
+calcul_wealth = "10"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://d3r2ja2tecgpe"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les {tribe_name} réservent un accueil magnifique aux Espagnols. Un banquet est organisé, nourriture et femmes les émerveillent. Du moins jusqu’au lendemain, où ils se rendent compte que certains gars manquent à l’appel. Peut-être se sont-ils enfuis avec quelques indiennes ? Ou peut-être ont-ils glissé dans le stock de flèches…Quoi qu’il en soit, les {tribe_name} leur indiquent la route à suivre en arborant un grand sourire."
+types_text = 2
+type_choice = "b1"
+calcul_food = "(3 * troops)"
+calcul_troops = "-randi_range(5, 12)"
+calcul_trust = "-10"
+calcul_wealth = "10"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

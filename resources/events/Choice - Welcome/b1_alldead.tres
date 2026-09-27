@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://dtq2cde868ta1"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les {tribe_name} réservent un accueil magnifique aux Espagnols. Un banquet est organisé, nourriture et femmes les émerveillent. Du moins c’est ce que nous supposerons, car personne ne reviendra de cette expédition. Se sont-ils installés dans ce dernier village ? Il faudrait vérifier à qui appartiennent les scalps fraîchement arrachés."
+types_text = 4
+type_choice = "b1"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

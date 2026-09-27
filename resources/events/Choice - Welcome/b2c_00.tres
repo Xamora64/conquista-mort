@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://cljjbq3nuj7rl"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Alors que la végétation change et que les Espagnols se mettent à remettre en question les choix du guide, celui-ci disparaît au détour d’un fourré. Les conquistadors comprennent alors avoir été bernés tandis que le {tribe_name} rie en imaginant leurs visages décomposés."
+types_text = 2
+type_choice = "b2c"
+calcul_trust = "-50"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

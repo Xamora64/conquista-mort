@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://dbhdffagx34ve"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les Espagnols sont devenus très méfiants et ont vite compris que les {tribe_name} n’étaient pas assez nombreux pour leur résister. Le choix le plus sûr pour ces envahisseurs a été de tuer les guerriers et de réduire le reste en esclavage. Ils n’ont pas non plus oublié de se remplir les poches !Les {tribe_name} regretteront longtemps leur choix…"
+types_text = 2
+type_choice = "b3"
+calcul_food = "(2 * tribal_number)"
+calcul_troops = "-randi_range(2, 5)"
+calcul_trust = "10"
+calcul_wealth = "30"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

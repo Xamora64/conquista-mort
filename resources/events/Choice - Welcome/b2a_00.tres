@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://28d48su75ikv"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Le guide en profite pour emmener ce troupeau d’étranger vers les voisins. Ce n’est plus le problème des {tribe_name}."
+types_text = 2
+type_choice = "b2a"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"
