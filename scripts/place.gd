@@ -4,12 +4,23 @@ extends Area3D
 const NEAREST_LIMIT = 0.5
 const LINKS_LIMIT = Vector2(3, 4)
 
-@export var biome: BiomeData
-@export var tribe: Tribe
-@export var links: Array[Place] = []
+@export var biome: BiomeData = null
+@export var tribe: Tribe = null
 @export var links_limit: = 3
 
-func with_values(position: Vector3, biome: BiomeData, tribe: Tribe, links: Array[Place], links_limit: int) -> Place:
+var links: Array[Link] = []
+
+class Link:
+	var place: Place
+	var path_draw: PathDraw
+	var distance: int
+	
+	func _init(place: Place, path_draw: PathDraw = null, distance: int = 0) -> void:
+		self.place = place
+		self.path_draw = path_draw
+		self.distance = distance
+
+func with_values(position: Vector3, biome: BiomeData, tribe: Tribe, links: Array[Link], links_limit: int) -> Place:
 	self.position = position
 	self.biome = biome
 	self.tribe = tribe
@@ -21,12 +32,20 @@ signal display_event_popup()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var color: Color = Color.WHITE
+	if (biome.type == BiomeData.TYPES_BIOMES.PLAIN):
+		color = Color.YELLOW
+	elif (biome.type == BiomeData.TYPES_BIOMES.FOREST):
+		color = Color.DARK_GREEN
+	elif (biome.type == BiomeData.TYPES_BIOMES.SWAMP):
+		color = Color.RED
+	
+	# Permet de définir un material par sphere
+	var mat = $CSGSphere3D.material.duplicate()
+	mat.albedo_color = color
+	$CSGSphere3D.material_override = mat
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
-	if (event.is_action_pressed("left click")):
-		print("event selectioned: ", position.x, " ", position.y, " ", position.z)

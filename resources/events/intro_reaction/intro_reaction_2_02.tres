@@ -6,5 +6,6 @@
 script = ExtResource("1_jccg5")
 text = "Une nouvelle arrivée se devrait d’être fêtée, le banquet semble une réponse appropriée."
 types_text = 1
+biome = 3
 aggression = 2
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

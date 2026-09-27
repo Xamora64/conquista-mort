@@ -6,5 +6,6 @@
 script = ExtResource("1_jccg5")
 text = "La région est trop secouée par les conflits territoriaux pour ouvrir grand ses bras à un inconnu."
 types_text = 1
+biome = 3
 aggression = -1
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

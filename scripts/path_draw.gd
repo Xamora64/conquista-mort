@@ -20,7 +20,11 @@ func _process(_delta: float) -> void:
 	if not is_instance_valid(place_from) or not is_instance_valid(place_to):
 		return
 	var camera = get_viewport().get_camera_3d()
-	line.points = PackedVector2Array([
-		camera.unproject_position(place_from.global_position),
-		camera.unproject_position(place_to.global_position),
-	])
+	var from_global = place_from.global_position
+	var to_global = place_to.global_position
+	line.visible = not camera.is_position_behind(from_global) and not camera.is_position_behind(to_global)
+	if (line.visible):
+		line.points = PackedVector2Array([
+			camera.unproject_position(place_from.global_position),
+			camera.unproject_position(place_to.global_position),
+		])

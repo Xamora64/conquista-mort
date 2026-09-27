@@ -6,5 +6,6 @@
 script = ExtResource("1_jccg5")
 text = "Les traditions d’hospitalité de la chefferie les poussent à chercher le dialogue, bien qu’une part d’inquiétude demeure."
 types_text = 1
+biome = 3
 aggression = 2
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

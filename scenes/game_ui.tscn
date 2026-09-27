@@ -1,12 +1,104 @@
 [gd_scene format=3 uid="uid://dw0jc5fh4411n"]
 
-[ext_resource type="Script" uid="uid://dxp2pybg7pwc3" path="res://scripts/button_manager.gd" id="1_yubou"]
+[ext_resource type="Script" uid="uid://dxp2pybg7pwc3" path="res://scripts/buttons/button_manager.gd" id="1_yubou"]
+[ext_resource type="FontFile" uid="uid://biw3sdcf71n3d" path="res://assets/fonts/GrenzeGotisch-Light.ttf" id="2_u001w"]
+[ext_resource type="Texture2D" uid="uid://ox02wxmjnk1y" path="res://assets/textures/bg2UI.png" id="3_u2dgd"]
+[ext_resource type="Texture2D" uid="uid://boepm6slg1a80" path="res://assets/textures/teteIndiens/indienNeutre.png" id="4_bt76a"]
+[ext_resource type="Script" uid="uid://dd25do15j28yh" path="res://scripts/buttons/destination_button.gd" id="4_lab56"]
+[ext_resource type="Script" uid="uid://daxilfx5uewe6" path="res://scripts/ui_manager.gd" id="4_u2dgd"]
+[ext_resource type="Texture2D" uid="uid://ub3sy1b117ov" path="res://assets/textures/bouton.png" id="5_djwj0"]
+[ext_resource type="AudioStream" uid="uid://d2lkt1wxminsg" path="res://assets/sounds/Conquistamort-Marche-des-espagnols.ogg" id="5_x8pta"]
+[ext_resource type="AudioStream" uid="uid://vdrb73nplws0" path="res://assets/sounds/Conquistamort-Attaque-guérilla.ogg" id="6_2rmtt"]
+[ext_resource type="AudioStream" uid="uid://c0tq5mpr8thrv" path="res://assets/sounds/Conquistamort-Attaque.ogg" id="7_0dnje"]
+[ext_resource type="Script" uid="uid://c8cche7vmk44o" path="res://scripts/buttons/guerilla_button.gd" id="7_gj1yn"]
+[ext_resource type="Script" uid="uid://b2xq7ovimes2i" path="res://scripts/buttons/front_button.gd" id="9_5kjus"]
+[ext_resource type="AudioStream" uid="uid://c5bhc5jlnut7q" path="res://assets/sounds/Ui_FuiteDecision_1.ogg" id="11_5kjus"]
+[ext_resource type="Script" uid="uid://bwarwlhn70arq" path="res://scripts/buttons/attack_button.gd" id="12_36vcn"]
+[ext_resource type="AudioStream" uid="uid://5yd0dnob38am" path="res://assets/sounds/Ui_FuiteDecision_2.ogg" id="12_bj1rn"]
+[ext_resource type="Script" uid="uid://bh1gexbtolt5s" path="res://scripts/escape_button.gd" id="13_2yflp"]
+[ext_resource type="AudioStream" uid="uid://cxowqmjvew0ab" path="res://assets/sounds/Ui_FuiteDecision_3.ogg" id="13_36vcn"]
+[ext_resource type="AudioStream" uid="uid://cem6f6ycymhhe" path="res://assets/sounds/Conquistamort-Fuite.ogg" id="14_2yflp"]
+[ext_resource type="Script" uid="uid://b13u4h0iak2ie" path="res://scripts/buttons/welcome_button.gd" id="18_n74c5"]
+[ext_resource type="Texture2D" uid="uid://civonkggha1s6" path="res://assets/textures/teteIndiens/indienColere.png" id="19_0dnje"]
+[ext_resource type="Texture2D" uid="uid://drw1niqiei23m" path="res://assets/textures/teteIndiens/indienContent.png" id="20_lab56"]
 
 [sub_resource type="Theme" id="Theme_a8s68"]
+default_font = ExtResource("2_u001w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3w35"]
+texture = ExtResource("3_u2dgd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bffpv"]
+texture = ExtResource("3_u2dgd")
 
 [node name="GameUI" type="CanvasLayer" unique_id=2075735181]
 
+[node name="DestinationChoicePopup" type="PopupPanel" parent="." unique_id=1204121019]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(1616, 708)
+visible = true
+theme = SubResource("Theme_a8s68")
+theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
+
+[node name="MarginContainer" type="MarginContainer" parent="DestinationChoicePopup" unique_id=784845712]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1616.0
+offset_bottom = 708.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VSplitContainer" parent="DestinationChoicePopup/MarginContainer" unique_id=2057328795]
+layout_mode = 2
+split_offsets = PackedInt32Array(96)
+split_offset = 96
+
+[node name="Question" type="Label" parent="DestinationChoicePopup/MarginContainer/VBoxContainer" unique_id=1782516728]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "OU SOUHAITEZ-VOUS GUIDER LES CONQUISTADORS ?"
+horizontal_alignment = 1
+
+[node name="Choices" type="HFlowContainer" parent="DestinationChoicePopup/MarginContainer/VBoxContainer" unique_id=67604058]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DestinationChoice" type="TextureButton" parent="DestinationChoicePopup/MarginContainer/VBoxContainer/Choices" unique_id=1199662759 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow")]
+layout_mode = 2
+size_flags_horizontal = 3
+action_mode = 0
+texture_normal = ExtResource("5_djwj0")
+stretch_mode = 5
+script = ExtResource("4_lab56")
+sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
+parentPopupWindow = NodePath("../../../..")
+nextPopupWindow = NodePath("../../../../../ReactionDescription2")
+snippets = Array[AudioStreamOggVorbis]([ExtResource("5_x8pta")])
+
+[node name="Label" type="Label" parent="DestinationChoicePopup/MarginContainer/VBoxContainer/Choices/DestinationChoice" unique_id=1117298421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Guerilla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="MainMenu" type="MarginContainer" parent="." unique_id=821187735]
+visible = false
 custom_maximum_size = Vector2(1600, 900)
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,6 +135,7 @@ layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("1_yubou")
 sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
+snippets = Array[AudioStreamOggVorbis]([null, null])
 
 [node name="TeamName" type="Label" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=198080488]
 layout_mode = 2
@@ -58,17 +151,35 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "(ILLUSTRATION)"
 
+[node name="ReactionDescription2" type="PopupPanel" parent="." unique_id=492271503]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(1300, 700)
+theme = SubResource("Theme_a8s68")
+theme_override_styles/panel = SubResource("StyleBoxTexture_bffpv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReactionDescription2" unique_id=635036731]
+offset_right = 1300.0
+offset_bottom = 700.0
+
+[node name="TextureRect" type="TextureRect" parent="ReactionDescription2/VBoxContainer" unique_id=1159352278]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Description" type="Label" parent="ReactionDescription2/VBoxContainer" unique_id=632394346]
+layout_mode = 2
+size_flags_vertical = 2
+
 [node name="TerrainActionDescription" type="PopupPanel" parent="." unique_id=849746673]
 oversampling_override = 1.0
+initial_position = 1
 size = Vector2i(1300, 700)
-visible = true
 theme = SubResource("Theme_a8s68")
+theme_override_styles/panel = SubResource("StyleBoxTexture_bffpv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TerrainActionDescription" unique_id=1331336811]
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 1296.0
-offset_bottom = 696.0
+offset_right = 1300.0
+offset_bottom = 700.0
 
 [node name="TextureRect" type="TextureRect" parent="TerrainActionDescription/VBoxContainer" unique_id=590702737]
 layout_mode = 2
@@ -78,56 +189,236 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 2
 
-[node name="PlayerChoicePopup" type="PopupPanel" parent="." unique_id=1167401852]
+[node name="PlayerChoiceActionPopup2" type="PopupPanel" parent="." unique_id=1629120633]
 oversampling_override = 1.0
-size = Vector2i(1300, 700)
-visible = true
+initial_position = 2
+size = Vector2i(1490, 708)
 theme = SubResource("Theme_a8s68")
+theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PlayerChoicePopup" unique_id=2033960642]
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 1296.0
-offset_bottom = 696.0
-
-[node name="TribeAttributes" type="HBoxContainer" parent="PlayerChoicePopup/VBoxContainer" unique_id=839533189]
-layout_mode = 2
-
-[node name="Aggressivity" type="TextureRect" parent="PlayerChoicePopup/VBoxContainer/TribeAttributes" unique_id=484578247]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="PlayerChoiceActionPopup2" unique_id=246198084]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1490.0
+offset_bottom = 708.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 80
 
-[node name="Amount" type="ProgressBar" parent="PlayerChoicePopup/VBoxContainer/TribeAttributes" unique_id=1814389669]
+[node name="VBoxContainer" type="VSplitContainer" parent="PlayerChoiceActionPopup2/MarginContainer" unique_id=487719956]
 layout_mode = 2
-size_flags_horizontal = 3
+split_offsets = PackedInt32Array(96, -332)
+split_offset = 96
 
-[node name="Description" type="Label" parent="PlayerChoicePopup/VBoxContainer" unique_id=546250978]
+[node name="Description2" type="Label" parent="PlayerChoiceActionPopup2/MarginContainer/VBoxContainer" unique_id=333311583]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "QUEL TYPE D'ATTAQUE SOUHAITEZ VOUS FAIRE ?"
+horizontal_alignment = 1
 
-[node name="Choices" type="HBoxContainer" parent="PlayerChoicePopup/VBoxContainer" unique_id=1547599824]
+[node name="Question" type="Label" parent="PlayerChoiceActionPopup2/MarginContainer/VBoxContainer" unique_id=1774789217]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "QUEL TYPE D'ATTAQUE SOUHAITEZ VOUS FAIRE ?"
+horizontal_alignment = 1
+
+[node name="Choices" type="HBoxContainer" parent="PlayerChoiceActionPopup2/MarginContainer/VBoxContainer" unique_id=1078317551]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Choice1" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=1079188775 node_paths=PackedStringArray("sound_player")]
+[node name="GuerillaChoice" type="TextureButton" parent="PlayerChoiceActionPopup2/MarginContainer/VBoxContainer/Choices" unique_id=381014580 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow")]
 layout_mode = 2
 size_flags_horizontal = 3
-script = ExtResource("1_yubou")
-sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
+action_mode = 0
+texture_normal = ExtResource("5_djwj0")
+stretch_mode = 5
+script = ExtResource("7_gj1yn")
+sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
+is_player_choice_button = true
+parentPopupWindow = NodePath("../../../..")
+nextPopupWindow = NodePath("../../../../../ReactionDescription2")
+snippets = Array[AudioStreamOggVorbis]([ExtResource("6_2rmtt")])
 
-[node name="Choice2" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=429922488 node_paths=PackedStringArray("sound_player")]
-layout_mode = 2
-size_flags_horizontal = 3
-script = ExtResource("1_yubou")
-sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
+[node name="Label" type="Label" parent="PlayerChoiceActionPopup2/MarginContainer/VBoxContainer/Choices/GuerillaChoice" unique_id=186901008]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Guerilla"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Choice3" type="TextureButton" parent="PlayerChoicePopup/VBoxContainer/Choices" unique_id=396713551 node_paths=PackedStringArray("sound_player")]
+[node name="FrontChoice" type="TextureButton" parent="PlayerChoiceActionPopup2/MarginContainer/VBoxContainer/Choices" unique_id=1614407076 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow")]
 layout_mode = 2
 size_flags_horizontal = 3
-script = ExtResource("1_yubou")
-sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
+action_mode = 0
+texture_normal = ExtResource("5_djwj0")
+stretch_mode = 5
+script = ExtResource("9_5kjus")
+sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
+is_player_choice_button = true
+parentPopupWindow = NodePath("../../../..")
+nextPopupWindow = NodePath("../../../../../ReactionDescription2")
+snippets = Array[AudioStreamOggVorbis]([ExtResource("7_0dnje")])
+
+[node name="Label" type="Label" parent="PlayerChoiceActionPopup2/MarginContainer/VBoxContainer/Choices/FrontChoice" unique_id=1772031851]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Front"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerChoiceActionPopup" type="PopupPanel" parent="." unique_id=1167401852]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(1446, 708)
+theme = SubResource("Theme_a8s68")
+theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
+
+[node name="MarginContainer" type="MarginContainer" parent="PlayerChoiceActionPopup" unique_id=589057479]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1446.0
+offset_bottom = 708.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VSplitContainer" parent="PlayerChoiceActionPopup/MarginContainer" unique_id=428486498]
+layout_mode = 2
+split_offsets = PackedInt32Array(0, -244)
+
+[node name="TribeAttributes" type="HBoxContainer" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer" unique_id=297421569]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/TribeAttributes" unique_id=936530187]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Aggressivity" type="TextureRect" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/TribeAttributes" unique_id=484578247]
+layout_mode = 2
+texture = ExtResource("4_bt76a")
+
+[node name="Control" type="Control" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/TribeAttributes" unique_id=593802608]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/TribeAttributes" unique_id=1384667754]
+layout_mode = 2
+text = "Taille tribu: "
+
+[node name="Label" type="Label" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/TribeAttributes" unique_id=1277034937]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer" unique_id=546250978]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Choices" type="HBoxContainer" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer" unique_id=1175011143]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttaquerChoice1" type="TextureButton" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices" unique_id=1079188775]
+layout_mode = 2
+size_flags_horizontal = 3
+action_mode = 0
+texture_normal = ExtResource("5_djwj0")
+stretch_mode = 5
+script = ExtResource("12_36vcn")
+
+[node name="Label" type="Label" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices/AttaquerChoice1" unique_id=1052422846]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Attaquer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FuirChoice2" type="TextureButton" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices" unique_id=429922488 node_paths=PackedStringArray("sound_player", "parentPopupWindow")]
+layout_mode = 2
+size_flags_horizontal = 3
+action_mode = 0
+texture_normal = ExtResource("5_djwj0")
+stretch_mode = 5
+script = ExtResource("13_2yflp")
+sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
+is_player_choice_button = true
+parentPopupWindow = NodePath("../../../..")
+snippets = Array[AudioStreamOggVorbis]([ExtResource("11_5kjus"), ExtResource("12_bj1rn"), ExtResource("13_36vcn"), ExtResource("14_2yflp")])
+
+[node name="Label" type="Label" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices/FuirChoice2" unique_id=183108335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Fuir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AccueillirChoice3" type="TextureButton" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices" unique_id=396713551]
+layout_mode = 2
+size_flags_horizontal = 3
+action_mode = 0
+texture_normal = ExtResource("5_djwj0")
+stretch_mode = 5
+script = ExtResource("18_n74c5")
+
+[node name="Label" type="Label" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices/AccueillirChoice3" unique_id=1112215970]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Accueillir"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Audio" type="Node2D" parent="." unique_id=839973120]
 
 [node name="ButtonAudioPlayer" type="AudioStreamPlayer" parent="Audio" unique_id=232772946]
 
-[node name="UIManager" type="Node2D" parent="." unique_id=1147072397]
+[node name="UIManager" type="Node2D" parent="." unique_id=1147072397 node_paths=PackedStringArray("tribe_event_popup", "tribe_aggression_text_rect", "tribe_description_label", "biome_event_popup")]
+script = ExtResource("4_u2dgd")
+tribe_event_popup = NodePath("../PlayerChoiceActionPopup")
+tribe_aggression_text_rect = NodePath("../PlayerChoiceActionPopup/MarginContainer/VBoxContainer/TribeAttributes/Aggressivity")
+tribe_description_label = NodePath("../PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Description")
+aggressive_icon = ExtResource("19_0dnje")
+neutral_icon = ExtResource("4_bt76a")
+welcoming_icon = ExtResource("20_lab56")
+biome_event_popup = NodePath("../TerrainActionDescription")
