@@ -677,11 +677,13 @@ script = ExtResource("32_sfun4")
 sound_player = NodePath(".")
 
 [node name="Conquistador" type="Node3D" parent="." unique_id=171978117 node_paths=PackedStringArray("place_in")]
+visible = false
 script = ExtResource("36_27ch3")
 place_in = NodePath("../Place")
 metadata/_custom_type_script = "uid://gubhu3vi4d4m"
 
 [node name="Place" type="Area3D" parent="." unique_id=727735380 node_paths=PackedStringArray("tribe")]
+visible = false
 script = ExtResource("37_qleia")
 biome = ExtResource("38_ptl2c")
 tribe = NodePath("../Tribe")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://cq2hq2frbyqub"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "La faim a eu raison des derniers conquistadors. Ceux qui ne sont pas morts, ont abandonné leurs camarades pour rejoindre les chefferies. L’Histoire n’aura pas une ligne de leurs aventures, car personne ne reste pour l’écrire. Il ne faut pas sous-estimer les conséquences dévastatrices de l’absence de paëlla."
+types_text = 4
+type_choice = "ad_hunger"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

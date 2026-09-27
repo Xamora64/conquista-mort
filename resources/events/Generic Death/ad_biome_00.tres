@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://dtq2cde868ta1"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Aucun homme ne revint de cette expédition. Le nouveau monde aura dévoré leurs âmes cupides, et peut-être aussi loups et alligators.Les chefferies trouveront leurs corps et se remémoreront les souvenirs douloureux de leurs rencontres avec ces européens, avant que d’autres ne débarquent bien sûr."
+types_text = 4
+type_choice = "ad_biome"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"
