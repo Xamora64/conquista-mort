@@ -10,7 +10,6 @@
 albedo_texture = ExtResource("4_7o0rv")
 
 [sub_resource type="Environment" id="Environment_dfipr"]
-background_mode = 2
 background_energy_multiplier = 1.99
 glow_enabled = true
 glow_intensity = 0.1
@@ -79,7 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0755806, -114.470505, -87.0
 material_override = ExtResource("5_7o0rv")
 
 [node name="Pic_02_low" parent="Assets_01_JAM" index="7" unique_id=1045573601]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2160606, -115.26764, -103.85369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2160606, -115.26764, -103.638245)
 material_override = ExtResource("5_7o0rv")
 
 [node name="Pic_03_low" parent="Assets_01_JAM" index="8" unique_id=68287287]
@@ -99,10 +98,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7056828, -116.63376, -88.5
 material_override = ExtResource("5_7o0rv")
 
 [node name="pCylinder75" parent="Assets_01_JAM" index="12" unique_id=737186251]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26224914, -113.20437, -83.55615)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2719545, -113.20437, -82.82761)
 material_override = ExtResource("5_7o0rv")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1892391484]
 environment = SubResource("Environment_dfipr")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=103486996]
+transform = Transform3D(0.563263, 0, -0.82627773, 0, 1, 0, 0.82627773, 0, 0.563263, -11.960833, 13.4484005, -2.1871815)
 
 [editable path="Assets_01_JAM"]
