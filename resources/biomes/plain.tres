@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_v4njs")
-type = 1
+type = 2
 metadata/_custom_type_script = "uid://c0rmqvgckai8j"

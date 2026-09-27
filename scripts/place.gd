@@ -1,10 +1,10 @@
 class_name Place
 extends Area3D
 
-const NEAREST_LIMIT = 0.5
-const LINKS_LIMIT = Vector2(3, 4)
-
+const NEAREST_LIMIT = 0.6
+const LINKS_LIMIT = Vector2(4, 5)
 @export var biome: BiomeData = null
+
 @export var tribe: Tribe = null
 @export var links_limit: = 3
 @export var start: bool = false
@@ -16,6 +16,7 @@ class Link:
 	var place: Place
 	var path_draw: PathDraw
 	var distance: int
+	var taken: bool = false
 	
 	func _init(place: Place, path_draw: PathDraw = null, distance: int = 0) -> void:
 		self.place = place

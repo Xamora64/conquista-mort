@@ -1,15 +1,15 @@
 class_name BiomeData
 extends Resource
 
-# SWAMP = 20%, PLAIN = 40%, FOREST = 40%
+# SWAMP = 20%, FOREST = 40%, PLAIN = 40%
 const WEIGHT = [0.2, 0.4, 0.4, 0]
 const RESOURCES = [
 	"res://resources/biomes/swamp.tres",
-	"res://resources/biomes/plain.tres",
 	"res://resources/biomes/forest.tres",
+	"res://resources/biomes/plain.tres",
 ]
 
-enum TYPES_BIOMES { SWAMP = 0, PLAIN = 1, FOREST = 2, NONE = 3 }
+enum TYPES_BIOMES { SWAMP = 0, FOREST = 1, PLAIN = 2, NONE = 3 }
 const TYPES_BIOMES_TEXT: Dictionary[TYPES_BIOMES, String] = {
 	TYPES_BIOMES.SWAMP: "marais",
 	TYPES_BIOMES.PLAIN: "plaine",

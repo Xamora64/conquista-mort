@@ -17,5 +17,3 @@ shape = SubResource("SphereShape3D_kwsvg")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=2039227542]
 material = SubResource("StandardMaterial3D_tipki")
-
-[connection signal="input_event" from="." to="." method="_on_input_event"]

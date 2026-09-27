@@ -10,6 +10,8 @@ func _ready() -> void:
 	#Load Event Data
 	EventData.load_folder("res://resources/events/")
 	$Conquistador.place_in = $Map.place_start
+	$Conquistador.historic_places.append($Conquistador.place_in)
+	$Conquistador.get_next_place($Conquistador.place_in.links)
 		
 	#Place Conquistador
 
