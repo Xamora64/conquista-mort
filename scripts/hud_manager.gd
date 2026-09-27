@@ -23,28 +23,28 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_food_changed(value: int)-> void:
-	food_bar.value=clamp(value, 0, food_bar.max_value)
+	food_bar.set_value_no_signal(clamp(value, 0, food_bar.max_value))
 	_set_color(food_bar)
 
 func _on_trust_changed(value: int)-> void:
-	trust_bar.value=clamp(value, 0, trust_bar.max_value)
+	trust_bar.set_value(clamp(value, 0, trust_bar.max_value))
 	_set_color(trust_bar)
 
 func _on_troops_changed(value: int)-> void:
-	troops_bar.value=clamp(value, 0, troops_bar.max_value)
+	troops_bar.set_value(clamp(value, 0, troops_bar.max_value))
 	_set_color(troops_bar)
 
 func _on_wealth_changed(value: int)-> void:
-	wealth_bar.value=clamp(value, 0, wealth_bar.max_value)
+	wealth_bar.set_value(clamp(value, 0, wealth_bar.max_value))
 	_set_color(wealth_bar)
 	
 func _set_color(bar: TextureProgressBar)->void:
 	if bar.value>=0 && bar.value<=bar.max_value/4:
-		bar.tint_progress=Color.RED
+		bar.set_tint_progress(Color.RED)
 	elif bar.value>bar.max_value/4 && bar.value<=bar.max_value/2:
-		bar.tint_progress=Color.ORANGE
+		bar.set_tint_progress(Color.ORANGE)
 	else:
-		bar.tint_progress=Color.GREEN
+		bar.set_tint_progress(Color.GREEN)
 	
 	
 	
