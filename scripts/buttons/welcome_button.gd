@@ -7,7 +7,7 @@ extends TextureButton
 @export var destination_button: TextureButton
 @export var destination_label: Label
 @export var flow_container: HFlowContainer
-
+@export var game_ui: Node
 
 @export var snippets: Array[AudioStreamOggVorbis]	
 
@@ -16,13 +16,15 @@ func _pressed() -> void:
 	sound_player.play()
 	parentPopupWindow.hide()
 	_populate_next_popup()
-	nextPopupWindow.show()
+	nextPopupWindow.popup()
+	game_ui.current_popup=nextPopupWindow
 
 func _populate_next_popup():
-	var current_place:Place=get_node("../Conquistador").event_in
-	for i in current_place.destinations:
+	var current_place:Place=game_ui.conquistador.place_in
+	for link in current_place.links:
 		var cloned_button=destination_button.duplicate()
 		var destination_label=destination_label.duplicate()
-		#destination_set_text(i.text)
+		destination_label.set_text(str(link.place.biome.type))
+		cloned_button.show()
 		cloned_button.add_child(destination_label)
 		flow_container.add_child(cloned_button)

@@ -1,54 +1,27 @@
 extends Node
 
-@export var conquistador: Node3D
-@export var tribe_event_popup: PopupPanel
-@export var tribe_aggression_text_rect:TextureRect
-@export var tribe_description_label: Label 
-@export var tribe_amount_label: Label
-@export var aggressive_icon: Texture2D
-@export var neutral_icon: Texture2D
-@export var welcoming_icon: Texture2D
- 
-@export var biome_description_label: Label
-@export var biome_illustration: TextureRect
-@export var biome_event_popup: PopupPanel
+class_name UIManager
 
-@export var destination_choice_popup: PopupPanel
-@export var destination_choices_container: HFlowContainer
-@export var destination_description: Label
 
-@export var simple_reaction_popup: PopupPanel
-@export var reaction_illustration: TextureRect
-@export var reaction_description: Label
+static func get_tribe_intro(place: Place)-> EventData:
+	var	place_data: EventData = EventData.ask_possible_events(EventData.TYPES_TEXT.INTRO).pick_random()
+	return place_data
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass#conquistador.event_in.display_event_popup.connect(_display_popup)
+static func get_tribe_reaction_place_data(place: Place)-> EventData:
+	var tribe_reaction_data: EventData = EventData.ask_possible_events(EventData.TYPES_TEXT.INTRO_REACTION, 
+		EventData.TYPES_BIOMES.NONE, "", place.tribe.aggression).pick_random()
+	return tribe_reaction_data
 
-func _display_popup(current_place: Place):
-	if current_place.tribe!=null:
-		_setup_tribe_popup(current_place)
-		tribe_event_popup.show()
-	else:
-		_setup_biome_popup(current_place)
-		biome_event_popup.show()
-		
-func _setup_tribe_popup(current_place: Place):
-	tribe_amount_label.set_text(str(current_place.tribe.number))
-	#tribe_description_label.set_text(str(current_place.tribe.))
-	match current_place.tribe.aggression:
-		2:
-			tribe_aggression_text_rect.set_texture(welcoming_icon)
-		-2:
-			tribe_aggression_text_rect.set_texture(aggressive_icon)
-		_:
-			tribe_aggression_text_rect.set_texture(neutral_icon)
-
-func _setup_biome_popup(current_place: Place):
-	current_place.biome.type
+static func get_biome_reaction_place_data(place: Place)-> EventData:
+	var biome_reaction_data: EventData= EventData.ask_possible_events(EventData.TYPES_TEXT.EVENT_BIOME).pick_random()
+	return biome_reaction_data
 	
-#func _setup_destination_popup(current_place: Place):
+static func fill_place_intro(place_data: EventData, place: Place)-> String:
+	var intro_result: String=EventData.apply_text_info_event(place_data.text, place.tribe, place.biome)
+	return intro_result
 	
-	
+static func fill_place_reaction(place_data: EventData, place: Place)-> String:
+	var reaction_result: String=EventData.apply_text_info_event(place_data.text, place.tribe, place.biome)
+	return reaction_result
 	
 	

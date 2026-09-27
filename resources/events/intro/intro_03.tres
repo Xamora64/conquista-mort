@@ -5,5 +5,4 @@
 [resource]
 script = ExtResource("1_jccg5")
 text = "Les éclaireurs {tribe_name} rapportent avoir vu un groupe aux allures inconnues se diriger par ici."
-biome = 3
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

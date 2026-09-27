@@ -6,15 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dw0jc5fh4411n" path="res://scenes/game_ui.tscn" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://yjpa04jof6bk" path="res://scenes/player.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://f5gt6bb6viw1" path="res://scenes/conquistador.tscn" id="6_tefeu"]
-[ext_resource type="AudioStream" uid="uid://ch7s134abpgyd" path="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg" id="7_o6xl0"]
-[ext_resource type="Script" uid="uid://b78yselgsvxxh" path="res://scripts/background_music.gd" id="8_85g3d"]
 
 [node name="Main" type="Node" unique_id=2064521053]
 script = ExtResource("1_ig7tw")
-
-[node name="HUD" parent="." unique_id=1561272234 instance=ExtResource("2_lquwl")]
-
-[node name="GameUI" parent="." unique_id=2075735181 instance=ExtResource("3_7mycd")]
 
 [node name="Map" parent="." unique_id=707007999 instance=ExtResource("2_0xm2m")]
 
@@ -23,11 +17,9 @@ script = ExtResource("1_ig7tw")
 [node name="Conquistador" parent="." unique_id=2115321676 instance=ExtResource("6_tefeu")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1, 0, 0)
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1839215743 node_paths=PackedStringArray("sound_player")]
-stream = ExtResource("7_o6xl0")
-autoplay = true
-parameters/looping = true
-script = ExtResource("8_85g3d")
-sound_player = NodePath(".")
+[node name="HUD" parent="." unique_id=1561272234 instance=ExtResource("2_lquwl")]
+
+[node name="GameUI" parent="." unique_id=2075735181 node_paths=PackedStringArray("conquistador") instance=ExtResource("3_7mycd")]
+conquistador = NodePath("../Conquistador")
 
 [connection signal="click_on_place" from="Map" to="." method="_on_map_click_on_place"]

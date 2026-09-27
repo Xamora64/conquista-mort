@@ -4,8 +4,8 @@ extends TextureButton
 @export var is_player_choice_button: bool
 @export var parentPopupWindow: PopupPanel
 @export var nextPopupWindow: PopupPanel
-@export var reactionLabel: Label
-
+@export var descriptionLabel: Label
+@export var game_ui: Node
 @export var snippets: Array[AudioStreamOggVorbis]	
 
 func _pressed() -> void:
@@ -13,11 +13,12 @@ func _pressed() -> void:
 	sound_player.play()
 	parentPopupWindow.hide()
 	_populate_next_popup()
-	nextPopupWindow.show()
+	nextPopupWindow.popup()
+	game_ui.current_popup=nextPopupWindow
 
 func _populate_next_popup():
-	var current_place:Place=get_node("../Conquistador").event_in
-	reactionLabel.set_text(current_place.reaction)
+	var current_place:Place=game_ui.conquistador.place_in
+	descriptionLabel.set_text(current_place.reaction)
 
 	
 	

@@ -32,7 +32,7 @@ signal wealth_changed(value)
 		wealth_changed.emit(value)
 
 # L'évenement où ils se trouve
-var place_in: Place:
+@export var place_in: Place:
 	set(value):
 		place_in = value
 		#place_in.display_event_popup.emit(value)

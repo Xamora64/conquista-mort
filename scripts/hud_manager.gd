@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_food_changed(value: int)-> void:
-	food_bar.set_value_no_signal(clamp(value, 0, food_bar.max_value))
+	food_bar.set_value(clamp(value, 0, food_bar.max_value))
 	_set_color(food_bar)
 
 func _on_trust_changed(value: int)-> void:

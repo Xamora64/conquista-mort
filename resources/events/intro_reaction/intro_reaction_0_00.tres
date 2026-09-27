@@ -6,5 +6,4 @@
 script = ExtResource("1_jccg5")
 text = "Les habitants ne semblent pas avoir d'a priori particulier et attendent le choix de leur chef."
 types_text = 1
-biome = 3
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"
