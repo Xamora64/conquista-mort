@@ -175,7 +175,7 @@ vertical_alignment = 3
 autowrap_mode = 3
 text_overrun_behavior = 1
 
-[node name="StartExpeditionButton" type="TextureButton" parent="FirstPlaceIntroDescription/MarginContainer/VBoxContainer" unique_id=613935276 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "descriptionLabel", "game_ui")]
+[node name="StartExpeditionButton" type="TextureButton" parent="FirstPlaceIntroDescription/MarginContainer/VBoxContainer" unique_id=613935276 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "descriptionLabel", "game_ui", "biome_description_label")]
 custom_maximum_size = Vector2(-1, 160)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -186,9 +186,10 @@ stretch_mode = 5
 script = ExtResource("24_36vcn")
 sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
 parentPopupWindow = NodePath("../../..")
-nextPopupWindow = NodePath("../../../../PlaceIntroDescription")
+nextPopupWindow = NodePath("../../../../ReactionDescriptionPopup")
 descriptionLabel = NodePath("../Description")
 game_ui = NodePath("../../../..")
+biome_description_label = NodePath("../../../../ReactionDescriptionPopup/MarginContainer/VBoxContainer/Description")
 snippets = Array[AudioStreamOggVorbis]([ExtResource("8_bj1rn")])
 
 [node name="Label" type="Label" parent="FirstPlaceIntroDescription/MarginContainer/VBoxContainer/StartExpeditionButton" unique_id=1326665866]
@@ -215,8 +216,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1400.0
-offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -419,7 +418,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="NextButton" type="TextureButton" parent="ReactionDescriptionPopup/MarginContainer/VBoxContainer" unique_id=730427934 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindowIntro", "nextPopupWindowBiome", "game_ui")]
+[node name="NextButton" type="TextureButton" parent="ReactionDescriptionPopup/MarginContainer/VBoxContainer" unique_id=730427934 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindowIntro", "nextPopupWindowBiome", "descriptionLabel", "game_ui")]
 custom_maximum_size = Vector2(-1, 160)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -432,6 +431,7 @@ sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
 parentPopupWindow = NodePath("../../..")
 nextPopupWindowIntro = NodePath("../../../../PlaceIntroDescription")
 nextPopupWindowBiome = NodePath("../../..")
+descriptionLabel = NodePath("../../../../PlaceIntroDescription/MarginContainer/VBoxContainer/Description")
 game_ui = NodePath("../../../..")
 snippets = Array[AudioStreamOggVorbis]([ExtResource("8_bj1rn")])
 
@@ -461,8 +461,6 @@ custom_maximum_size = Vector2(1200, -1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1200.0
-offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -481,7 +479,6 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Description" type="Label" parent="PlaceIntroDescription/MarginContainer/VBoxContainer" unique_id=1999667687]
-visible = false
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -545,6 +542,8 @@ custom_maximum_size = Vector2(1200, 700)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1200.0
+offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3

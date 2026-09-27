@@ -27,8 +27,8 @@ func _pressed() -> void:
 	parentPopupWindow.hide()
 	var current_place:Place=game_ui.conquistador.place_in
 	var event_data: EventData
-	if current_place.tribe!=null:
-		event_data=UIManager.get_tribe_intro(current_place)
+	if current_place.tribe != null:
+		event_data=UIManager.get_tribe_reaction_place_data(current_place)
 		_show_choice_window(event_data, current_place)
 		nextPopupWindowPlayerChoice.popup()
 		game_ui.current_popup=nextPopupWindowPlayerChoice

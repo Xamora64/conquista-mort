@@ -22,6 +22,8 @@ func _populate_next_popup():
 	if (next_place.tribe != null):
 		nextPopupWindowIntro.popup()
 		game_ui.current_popup = nextPopupWindowIntro
+		var event_data = UIManager.get_tribe_intro(next_place)
+		descriptionLabel.set_text(UIManager.fill_place_intro(event_data, next_place))
 	else:
 		nextPopupWindowBiome.popup()
 		game_ui.current_popup = nextPopupWindowBiome

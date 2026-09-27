@@ -14,19 +14,16 @@ func _pressed() -> void:
 	parentPopupWindow.hide()
 	game_ui.guide=true
 	var current_place:Place=game_ui.conquistador.place_in
-<<<<<<< Updated upstream
 	var event_data: EventData
 	#var action_type=_determine_action_type(current_place.tribe, game_ui.conquistador)
 	#event_data=UIManager.get_guide_result(current_place, action_type[0], action_type[1])
 	var action_type=""
 	#event_data=UIManager.get_guide_result(current_place, action_type)
-	_show_result_window(event_data, current_place)
-=======
-	var action_type=_determine_action_type(current_place.tribe, game_ui.conquistador)
+	#_show_result_window(event_data, current_place)
+	#var action_type=_determine_action_type(current_place.tribe, game_ui.conquistador)
 	var description=UIManager.get_guide_result(current_place, action_type.keys()[0], action_type.values()[0])
 	#UIManager.calcul_consequence(event)
 	_show_result_window(description)
->>>>>>> Stashed changes
 	nextPopupWindow.popup()
 	game_ui.current_popup=nextPopupWindow
 

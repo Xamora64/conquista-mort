@@ -3,7 +3,7 @@ extends Node3D
 var center = Vector3.ZERO
 var screen_size
 @export var LIMIT_ZOOM = [1.0, 12.0]
-@export var LIMIT_ZONE = [Vector2(-5, 10), Vector2(-5, 10)]
+@export var LIMIT_ZONE = [Vector2(-15, 30), Vector2(-15, 30)]
 
 func _ready() -> void:
 	$Camera3D.position.y = 4.0
