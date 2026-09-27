@@ -13,7 +13,10 @@
 [ext_resource type="Material" uid="uid://olgbf8ev72ve" path="res://assets/materials/M_Props.tres" id="5_7o0rv"]
 [ext_resource type="Material" uid="uid://s0i7qj1itodh" path="res://assets/materials/M_Herbe.tres" id="6_isj1y"]
 [ext_resource type="PackedScene" uid="uid://b8cr3oylg35im" path="res://assets/meshes/foret.fbx" id="9_fx70h"]
+[ext_resource type="PackedScene" uid="uid://ca1waspvob8x7" path="res://assets/meshes/marais.fbx" id="10_rm2v8"]
 [ext_resource type="PackedScene" uid="uid://i3mwmievb3s2" path="res://assets/meshes/fortificationTribu.fbx" id="11_5kws7"]
+[ext_resource type="Material" uid="uid://byy08l2fqamv8" path="res://assets/materials/M_solMarais.tres" id="11_dyswj"]
+[ext_resource type="Material" uid="uid://tyqcnsndrwg0" path="res://assets/materials/M_Eau.tres" id="12_ls7qd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbnx"]
 albedo_texture = ExtResource("4_7o0rv")
@@ -32,7 +35,7 @@ adjustment_saturation = 0.97
 [node name="Node3D" type="Node3D" unique_id=1155538843]
 
 [node name="pion" parent="." unique_id=1876555084 instance=ExtResource("1_tbbnx")]
-transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -38.195797, 10.16748, 16.444708)
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -64.20332, 10.16748, 16.444708)
 
 [node name="Casque" parent="pion" index="0" unique_id=498105417]
 material_override = ExtResource("2_u1hiq")
@@ -41,7 +44,7 @@ material_override = ExtResource("2_u1hiq")
 material_override = ExtResource("3_fx70h")
 
 [node name="plaineTribu" parent="." unique_id=987055540 instance=ExtResource("4_isj1y")]
-transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 38.654945, 9.900838, 14.93087)
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 12.647415, 9.900838, 14.93087)
 
 [node name="maison_02_low_002" parent="plaineTribu" index="0" unique_id=2074510622]
 material_override = ExtResource("5_7o0rv")
@@ -146,7 +149,7 @@ material_override = ExtResource("6_isj1y")
 material_override = ExtResource("6_isj1y")
 
 [node name="plaine" parent="." unique_id=252168272 instance=ExtResource("4_dy7j5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.993483, 7.921337, 17.726637)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0140476, 7.921337, 17.726637)
 
 [node name="pCube12_001" parent="plaine" index="0" unique_id=1776797511]
 material_override = ExtResource("5_7o0rv")
@@ -218,7 +221,7 @@ material_override = ExtResource("6_isj1y")
 material_override = ExtResource("6_isj1y")
 
 [node name="foretTribu" parent="." unique_id=1612660823 instance=ExtResource("4_hsjgk")]
-transform = Transform3D(0.022598833, 0, 0.99974465, 0, 1, 0, -0.99974465, 0, 0.022598833, -3.2342148, 9.908955, 12.033884)
+transform = Transform3D(0.022598833, 0, 0.99974465, 0, 1, 0, -0.99974465, 0, 0.022598833, -29.241745, 9.908955, 12.033884)
 
 [node name="Arbre" parent="foretTribu" index="0" unique_id=464320638]
 material_override = ExtResource("5_7o0rv")
@@ -248,7 +251,7 @@ material_override = ExtResource("5_7o0rv")
 material_override = ExtResource("5_7o0rv")
 
 [node name="foret" parent="." unique_id=562051554 instance=ExtResource("9_fx70h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.62535, 9.861566, 21.619614)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.63288, 9.861566, 21.619614)
 
 [node name="Arbre" parent="foret" index="0" unique_id=692548085]
 material_override = ExtResource("5_7o0rv")
@@ -268,8 +271,242 @@ material_override = ExtResource("5_7o0rv")
 [node name="Arbre_005" parent="foret" index="5" unique_id=792922991]
 material_override = ExtResource("5_7o0rv")
 
+[node name="marais" parent="." unique_id=268456809 instance=ExtResource("10_rm2v8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.080448, 6.0783844, 21.725662)
+
+[node name="marais2" parent="." unique_id=334565909 instance=ExtResource("10_rm2v8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.080448, 6.0783844, 21.725662)
+
+[node name="Barque_01_low1" parent="marais2/group2" parent_id_path=PackedInt32Array(334565909, 1992671164) index="0" unique_id=312808729]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_01_low" parent="marais2/group31" parent_id_path=PackedInt32Array(334565909, 1775943449) index="0" unique_id=110239970]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_02_low" parent="marais2/group31" parent_id_path=PackedInt32Array(334565909, 1775943449) index="1" unique_id=565210195]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_01_low_001" parent="marais2/group32" parent_id_path=PackedInt32Array(334565909, 279187931) index="0" unique_id=1144124122]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_02_low_001" parent="marais2/group32" parent_id_path=PackedInt32Array(334565909, 279187931) index="1" unique_id=885325866]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_03_low_001" parent="marais2/group32" parent_id_path=PackedInt32Array(334565909, 279187931) index="2" unique_id=1002917054]
+material_override = ExtResource("5_7o0rv")
+
+[node name="polySurface13regdsefds3" parent="marais2/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="0" unique_id=1694875324]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4" parent="marais2/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="1" unique_id=1921557148]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7" parent="marais2/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="2" unique_id=2125309418]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8" parent="marais2/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="3" unique_id=1091141710]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9" parent="marais2/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="4" unique_id=1388179637]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19" parent="marais2/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="5" unique_id=2096175936]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_001" parent="marais2/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="0" unique_id=1457858109]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_001" parent="marais2/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="1" unique_id=641397039]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_001" parent="marais2/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="2" unique_id=860887670]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_001" parent="marais2/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="3" unique_id=617318564]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_001" parent="marais2/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="4" unique_id=1966299810]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_001" parent="marais2/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="5" unique_id=1330724068]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_010" parent="marais2/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="0" unique_id=509786064]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_010" parent="marais2/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="1" unique_id=1435765498]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_010" parent="marais2/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="2" unique_id=900461830]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_010" parent="marais2/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="3" unique_id=1376169129]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_010" parent="marais2/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="4" unique_id=2026796335]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_011" parent="marais2/herbe11" parent_id_path=PackedInt32Array(334565909, 855143753) index="0" unique_id=1966409527]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_011" parent="marais2/herbe11" parent_id_path=PackedInt32Array(334565909, 855143753) index="1" unique_id=563030642]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_011" parent="marais2/herbe11" parent_id_path=PackedInt32Array(334565909, 855143753) index="2" unique_id=195021030]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_012" parent="marais2/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="0" unique_id=824648014]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_012" parent="marais2/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="1" unique_id=731567430]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_012" parent="marais2/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="2" unique_id=2146404820]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_012" parent="marais2/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="3" unique_id=644024396]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_012" parent="marais2/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="4" unique_id=1620666863]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_012" parent="marais2/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="5" unique_id=406328349]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_013" parent="marais2/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="0" unique_id=1721573328]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_013" parent="marais2/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="1" unique_id=572015947]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_013" parent="marais2/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="2" unique_id=243353451]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_013" parent="marais2/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="3" unique_id=1367251498]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_013" parent="marais2/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="4" unique_id=783476619]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_013" parent="marais2/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="5" unique_id=992107096]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_014" parent="marais2/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="0" unique_id=528182112]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_014" parent="marais2/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="1" unique_id=1745881234]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_014" parent="marais2/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="2" unique_id=1331669045]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_014" parent="marais2/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="3" unique_id=1789768498]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_014" parent="marais2/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="4" unique_id=648847087]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_014" parent="marais2/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="5" unique_id=1513958395]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_015" parent="marais2/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="0" unique_id=1833007842]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_015" parent="marais2/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="1" unique_id=696509008]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_015" parent="marais2/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="2" unique_id=356163065]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_015" parent="marais2/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="3" unique_id=998530775]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_015" parent="marais2/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="4" unique_id=2057107822]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_015" parent="marais2/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="5" unique_id=1002993427]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_016" parent="marais2/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="0" unique_id=824726255]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_016" parent="marais2/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="1" unique_id=132108153]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_016" parent="marais2/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="2" unique_id=1118240984]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_016" parent="marais2/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="3" unique_id=38216036]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_016" parent="marais2/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="4" unique_id=1893840414]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_016" parent="marais2/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="5" unique_id=328203265]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_002" parent="marais2/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="0" unique_id=1735840790]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_002" parent="marais2/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="1" unique_id=1055660230]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_002" parent="marais2/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="2" unique_id=1798913212]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_002" parent="marais2/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="3" unique_id=1635007375]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_002" parent="marais2/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="4" unique_id=1653272262]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_002" parent="marais2/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="5" unique_id=1192873539]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_003" parent="marais2/herbe3" parent_id_path=PackedInt32Array(334565909, 488623165) index="0" unique_id=1531938604]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_003" parent="marais2/herbe3" parent_id_path=PackedInt32Array(334565909, 488623165) index="1" unique_id=1642569601]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_003" parent="marais2/herbe3" parent_id_path=PackedInt32Array(334565909, 488623165) index="2" unique_id=166027833]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_004" parent="marais2/herbe4" parent_id_path=PackedInt32Array(334565909, 309177716) index="0" unique_id=1900453673]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_005" parent="marais2/herbe5" parent_id_path=PackedInt32Array(334565909, 1377792425) index="0" unique_id=1667112140]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds3_006" parent="marais2/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="0" unique_id=375903212]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds4_006" parent="marais2/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="1" unique_id=1967534476]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_006" parent="marais2/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="2" unique_id=551864544]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds8_006" parent="marais2/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="3" unique_id=1899041791]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds9_006" parent="marais2/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="4" unique_id=1595497602]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface19_006" parent="marais2/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="5" unique_id=1146603024]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13regdsefds7_007" parent="marais2/herbe7" parent_id_path=PackedInt32Array(334565909, 1512337435) index="0" unique_id=494869322]
+material_override = ExtResource("6_isj1y")
+
+[node name="pCube46" parent="marais2" index="18" unique_id=51036364]
+material_override = ExtResource("11_dyswj")
+
+[node name="pPlane2" parent="marais2" index="19" unique_id=956005479]
+material_override = ExtResource("12_ls7qd")
+
 [node name="fortificationTribu" parent="." unique_id=413521059 instance=ExtResource("11_5kws7")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.090674, 9.347418, 20.141357)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.916856, 9.347418, 20.141357)
 
 [node name="Maison_Toit_001" parent="fortificationTribu" index="0" unique_id=2131793054]
 transform = Transform3D(0.01, 0, 0, 0, -1.1920929e-09, -0.009999999, 0, 0.009999999, -1.1920929e-09, 0.5655308, 2.9122944, 0.09560871)
@@ -431,5 +668,7 @@ transform = Transform3D(0.563263, 0, -0.82627773, 0, 1, 0, 0.82627773, 0, 0.5632
 [editable path="plaine"]
 [editable path="foretTribu"]
 [editable path="foret"]
+[editable path="marais"]
+[editable path="marais2"]
 [editable path="fortificationTribu"]
 [editable path="Assets_01_JAM"]

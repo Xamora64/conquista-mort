@@ -65,9 +65,10 @@ static func apply_text_info_event(text_event: String, tribe: Tribe = null, biome
 
 static var expression = Expression.new()
 
-# replace food, troops, trust, wealth
+# replace food, troops, trust, wealth, tribe_number
 static func calcul_event(event: EventData, conquis: Conquistador):
 	var to_replace = {
+		"tribe_number": conquis.place_in.tribe.number,
 		"food": conquis.food,
 		"troops": conquis.troops,
 		"trust": conquis.trust,

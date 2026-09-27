@@ -29,12 +29,5 @@ static func fill_place_reaction(place_data: EventData, place: Place)-> String:
 	var reaction_result: String=EventData.apply_text_info_event(place_data.text, place.tribe, place.biome)
 	return reaction_result
 	
-static func get_guide_result(place: Place, action_type: String)->EventData:
-	var guide_reaction_data: EventData = EventData.ask_possible_events(EventData.TYPES_TEXT.CHOICE, 
-		EventData.TYPES_BIOMES.NONE, action_type, place.tribe.aggression).pick_random()
-	return guide_reaction_data
-	
-static func get_attack_info(place: Place, action_type)->EventData:
-	var guide_reaction_data: EventData = EventData.ask_possible_events(EventData.TYPES_TEXT.CHOICE, 
-		EventData.TYPES_BIOMES.NONE, "", place.tribe.aggression).pick_random()
-	return guide_reaction_data
+static func calcul_consequence(event_data: EventData, conquistador: Conquistador):
+	EventData.calcul_event(event_data, conquistador)
