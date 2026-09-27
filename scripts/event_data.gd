@@ -74,7 +74,6 @@ static func calcul_event(event: EventData, conquis: Conquistador):
 		"trust": conquis.trust,
 		"wealth": conquis.wealth
 	}
-	print(event.calcul_food)
 	if (not event.calcul_food.is_empty()):
 		if expression.parse(event.calcul_food, to_replace.keys()) != OK: 
 			print("ERROR CALCUL FOOD")

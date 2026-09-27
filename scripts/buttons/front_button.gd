@@ -15,9 +15,23 @@ func _pressed() -> void:
 	parentPopupWindow.hide()
 	nextPopupWindow.popup()
 	game_ui.current_popup=nextPopupWindow
+	var conquis = game_ui.conquistador
+	var current_place:Place=conquis.place_in
 	
-func _populate_next_popup():
-	var current_place:Place=get_node("../Conquistador").event_in
-	descriptionLabel.set_text(current_place.reaction)
+	var wh = _what_happend(current_place.tribe, conquis)
+	var event_data = UIManager.get_tribe_choice(current_place, wh)
+	#print(event_data.text)
+	EventData.calcul_event(event_data, game_ui.conquistador)
+
+	descriptionLabel.set_text(UIManager.fill_place_intro(event_data, current_place))
+	nextPopupWindow.popup()
+	game_ui.current_popup=nextPopupWindow
 	
-	
+func _what_happend(tribe: Tribe, conquis: Conquistador) -> String:
+	if (tribe.number * 2 > conquis.troops):
+		return "a1a"
+	else:
+		if (tribe.aggression < 0):
+			return "a1b"
+		else:
+			return "a1c"

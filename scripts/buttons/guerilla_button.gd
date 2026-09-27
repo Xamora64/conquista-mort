@@ -14,32 +14,21 @@ func _pressed() -> void:
 	parentPopupWindow.hide()
 	var current_place:Place=game_ui.conquistador.place_in
 	
-	#var action_type=_determine_action_type(current_place.tribe, game_ui.conquistador)
-	#var description=UIManager.get_guide_result(current_place, action_type.keys()[0], action_type.values()[0])
-	#_show_result_window(description)
-	#UIManager.calcul_consequence()
+	var wh =  _what_happend(current_place.tribe)
+	var event_data = UIManager.get_tribe_choice(current_place, wh)
+	#print(event_data.text)
+	EventData.calcul_event(event_data, game_ui.conquistador)
+
+	descriptionLabel.set_text(UIManager.fill_place_intro(event_data, current_place))
 	nextPopupWindow.popup()
 	game_ui.current_popup=nextPopupWindow
-
-func _show_result_window(description: String):
-	descriptionLabel.set_text(description)
 	
-func _determine_action_type(tribe: Tribe, conquistador: Conquistador)-> Dictionary[String, EventData.TYPES_TEXT]:
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression==-2:
-		return {"b1":EventData.TYPES_TEXT.ALL_DEAD}
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression==-2:
-		return {"b1":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.tribe != null:
-		return {"b2a":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.PLAIN:
-		return {"b2b":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.SWAMP:
-		return {"b2c":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number< 1.5*conquistador.troops && conquistador.trust>=30 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.SWAMP:
-		return {"b2":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number< 1.5*conquistador.troops && conquistador.trust>=30 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.PLAIN:
-		return {"b2":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number< 1.5*conquistador.troops && conquistador.trust<30:
-		return {"b3":EventData.TYPES_TEXT.CHOICE}
-	return {"":EventData.TYPES_TEXT.CHOICE}
+func _what_happend(tribe: Tribe) -> String:
+	if (tribe.aggression == -2):
+		return "a2a"
+	elif (tribe.aggression == -1):
+		return "a2b"
+	else:
+		return "a2c"
+	
 	

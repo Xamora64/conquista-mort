@@ -216,6 +216,8 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1400.0
+offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -322,7 +324,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GuerillaChoice" type="TextureButton" parent="PlayerAttackChoicePopup/MarginContainer/VBoxContainer/Choices" unique_id=381014580 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "game_ui")]
+[node name="GuerillaChoice" type="TextureButton" parent="PlayerAttackChoicePopup/MarginContainer/VBoxContainer/Choices" unique_id=381014580 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "descriptionLabel", "game_ui")]
 custom_maximum_size = Vector2(-1, 200)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -334,6 +336,7 @@ sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
 parentPopupWindow = NodePath("../../../..")
 nextPopupWindow = NodePath("../../../../../ReactionDescriptionPopup")
 snippets = Array[AudioStreamOggVorbis]([ExtResource("6_2rmtt")])
+descriptionLabel = NodePath("../../../../../ReactionDescriptionPopup/MarginContainer/VBoxContainer/Description")
 game_ui = NodePath("../../../../..")
 
 [node name="Label" type="Label" parent="PlayerAttackChoicePopup/MarginContainer/VBoxContainer/Choices/GuerillaChoice" unique_id=186901008]
@@ -349,7 +352,7 @@ text = "Guerilla"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FrontChoice" type="TextureButton" parent="PlayerAttackChoicePopup/MarginContainer/VBoxContainer/Choices" unique_id=1614407076 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "game_ui")]
+[node name="FrontChoice" type="TextureButton" parent="PlayerAttackChoicePopup/MarginContainer/VBoxContainer/Choices" unique_id=1614407076 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "descriptionLabel", "game_ui")]
 custom_maximum_size = Vector2(-1, 200)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -361,6 +364,7 @@ sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
 parentPopupWindow = NodePath("../../../..")
 nextPopupWindow = NodePath("../../../../../ReactionDescriptionPopup")
 snippets = Array[AudioStreamOggVorbis]([ExtResource("7_0dnje")])
+descriptionLabel = NodePath("../../../../../ReactionDescriptionPopup/MarginContainer/VBoxContainer/Description")
 game_ui = NodePath("../../../../..")
 
 [node name="Label" type="Label" parent="PlayerAttackChoicePopup/MarginContainer/VBoxContainer/Choices/FrontChoice" unique_id=1772031851]
@@ -461,6 +465,8 @@ custom_maximum_size = Vector2(1200, -1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1200.0
+offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -667,6 +673,7 @@ texture_normal = ExtResource("5_djwj0")
 stretch_mode = 5
 script = ExtResource("18_n74c5")
 sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
+is_player_choice_button = null
 parentPopupWindow = NodePath("../../../..")
 nextPopupWindow = NodePath("../../../../../DestinationChoicePopup")
 destination_button = NodePath("../../../../../DestinationChoicePopup/MarginContainer/VBoxContainer/Choices/DestinationChoice")
