@@ -20,4 +20,4 @@ func _populate_next_popup():
 	var current_place:Place=game_ui.conquistador.place_in
 	var event_data: EventData = UIManager.get_tribe_choice(current_place, "c1")
 	UIManager.calcul_consequence(event_data, game_ui.conquistador)
-	descriptionLabel.set_text(event_data.text)
+	descriptionLabel.set_text(UIManager.fill_place_intro(event_data, current_place))

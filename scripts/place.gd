@@ -67,7 +67,7 @@ func _ready() -> void:
 			current = node3d_swamp
 	if (current != null):
 		current.set_visible(true)
-		current.rotate_y(randf_range(0, 360))
+		#current.rotate(randf_range(0, 360))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
