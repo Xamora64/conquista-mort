@@ -6,6 +6,11 @@ class_name UIManager
 static func get_tribe_intro(place: Place)-> EventData:
 	var	place_data: EventData = EventData.ask_possible_events(EventData.TYPES_TEXT.INTRO).pick_random()
 	return place_data
+	
+static func get_guide_result(place: Place, choice: String, type: EventData.TYPES_TEXT)-> String:
+	#var	place_data: EventData = EventData.ask_possible_events(type, BiomeData.TYPES_BIOMES.NONE, choice).pick_random()
+	#return place_data
+	return ""
 
 static func get_tribe_reaction_place_data(place: Place)-> EventData:
 	var tribe_reaction_data: EventData = EventData.ask_possible_events(EventData.TYPES_TEXT.INTRO_REACTION, 
