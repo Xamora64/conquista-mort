@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cev0smjojenw7"]
+
+[ext_resource type="Texture2D" uid="uid://i3q42x7n0n6i" path="res://assets/textures/meshes/Casque_chara_openPBR_shader1_Metallic.jpg" id="1_xl0cf"]
+
+[resource]
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.5, 0.5, 0.495, 1)
+albedo_texture = ExtResource("1_xl0cf")
+metallic = 0.24
+roughness = 0.0

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://w8e6ahgx6wcf"]
+
+[ext_resource type="Texture2D" uid="uid://7nxpl2esbwf2" path="res://assets/textures/meshes/Casque_chara_openPBR_shader1_BaseColor.jpg" id="1_ttntr"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(1, 0.9372549, 0.99215686, 1)
+albedo_texture = ExtResource("1_ttntr")
+roughness = 0.0

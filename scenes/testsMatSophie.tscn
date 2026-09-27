@@ -1,16 +1,26 @@
 [gd_scene format=3 uid="uid://evb56quga65v"]
 
 [ext_resource type="Material" uid="uid://dhmiwi43v0c3w" path="res://assets/materials/M_Map.tres" id="1_gj52n"]
+[ext_resource type="PackedScene" uid="uid://v2ohf8mmvwbs" path="res://assets/meshes/pion.fbx" id="1_tbbnx"]
 [ext_resource type="ArrayMesh" uid="uid://bvrcf2j3lsgxd" path="res://assets/meshes/map.obj" id="2_gj52n"]
+[ext_resource type="Material" uid="uid://cev0smjojenw7" path="res://assets/materials/M_Casque.tres" id="2_u1hiq"]
 [ext_resource type="PackedScene" uid="uid://c1wlubuav5q0l" path="res://assets/meshes/Assets_01_JAM.fbx" id="3_bsi0v"]
+[ext_resource type="Material" uid="uid://w8e6ahgx6wcf" path="res://assets/materials/M_Pion.tres" id="3_fx70h"]
 [ext_resource type="Texture2D" uid="uid://bxck1kl20dqpv" path="res://assets/textures/meshes/Assets_01_JAM_openPBR_shader1_BaseColor.jpg" id="4_7o0rv"]
+[ext_resource type="PackedScene" uid="uid://dkld1r1p3vh0o" path="res://assets/meshes/plaine.fbx" id="4_dy7j5"]
+[ext_resource type="PackedScene" uid="uid://v42q46cnrrh6" path="res://assets/meshes/foretTribu.fbx" id="4_hsjgk"]
+[ext_resource type="PackedScene" uid="uid://bw5ehqtwufck4" path="res://assets/meshes/plaineTribu.fbx" id="4_isj1y"]
 [ext_resource type="Material" uid="uid://olgbf8ev72ve" path="res://assets/materials/M_Props.tres" id="5_7o0rv"]
+[ext_resource type="Material" uid="uid://s0i7qj1itodh" path="res://assets/materials/M_Herbe.tres" id="6_isj1y"]
+[ext_resource type="PackedScene" uid="uid://b8cr3oylg35im" path="res://assets/meshes/foret.fbx" id="9_fx70h"]
+[ext_resource type="PackedScene" uid="uid://i3mwmievb3s2" path="res://assets/meshes/fortificationTribu.fbx" id="11_5kws7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbnx"]
 albedo_texture = ExtResource("4_7o0rv")
 
 [sub_resource type="Environment" id="Environment_dfipr"]
-background_energy_multiplier = 1.99
+background_energy_multiplier = 6.59
+ambient_light_color = Color(0.91489834, 0.8400857, 0.77932984, 1)
 glow_enabled = true
 glow_intensity = 0.1
 glow_bloom = 0.12
@@ -21,18 +31,221 @@ adjustment_saturation = 0.97
 
 [node name="Node3D" type="Node3D" unique_id=1155538843]
 
+[node name="pion" parent="." unique_id=1876555084 instance=ExtResource("1_tbbnx")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -32.328293, 10.16748, 16.444708)
+
+[node name="Casque" parent="pion" index="0" unique_id=498105417]
+material_override = ExtResource("2_u1hiq")
+
+[node name="Pion" parent="pion" index="1" unique_id=1480979400]
+material_override = ExtResource("3_fx70h")
+
+[node name="plaineTribu" parent="." unique_id=987055540 instance=ExtResource("4_isj1y")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 26.124386, 9.900838, 14.93087)
+
+[node name="plaine" parent="." unique_id=252168272 instance=ExtResource("4_dy7j5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.805498, 7.921337, 17.726637)
+
+[node name="pCube12_001" parent="plaine" index="0" unique_id=1776797511]
+material_override = ExtResource("5_7o0rv")
+
+[node name="pCube13_001" parent="plaine" index="1" unique_id=525795253]
+material_override = ExtResource("5_7o0rv")
+
+[node name="pCube13_002" parent="plaine" index="2" unique_id=408739902]
+material_override = ExtResource("5_7o0rv")
+
+[node name="pCube14_001" parent="plaine" index="3" unique_id=1912971799]
+material_override = ExtResource("5_7o0rv")
+
+[node name="pCube14_002" parent="plaine" index="4" unique_id=2095713294]
+material_override = ExtResource("5_7o0rv")
+
+[node name="pCube14_003" parent="plaine" index="5" unique_id=1885491162]
+material_override = ExtResource("5_7o0rv")
+
+[node name="pCube14_004" parent="plaine" index="6" unique_id=813635663]
+material_override = ExtResource("5_7o0rv")
+
+[node name="polySurface11" parent="plaine" index="7" unique_id=1301728362]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface11_001" parent="plaine" index="8" unique_id=259643168]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface11_002" parent="plaine" index="9" unique_id=1142827670]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface11_003" parent="plaine" index="10" unique_id=283234767]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface11_004" parent="plaine" index="11" unique_id=232734496]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface12" parent="plaine" index="12" unique_id=1869088520]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface12_001" parent="plaine" index="13" unique_id=1599464795]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface12_002" parent="plaine" index="14" unique_id=1070449865]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface12_003" parent="plaine" index="15" unique_id=1044890605]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface12_004" parent="plaine" index="16" unique_id=461031539]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13" parent="plaine" index="17" unique_id=78763420]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13_001" parent="plaine" index="18" unique_id=1447114665]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13_002" parent="plaine" index="19" unique_id=106467281]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13_003" parent="plaine" index="20" unique_id=583900285]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface13_004" parent="plaine" index="21" unique_id=155587106]
+material_override = ExtResource("6_isj1y")
+
+[node name="polySurface5" parent="plaine" index="22" unique_id=788436727]
+material_override = ExtResource("6_isj1y")
+
+[node name="foretTribu" parent="." unique_id=1612660823 instance=ExtResource("4_hsjgk")]
+transform = Transform3D(0.022598833, 0, 0.99974465, 0, 1, 0, -0.99974465, 0, 0.022598833, -6.002783, 9.908955, 12.033884)
+
+[node name="Arbre" parent="foretTribu" index="0" unique_id=464320638]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_001" parent="foretTribu" index="1" unique_id=476308692]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_002" parent="foretTribu" index="2" unique_id=318152187]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_003" parent="foretTribu" index="3" unique_id=1227096267]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_004" parent="foretTribu" index="4" unique_id=732916561]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_005" parent="foretTribu" index="5" unique_id=964997569]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_006" parent="foretTribu" index="6" unique_id=947483995]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_007" parent="foretTribu" index="7" unique_id=1487408562]
+material_override = ExtResource("5_7o0rv")
+
+[node name="maison_02_low_001" parent="foretTribu" index="8" unique_id=205393339]
+material_override = ExtResource("5_7o0rv")
+
+[node name="foret" parent="." unique_id=562051554 instance=ExtResource("9_fx70h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.62535, 9.861566, 21.619614)
+
+[node name="Arbre" parent="foret" index="0" unique_id=692548085]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_001" parent="foret" index="1" unique_id=143333512]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_002" parent="foret" index="2" unique_id=1370502343]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_003" parent="foret" index="3" unique_id=118060552]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_004" parent="foret" index="4" unique_id=132210800]
+material_override = ExtResource("5_7o0rv")
+
+[node name="Arbre_005" parent="foret" index="5" unique_id=792922991]
+material_override = ExtResource("5_7o0rv")
+
+[node name="fortificationTribu" parent="." unique_id=413521059 instance=ExtResource("11_5kws7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.690983, 9.347418, 20.141357)
+
+[node name="Maison_Toit_001" parent="fortificationTribu" index="0" unique_id=2131793054]
+transform = Transform3D(0.01, 0, 0, 0, -1.1920929e-09, -0.009999999, 0, 0.009999999, -1.1920929e-09, 0.5655308, 2.9122944, 0.09560871)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Maison_Toit_002" parent="fortificationTribu" index="1" unique_id=1161223352]
+transform = Transform3D(0.007074398, -0.0035438244, -4.716147e-10, 1.1790369e-10, 9.432295e-10, -0.007912382, 0.0035438242, 0.007074398, 9.432294e-10, 2.2379465, 2.2906713, -2.8556795)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Maison_Toit_003" parent="fortificationTribu" index="2" unique_id=1327097208]
+transform = Transform3D(0.0065443204, 0.004447208, 0, 0, 0, -0.007912382, -0.004447208, 0.0065443204, 0, 2.6904144, 2.2906713, 2.8688002)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_01_low_001" parent="fortificationTribu" index="3" unique_id=31992346]
+transform = Transform3D(0.0073654163, -0.004072762, 0.005400301, 0.0057002227, -0.00056045287, -0.008197155, 0.0036411681, 0.009115837, 0.0019087683, -1.8795862, 1.9705648, -3.9772978)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_01_low_002" parent="fortificationTribu" index="4" unique_id=1296939314]
+transform = Transform3D(0.008102291, -0.00088153494, 0.005794459, 0.0058111576, -8.002758e-05, -0.008137816, 0.00076374796, 0.009960747, 0.00044743295, -2.8411741, 1.8258018, -1.1946478)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_01_low_003" parent="fortificationTribu" index="5" unique_id=1172843681]
+transform = Transform3D(0.0061367224, -0.0062985634, 0.0047611687, 0.0055152476, -0.0008955395, -0.0082933735, 0.005650016, 0.0077153156, 0.002924246, -0.6272011, 2.1591063, -5.242635)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_01_low_004" parent="fortificationTribu" index="6" unique_id=1945094683]
+transform = Transform3D(0.007182281, 0.0044407155, 0.0053567598, 0.005672653, 0.0007212155, -0.00820371, -0.0040293727, 0.008930839, -0.0020010662, -2.820531, 1.8289099, 1.9296885)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_01_low_005" parent="fortificationTribu" index="7" unique_id=1377840665]
+transform = Transform3D(0.003551777, 0.008655304, 0.0035313712, 0.0051260954, 0.0013557052, -0.008478513, -0.007817162, 0.004821594, -0.0039552758, -0.04879284, 2.2461834, 5.6096754)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_01_low_006" parent="fortificationTribu" index="8" unique_id=947238113]
+transform = Transform3D(0.0058591533, 0.006604972, 0.004695175, 0.005473461, 0.0010470354, -0.008303309, -0.0059759147, 0.007434922, -0.0030017316, -2.1798677, 1.9253588, 3.5986223)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_02_low_001" parent="fortificationTribu" index="9" unique_id=1085966605]
+transform = Transform3D(0.0073654163, -0.004072762, 0.005400301, 0.0057002227, -0.00056045287, -0.008197155, 0.0036411681, 0.009115837, 0.0019087683, -2.3408117, 2.0312843, -3.1926336)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_02_low_002" parent="fortificationTribu" index="10" unique_id=66503781]
+transform = Transform3D(0.008102291, -0.00088153494, 0.005794459, 0.0058111576, -8.002758e-05, -0.008137816, 0.00076374796, 0.009960747, 0.00044743295, -3.0225801, 1.9286461, -0.30659962)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_02_low_003" parent="fortificationTribu" index="11" unique_id=1377212560]
+transform = Transform3D(0.0061367224, -0.0062985634, 0.0047611687, 0.0055152476, -0.0008955395, -0.0082933735, 0.005650016, 0.0077153156, 0.002924246, -1.2767773, 2.1914701, -4.603013)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_02_low_004" parent="fortificationTribu" index="12" unique_id=1367438289]
+transform = Transform3D(0.007182281, 0.0044407155, 0.0053567598, 0.005672653, 0.0007212155, -0.00820371, -0.0040293727, 0.008930839, -0.0020010662, -2.5147696, 2.0050955, 2.7708654)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_02_low_005" parent="fortificationTribu" index="13" unique_id=579340594]
+transform = Transform3D(0.0058591533, 0.006604972, 0.004695175, 0.005473461, 0.0010470354, -0.008303309, -0.0059759147, 0.007434922, -0.0030017316, -1.6669531, 2.1327305, 4.3238993)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_03_low_001" parent="fortificationTribu" index="14" unique_id=950115093]
+transform = Transform3D(0.0073654163, -0.004072762, 0.005400301, 0.0057002227, -0.00056045287, -0.008197155, 0.0036411681, 0.009115837, 0.0019087683, -2.3796759, 1.4083557, -2.0664206)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_03_low_002" parent="fortificationTribu" index="15" unique_id=307538973]
+transform = Transform3D(0.008102291, -0.00088153494, 0.005794459, 0.0058111576, -8.002758e-05, -0.008137816, 0.00076374796, 0.009960747, 0.00044743295, -2.687913, 1.3619518, 0.80009174)
+material_override = ExtResource("5_7o0rv")
+
+[node name="Pic_03_low_003" parent="fortificationTribu" index="16" unique_id=852299097]
+transform = Transform3D(0.0058591533, 0.006604972, 0.004695175, 0.005473461, 0.0010470354, -0.008303309, -0.0059759147, 0.007434922, -0.0030017316, -0.60907555, 1.6749115, 4.897662)
+material_override = ExtResource("5_7o0rv")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1315518064]
 transform = Transform3D(0.42447186, 0.83713895, 0.3449954, 0.7846073, -0.5302456, 0.32129592, 0.45190167, 0.13430482, -0.8818998, -67.69301, 88.590034, 106.95702)
 light_energy = 2.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 
-[node name="Map" type="MeshInstance3D" parent="." unique_id=1166969331]
-material_override = ExtResource("1_gj52n")
-mesh = ExtResource("2_gj52n")
-
 [node name="Assets_01_JAM" parent="." unique_id=451443645 instance=ExtResource("3_bsi0v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 126.91414, 76.58555)
+visible = false
 
 [node name="front1" parent="Assets_01_JAM" index="0" unique_id=229385863]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2666751, -139.32304, -87.47228)
@@ -101,10 +314,20 @@ material_override = ExtResource("5_7o0rv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2719545, -113.20437, -82.82761)
 material_override = ExtResource("5_7o0rv")
 
+[node name="Map" type="MeshInstance3D" parent="." unique_id=1166969331]
+material_override = ExtResource("1_gj52n")
+mesh = ExtResource("2_gj52n")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1892391484]
 environment = SubResource("Environment_dfipr")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=103486996]
 transform = Transform3D(0.563263, 0, -0.82627773, 0, 1, 0, 0.82627773, 0, 0.563263, -11.960833, 13.4484005, -2.1871815)
 
+[editable path="pion"]
+[editable path="plaineTribu"]
+[editable path="plaine"]
+[editable path="foretTribu"]
+[editable path="foret"]
+[editable path="fortificationTribu"]
 [editable path="Assets_01_JAM"]

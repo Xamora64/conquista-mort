@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://s0i7qj1itodh"]
+
+[ext_resource type="Texture2D" uid="uid://wmqjjwmha4l6" path="res://assets/textures/meshes/herbe_M_Herbe_BaseColor.jpg" id="1_4f3p2"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.9098039, 0.9372549, 0.99215686, 1)
+albedo_texture = ExtResource("1_4f3p2")
+roughness = 0.0
