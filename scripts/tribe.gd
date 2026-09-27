@@ -5,7 +5,43 @@ const LIMIT_NUMBER = Vector2(0, 3000)
 const LIMIT_AGGRESSION = Vector2(-2, 2)
 
 const NAME_TRIBE = [
-	""
+	"Ozita",
+	"Mucoço",
+	"Anhaica",
+	"Apalachee",
+	"Anhaica",
+	"Cofitachequi",
+	"Achalaque",
+	"Cosa",
+	"Cofaqui",
+	"Ocute",
+	"Hymachi",
+	"Cofitachequi",
+	"Talimeco",
+	"Guasuli",
+	"Chiaha",
+	"Coste",
+	"Toqua",
+	"Coosa",
+	"Talimachusi",
+	"Etowah",
+	"Ulibahali",
+	"Talisi",
+	"Tascaluza",
+	"Atahachi",
+	"Mavila",
+	"Chicaza",
+	"Alibamo",
+	"Quizquiz",
+	"Quigate",
+	"Utiangüe",
+	"Quigaltam",
+	"Guachoya",
+	"Soacatino",
+	"Guasco",
+	"Naquiscoza",
+	"Aminoya",
+	"Anilco"
 ]
 
 @export var tribe_name = "Tribe Test"
