@@ -201,7 +201,6 @@ vertical_alignment = 1
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(1400, 700)
-visible = true
 theme = SubResource("Theme_a8s68")
 theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 
@@ -209,6 +208,8 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1400.0
+offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -408,7 +409,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 uppercase = true
 
-[node name="NextButton" type="TextureButton" parent="ReactionDescriptionPopup/MarginContainer/VBoxContainer" unique_id=730427934 node_paths=PackedStringArray("parentPopupWindow", "nextPopupWindowIntro", "nextPopupWindowBiome", "game_ui")]
+[node name="NextButton" type="TextureButton" parent="ReactionDescriptionPopup/MarginContainer/VBoxContainer" unique_id=730427934 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindowIntro", "nextPopupWindowBiome", "game_ui")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -416,6 +417,7 @@ action_mode = 0
 texture_normal = ExtResource("5_djwj0")
 stretch_mode = 5
 script = ExtResource("10_8wu16")
+sound_player = NodePath("../../../../Audio/ButtonAudioPlayer")
 parentPopupWindow = NodePath("../../..")
 nextPopupWindowIntro = NodePath("../../../../PlaceIntroDescription")
 nextPopupWindowBiome = NodePath("../../..")
@@ -619,7 +621,7 @@ text = "Attaquer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FuirChoice2" type="TextureButton" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices" unique_id=429922488 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "game_ui")]
+[node name="FuirChoice2" type="TextureButton" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer/Choices" unique_id=429922488 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "descriptionLabel", "game_ui")]
 layout_mode = 2
 size_flags_horizontal = 3
 action_mode = 0
@@ -629,6 +631,7 @@ script = ExtResource("13_2yflp")
 sound_player = NodePath("../../../../../Audio/ButtonAudioPlayer")
 parentPopupWindow = NodePath("../../../..")
 nextPopupWindow = NodePath("../../../../../ReactionDescriptionPopup")
+descriptionLabel = NodePath("../../../../../ReactionDescriptionPopup/MarginContainer/VBoxContainer/Description")
 game_ui = NodePath("../../../../..")
 snippets = Array[AudioStreamOggVorbis]([ExtResource("11_5kjus"), ExtResource("12_bj1rn"), ExtResource("13_36vcn"), ExtResource("14_2yflp")])
 

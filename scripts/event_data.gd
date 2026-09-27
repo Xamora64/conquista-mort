@@ -42,6 +42,10 @@ static func ask_possible_events(type_text: TYPES_TEXT,
 							  aggression: int = 0) -> Array[EventData]:
 	var list_possible_events: Array[EventData] = []
 	for event in event_resources:
+		#print(event.types_text, " ", type_text, " ", event.types_text == type_text)
+		#print(event.biome, " ", biome, " ", event.biome == biome)
+		#print(event.type_choice, " ", type_choice, " ", event.type_choice == type_choice)
+		#print(event.aggression, " ", aggression, " ", event.aggression == aggression)
 		if (event.types_text == type_text &&
 			event.biome == biome &&
 			event.type_choice == type_choice &&
