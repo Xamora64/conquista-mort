@@ -12,13 +12,18 @@ func _pressed() -> void:
 	sound_player.set_stream(snippets[randi_range(0, snippets.size()-1)])
 	sound_player.play()
 	parentPopupWindow.hide()
-	_populate_next_popup()
+	game_ui.guide=true
+	var current_place:Place=game_ui.conquistador.place_in
+	var event_data: EventData
+	var action_type=""
+	event_data=UIManager.get_guide_result(current_place, action_type)
+	_show_result_window(event_data, current_place)
 	nextPopupWindow.popup()
 	game_ui.current_popup=nextPopupWindow
 
-func _populate_next_popup():
-	var current_place:Place=game_ui.conquistador.place_in
-	descriptionLabel.set_text(current_place.reaction)
+func _show_result_window(event_data: EventData, current_place: Place):
+	descriptionLabel.set_text(UIManager.fill_place_intro(event_data, current_place))
+	
 
 	
 	

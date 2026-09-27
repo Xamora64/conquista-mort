@@ -12,11 +12,12 @@ func _pressed() -> void:
 	sound_player.set_stream(snippets[randi_range(0, snippets.size()-1)])
 	sound_player.play()
 	parentPopupWindow.hide()
+	_populate_next_popup()
 	nextPopupWindow.popup()
 	game_ui.current_popup=nextPopupWindow
 	
 func _populate_next_popup():
-	var current_place:Place=get_node("../Conquistador").event_in
+	var current_place:Place=game_ui.conquistador.current_place
 	descriptionLabel.set_text(current_place.reaction)
 	
 	

@@ -21,10 +21,4 @@ func _pressed() -> void:
 
 func _populate_next_popup():
 	var current_place:Place=game_ui.conquistador.place_in
-	for link in current_place.links:
-		var cloned_button=destination_button.duplicate()
-		var destination_label=destination_label.duplicate()
-		destination_label.set_text(str(link.place.biome.type))
-		cloned_button.show()
-		cloned_button.add_child(destination_label)
-		flow_container.add_child(cloned_button)
+	

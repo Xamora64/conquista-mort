@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://de2ce7wjk740i" path="res://scripts/buttons/start_game_button.gd" id="8_sdeak"]
 [ext_resource type="Script" uid="uid://b2xq7ovimes2i" path="res://scripts/buttons/front_button.gd" id="9_5kjus"]
 [ext_resource type="AudioStream" uid="uid://ccom0725phd2g" path="res://assets/sounds/Ui_AttackDecision_1.ogg" id="9_lab56"]
-[ext_resource type="AudioStream" uid="uid://ch7s134abpgyd" path="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg" id="9_wbo4m"]
+[ext_resource type="AudioStream" uid="uid://b1vts3rcshm57" path="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg" id="9_wbo4m"]
 [ext_resource type="Script" uid="uid://212thwlf4m0h" path="res://scripts/buttons/end_step_button.gd" id="10_8wu16"]
 [ext_resource type="AudioStream" uid="uid://ck6diexg3kqh1" path="res://assets/sounds/Ui_AttackDecision_2.ogg" id="10_gj1yn"]
 [ext_resource type="AudioStream" uid="uid://c5bhc5jlnut7q" path="res://assets/sounds/Ui_FuiteDecision_1.ogg" id="11_5kjus"]
@@ -141,8 +141,6 @@ custom_maximum_size = Vector2(1200, -1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1200.0
-offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -156,6 +154,7 @@ theme_override_constants/margin_bottom = 80
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="FirstPlaceIntroDescription/MarginContainer/VBoxContainer" unique_id=2112914061]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -200,7 +199,7 @@ vertical_alignment = 1
 [node name="DestinationChoicePopup" type="PopupPanel" parent="." unique_id=1204121019]
 oversampling_override = 1.0
 initial_position = 1
-size = Vector2i(1400, 700)
+size = Vector2i(1349, 510)
 visible = true
 theme = SubResource("Theme_a8s68")
 theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
@@ -230,7 +229,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Vous devez choisir le prochain lieux sur la carte 
-où les conquitadors vont allez"
+où les conquitadors vont aller"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -239,7 +238,6 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="DestinationChoice" type="TextureButton" parent="DestinationChoicePopup/MarginContainer/VBoxContainer/Choices" unique_id=1199662759 node_paths=PackedStringArray("sound_player", "parentPopupWindow", "nextPopupWindow", "game_ui")]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 action_mode = 0
@@ -261,7 +259,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
-text = "Guerilla"
+text = "Valider"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -276,8 +274,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1490.0
-offset_bottom = 708.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -297,11 +293,10 @@ visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
-text = "LES INDIENS S'APPRETENT à attaquer"
+text = "Les indiens s'appretent à attaquer"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-uppercase = true
 
 [node name="Question" type="Label" parent="PlayerAttackChoicePopup/MarginContainer/VBoxContainer" unique_id=1774789217]
 layout_mode = 2
@@ -379,8 +374,6 @@ custom_maximum_size = Vector2(1200, -1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1200.0
-offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -406,7 +399,6 @@ text = "Votre choix a eu des consequences sur les conquistadores !"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-uppercase = true
 
 [node name="NextButton" type="TextureButton" parent="ReactionDescriptionPopup/MarginContainer/VBoxContainer" unique_id=730427934 node_paths=PackedStringArray("parentPopupWindow", "nextPopupWindowIntro", "nextPopupWindowBiome", "game_ui")]
 layout_mode = 2
@@ -448,8 +440,6 @@ custom_maximum_size = Vector2(1200, -1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1200.0
-offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -528,8 +518,6 @@ custom_maximum_size = Vector2(1200, 700)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1200.0
-offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -583,11 +571,10 @@ autowrap_mode = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 48
-text = "IL FAUT MANINTNANT CHOISIR CE QUE VOUS ALLEZ FAIRE DES CONQUISTADORES"
+text = "Choisissez ce que vous faites des conquistadores"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-uppercase = true
 
 [node name="Choices" type="HBoxContainer" parent="PlayerChoiceActionPopup/MarginContainer/VBoxContainer" unique_id=1175011143]
 layout_mode = 2
@@ -747,7 +734,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
-text = "Montrer Popup"
+text = "Montrer/Cacher Popup"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
