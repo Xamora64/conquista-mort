@@ -18,5 +18,5 @@ func _pressed() -> void:
 
 func _populate_next_popup():
 	var current_place:Place=game_ui.conquistador.place_in
-	descriptionLabel.set_text(current_place.reaction)
-	
+	var event_data: EventData = UIManager.get_tribe_choice(current_place, "c1")
+	descriptionLabel.set_text(event_data.text)

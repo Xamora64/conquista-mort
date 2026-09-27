@@ -7,15 +7,11 @@ extends TextureButton
 @export var nextPopupWindowBiome: PopupPanel
 @export var descriptionLabel: Label
 @export var game_ui: Node
-
-@export var snippets: Array[AudioStreamOggVorbis]	
+@export var snippets: Array[AudioStreamOggVorbis]
 
 func _pressed() -> void:
-	#var snippets_size = snippets.size() - 1
-	#if (snippets_size < 0):
-		#snippets_size = 0
-	#sound_player.set_stream(snippets[randi_range(0, snippets_size)])
-	#sound_player.play()
+	sound_player.set_stream(snippets[randi_range(0, snippets.size() - 1)])
+	sound_player.play()
 	parentPopupWindow.hide()
 	_populate_next_popup()
 	
