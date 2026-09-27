@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://smxkj6cgc7vw"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Alors que crainte et désir d’affrontement se mélangeaient dans l’esprit des {tribe_name}, les attaques sur les Espagnols se sont répétées. Les conquistadors enterrent les cadavres de leurs camarades et se hâtent de quitter ces terres."
+types_text = 2
+type_choice = "a2b"
+calcul_troops = "-(0.01 * tribe_number)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

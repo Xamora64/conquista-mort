@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://2tvyhi16fakb"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_no7jg"]
+
+[resource]
+script = ExtResource("1_no7jg")
+text = "C’est dans cette bataille que périrent les derniers Espagnols de l’expédition. Il n’y aura personne pour raconter leurs déboires. L’Histoire les oubliera comme d’autres avant et après eux.Les {tribe_name} ont toutefois la victoire amère, car même s’il ne restait qu’une poignée d’hommes en armure, les pertes sont lourdes…"
+types_text = 4
+type_choice = "a1"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

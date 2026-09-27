@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://d3r2ja2tecgpe"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Le rapport de force était bien trop déséquilibré. Il n’aura pas fallu longtemps aux Espagnols pour décimer les {tribe_name} et en profiter pour s’emparer de leurs ressources.Les quelques survivants se cachent, dans l’attente du départ de l’envahisseur pour rentrer chez eux."
+types_text = 2
+type_choice = "a1a"
+calcul_food = "tribe_number"
+calcul_troops = "-(0.01 * tribe_number)"
+calcul_trust = "30"
+calcul_wealth = "randi_range(8, 18)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

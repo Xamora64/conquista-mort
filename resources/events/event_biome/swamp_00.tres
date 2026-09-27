@@ -6,5 +6,6 @@
 script = ExtResource("1_jccg5")
 text = "Le marais s’infiltre partout. La boue sous les armures, les moustiques sous les vêtements et les maladies dans le sang. Les Espagnols tombent les uns après les autres à cause des fièvres intermittentes de la malaria."
 types_text = 3
+biome = 0
 calcul_troops = "-randi_range(20, 30)"
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

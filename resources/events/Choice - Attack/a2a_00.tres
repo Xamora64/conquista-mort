@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://dnvgpx0drg0ja"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "D'incessantes attaques de guerriers {tribe_name} ont rendu paranoïaque les membres de l’expédition. Les amérindiens regardent donc ces étrangers presser le pas et tirer des carreaux d’arbalète dans les broussailles vides au moindre bruit de vent."
+types_text = 2
+type_choice = "a2a"
+calcul_troops = "-(0.02 * tribe_number)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

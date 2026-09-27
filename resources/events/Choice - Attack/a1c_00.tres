@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://wa5tucr5fuxc"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les {tribe_name} se sont battus comme ils ont pu face à des Espagnols bien mieux équipés. Les pertes pour l’expédition sont significatives, bien que les autochtones se sont rapidement repliés quand ils ont compris que la bataille était perdue."
+types_text = 2
+type_choice = "a1c"
+calcul_food = "-(0.5 * tribe_number)"
+calcul_troops = "-(0.02 * tribe_number)"
+calcul_wealth = "-randi_range(8, 18)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

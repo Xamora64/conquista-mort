@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://bc5q4kcksmmuk"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les Espagnols prennent tout ce qu’il est possible de voler dans ces lieux vides. Les {tribe_name} observent à bonne distance leurs foyers être dévastés avec de l’amertume au cœur."
+types_text = 2
+type_choice = "c1"
+calcul_food = "tribe_number"
+calcul_wealth = "randi_range(10, 15)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"
