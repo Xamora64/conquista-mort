@@ -4,8 +4,7 @@
 
 [resource]
 script = ExtResource("1_jccg5")
-text = "Il faut prendre avant d’êtrel pris, ces étrangers vont être accueillis comme il se doit ici."
+text = "Il faut prendre avant d’être pris, ces étrangers vont être accueillis comme il se doit ici."
 types_text = 1
-biome = 3
 aggression = -2
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"
