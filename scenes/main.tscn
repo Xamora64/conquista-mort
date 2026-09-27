@@ -16,7 +16,7 @@ script = ExtResource("1_ig7tw")
 
 [node name="GameUI" parent="." unique_id=2075735181 instance=ExtResource("3_7mycd")]
 
-[node name="Map" parent="." unique_id=2049311125 instance=ExtResource("2_0xm2m")]
+[node name="Map" parent="." unique_id=707007999 instance=ExtResource("2_0xm2m")]
 
 [node name="Player" parent="." unique_id=815405141 instance=ExtResource("3_h2yge")]
 

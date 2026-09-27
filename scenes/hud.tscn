@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://d364lkvcdkmqx" path="res://scripts/hud_manager.gd" id="1_oo0fn"]
 [ext_resource type="PackedScene" uid="uid://f5gt6bb6viw1" path="res://scenes/conquistador.tscn" id="2_5ysmq"]
-[ext_resource type="Texture2D" uid="uid://b0tvagahcch87" path="res://assets/textures/sliders/logoNourriture.png" id="2_6fi6k"]
-[ext_resource type="Texture2D" uid="uid://1y4ftdm6juty" path="res://assets/textures/sliders/backgroundSlider (Copy).png" id="3_0i1j5"]
-[ext_resource type="Texture2D" uid="uid://c4vgw3bi4u3at" path="res://assets/textures/sliders/logoNbSoldats.png" id="4_hd3ao"]
-[ext_resource type="Texture2D" uid="uid://bv5lng2bu13e7" path="res://assets/textures/sliders/backgroundSlider(2).png" id="4_mphia"]
-[ext_resource type="Texture2D" uid="uid://2akbvjepdthy" path="res://assets/textures/sliders/logoConfiance.png" id="5_0i1j5"]
-[ext_resource type="Texture2D" uid="uid://dh0476x2hsogl" path="res://assets/textures/sliders/backgroundSlider(1).png" id="5_0m4u7"]
-[ext_resource type="Texture2D" uid="uid://cp6jm4ssfv2xi" path="res://assets/textures/sliders/logoRichesses.png" id="6_mphia"]
+[ext_resource type="Texture2D" uid="uid://c05itwkhlhjpm" path="res://assets/textures/sliders/logoNourriture.png" id="2_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://c4ngcwwjub4mb" path="res://assets/textures/sliders/backgroundSlider (Copy).png" id="3_0i1j5"]
+[ext_resource type="Texture2D" uid="uid://coy5tpk5lx5pw" path="res://assets/textures/sliders/logoNbSoldats.png" id="4_hd3ao"]
+[ext_resource type="Texture2D" uid="uid://b4gwntjauxhiu" path="res://assets/textures/sliders/backgroundSlider(2).png" id="4_mphia"]
+[ext_resource type="Texture2D" uid="uid://byuci4ulx2k7y" path="res://assets/textures/sliders/logoConfiance.png" id="5_0i1j5"]
+[ext_resource type="Texture2D" uid="uid://b31yxd4nnfpaa" path="res://assets/textures/sliders/backgroundSlider(1).png" id="5_0m4u7"]
+[ext_resource type="Texture2D" uid="uid://dbq460yg21yhv" path="res://assets/textures/sliders/logoRichesses.png" id="6_mphia"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1561272234 node_paths=PackedStringArray("food_bar", "trust_bar", "troops_bar", "wealth_bar", "conquistador")]
 script = ExtResource("1_oo0fn")

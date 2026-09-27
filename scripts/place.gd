@@ -7,6 +7,8 @@ const LINKS_LIMIT = Vector2(3, 4)
 @export var biome: BiomeData = null
 @export var tribe: Tribe = null
 @export var links_limit: = 3
+@export var start: bool = false
+@export var end: bool = false
 
 var links: Array[Link] = []
 

@@ -10,10 +10,12 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	place_start = placeCreator.init_place(Vector3(7.03, 0, 5.66), 0)
-	place_end = placeCreator.init_place(Vector3(-6.41, 0, -3.41), 0)
+	place_start = placeCreator.init_place(Vector3(7.03, 0, 5.66), true)
+	place_end = placeCreator.init_place(Vector3(-6.41, 0, -3.41), true)
+	place_start.start = true
+	place_end.end = true
 	
-	list_places = placeCreator.init_places(6.8, 5, -6, -3, 98, 0, 0)
+	list_places = placeCreator.init_places(6.8, 5, -6, -3, 112, 0, 0)
 	list_places.append(place_start)
 	list_places.append(place_end)
 	placeCreator.add_link_path_places(list_places)
@@ -28,8 +30,11 @@ signal click_on_place(place: Place)
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int, place: Place) -> void:
 	if (event.is_action_pressed("left click")):
-		print("event selectioned: ", position.x, " ", position.y, " ", position.z)
+		print("event selectioned: ", place.position.x, " ", place.position.y, " ", place.position.z)
 		possible_next_places(place)
+
+		print(get_path())
+		click_on_place.emit(place)
 	
 # De Droite à Gauche x: 7.03 => -6.41
 # De Bas à haut z: 5.66 => -3.41
@@ -42,6 +47,5 @@ func possible_next_places(place: Place) -> Array[Place]:
 		if (l_pos.x < p_pos.x || 
 			l_pos.z < p_pos.z):
 			next_places.append(link.place)
-	print(next_places.size())
-	click_on_place.emit(place)
+	#print(next_places.size())
 	return next_places
