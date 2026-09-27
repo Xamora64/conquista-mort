@@ -5,6 +5,21 @@ const NEAREST_LIMIT = 0.6
 const LINKS_LIMIT = Vector2(4, 5)
 @export var biome: BiomeData = null
 
+@export var node3d_plain_tribe: Node3D
+@export var node3d_plain: Node3D
+@export var node3d_forest_tribe: Node3D
+@export var node3d_forest: Node3D
+@export var node3d_swamp: Node3D
+@export var node3d_fortification: Node3D
+var current: Node3D = node3d_plain
+#var array_node3d: Array[Node3D] = [
+	#node3d_plain_tribe,
+	#node3d_plain,
+	#node3d_forest_tribu,
+	#node3d_swamp,
+	#node3d_fortification
+#]
+
 @export var tribe: Tribe = null
 @export var links_limit: = 3
 @export var start: bool = false
@@ -35,19 +50,21 @@ signal display_event_popup()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var color: Color = Color.WHITE
-	if (biome.type == BiomeData.TYPES_BIOMES.PLAIN):
-		color = Color.YELLOW
-	elif (biome.type == BiomeData.TYPES_BIOMES.FOREST):
-		color = Color.DARK_GREEN
-	elif (biome.type == BiomeData.TYPES_BIOMES.SWAMP):
-		color = Color.RED
-	
-	# Permet de définir un material par sphere
-	var mat = $CSGSphere3D.material.duplicate()
-	mat.albedo_color = color
-	$CSGSphere3D.material_override = mat
-	
+	if (tribe != null):
+		if (tribe.fortification):
+			current = node3d_fortification
+		elif (biome.type == biome.TYPES_BIOMES.PLAIN):
+			current = node3d_plain_tribe
+		elif (biome.type == biome.TYPES_BIOMES.FOREST):
+			current = node3d_forest_tribe
+	else:
+		if (biome.type == biome.TYPES_BIOMES.PLAIN):
+			current = node3d_plain_tribe
+		elif (biome.type == biome.TYPES_BIOMES.FOREST):
+			current = node3d_forest
+		elif (biome.type == biome.TYPES_BIOMES.SWAMP):
+			current = node3d_fortification
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
