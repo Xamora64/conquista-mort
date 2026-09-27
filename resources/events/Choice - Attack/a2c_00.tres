@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://d1ph2lhgvkrvi"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les {tribe_name} n’avaient pas une volonté belliqueuse assez forte envers les étrangers.Quelques attaques éparses ont entraîné la mort de conquistadors, mais les Espagnols craignent tout de même plus les maladies que ces guerriers peu motivés."
+types_text = 2
+type_choice = "a2c"
+calcul_troops = "-(0.005 * tribe_number)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

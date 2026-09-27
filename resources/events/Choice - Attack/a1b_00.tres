@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://dwq55tt3yldtt"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "Les guerriers {tribe_name} tombés au combat ont emporté avec eux de nombreux Espagnols. Les pertes matérielles sont aussi importantes du côté de l’expédition et la suite du voyage s’annonce plus compliquée."
+types_text = 2
+type_choice = "a1b"
+calcul_food = "-(2 * tribe_number)"
+calcul_troops = "-(0.05 * tribe_number)"
+calcul_trust = "-20"
+calcul_wealth = "-randi_range(25, 40)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"

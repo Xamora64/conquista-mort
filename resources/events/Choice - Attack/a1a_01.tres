@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://xfn4o5ak05br"]
+
+[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+
+[resource]
+script = ExtResource("1_jccg5")
+text = "La fumée des arquebuses et les cris des chiens de guerres seront les souvenirs horribles des quelques survivants des {tribe_name}. Les Espagnols, eux, en profitent pour dépouiller les corps et réduire en esclavage les prisonniers avant de reprendre leur route."
+types_text = 2
+type_choice = "a1a"
+calcul_food = "tribe_number"
+calcul_troops = "-(0.01 * tribe_number)"
+calcul_trust = "30"
+calcul_wealth = "randi_range(8, 18)"
+metadata/_custom_type_script = "uid://qw5mo7fk0xje"
