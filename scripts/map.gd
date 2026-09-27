@@ -86,9 +86,9 @@ func conquis_next_place(place_to: Place):
 		conquis.get_next_place(list_possible_links)
 		
 		if (conquis.food <= 0):
-			conquis.troops = conquis.troops * 0.9
+			conquis.troops = min(15, conquis.troops * 0.9)
 		else:
-			conquis.food -= conquis.troops / 2
+			conquis.food -= conquis.troops / 3
 		
 		hide_path()
 		hide_place(conquis.historic_places)

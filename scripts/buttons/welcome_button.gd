@@ -5,7 +5,7 @@ extends TextureButton
 @export var parentPopupWindow: PopupPanel
 @export var nextPopupWindow: PopupPanel
 @export var nextPopupWindowReaction: PopupPanel
-@export var destination_reaction: Labe
+@export var destination_reaction: Label
 @export var destination_button: TextureButton
 @export var destination_label: Label
 @export var flow_container: HFlowContainer
