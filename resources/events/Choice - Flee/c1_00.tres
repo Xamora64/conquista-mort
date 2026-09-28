@@ -7,6 +7,6 @@ script = ExtResource("1_jccg5")
 text = "Les {tribe_name} prennent le strict nécessaire et disparaissent dans la nature.Les Espagnols trouvent un village abandonné et en profitent pour piller la nourriture avant de reprendre leur route."
 types_text = 2
 type_choice = "c1"
-calcul_food = "tribe_number"
+calcul_food = "2 * tribe_number"
 calcul_wealth = "randi_range(10, 15)"
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"

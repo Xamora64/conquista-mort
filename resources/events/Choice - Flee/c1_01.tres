@@ -7,6 +7,6 @@ script = ExtResource("1_jccg5")
 text = "Les foyers sont encore chauds lorsque l’expédition entre chez les {tribe_name}, mais plus une seule trace d’autochtone. Si certains se plaignent de ne pas trouver de femmes, la majorité est trop occupée à piller les maisons."
 types_text = 2
 type_choice = "c1"
-calcul_food = "tribe_number"
+calcul_food = "2 * tribe_number"
 calcul_wealth = "randi_range(10, 15)"
 metadata/_custom_type_script = "uid://qw5mo7fk0xje"
