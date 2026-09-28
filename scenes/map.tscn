@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cmq2oebxey5us" path="res://assets/meshes/map2.fbx" id="5_2klcf"]
 [ext_resource type="PackedScene" uid="uid://ebrcp5jd37fk" path="res://assets/meshes/map.fbx" id="6_2lpho"]
 [ext_resource type="Material" uid="uid://dhmiwi43v0c3w" path="res://assets/materials/M_Map.tres" id="6_nakos"]
+[ext_resource type="Script" uid="uid://bnc6yxo0eyuho" path="res://scripts/candlelight_effect.gd" id="7_nakos"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jh32y"]
 albedo_color = Color(0.37213257, 0.15919474, 0.03065409, 1)
@@ -77,30 +78,35 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 16.5
 light_color = Color(1, 0.69411767, 0.5568628, 1)
 light_energy = 9.194
 spot_range = 61.434
+script = ExtResource("7_nakos")
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=41618501]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -16.355846, 20, -3.888174)
 light_color = Color(1, 0.69411767, 0.5568628, 1)
 light_energy = 9.194
 spot_range = 61.434
+script = ExtResource("7_nakos")
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1199862955]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -1.030302, 20, -11.15654)
 light_color = Color(1, 0.69411767, 0.5568628, 1)
 light_energy = 9.194
 spot_range = 61.434
+script = ExtResource("7_nakos")
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1220513561]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 16.485699, 20, 9.299641)
 light_color = Color(1, 0.69411767, 0.5568628, 1)
 light_energy = 9.194
 spot_range = 61.434
+script = ExtResource("7_nakos")
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=1740855902]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.908842, 20, 16.8065)
 light_color = Color(1, 0.69411767, 0.5568628, 1)
 light_energy = 9.194
 spot_range = 61.434
+script = ExtResource("7_nakos")
 
 [editable path="map"]
 [editable path="map2"]
