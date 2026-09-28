@@ -80,10 +80,13 @@ static func calcul_event(event: EventData, conquis: Conquistador):
 			return
 		conquis.food += expression.execute(to_replace.values())
 	if (not event.calcul_troops.is_empty()):
+		print(event.calcul_troops)
+		print(conquis.troops)
 		if expression.parse(event.calcul_troops, to_replace.keys()) != OK: 
 			print("ERROR CALCUL TROOPS")
 			return
 		conquis.troops += expression.execute(to_replace.values())
+		print(conquis.troops)
 	if (not event.calcul_trust.is_empty()):
 		if expression.parse(event.calcul_trust, to_replace.keys()) != OK: 
 			print("ERROR CALCUL TRUST")

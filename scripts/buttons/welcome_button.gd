@@ -31,9 +31,9 @@ func _pressed() -> void:
 		nextPopupWindow.popup()
 		game_ui.current_popup=nextPopupWindow
 	else:
-		destination_label.set_text(UIManager.fill_place_intro(event_data, current_place))
+		destination_reaction.set_text(UIManager.fill_place_intro(event_data, current_place))
 		nextPopupWindow.popup()
-		game_ui.current_popup=nextPopupWindow
+		game_ui.current_popup=nextPopupWindowReaction
 	
 func _what_happend(tribe: Tribe, conquis: Conquistador) -> String:
 	if (tribe.number * 1.5 > conquis.troops):
