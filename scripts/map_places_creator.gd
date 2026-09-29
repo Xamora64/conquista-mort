@@ -16,10 +16,34 @@ func add_link_path_places(list_places: Array[Place]) -> Array[PathDraw]:
 
 func init_places(x1, z1, x2, z2, number_places, min_link, max_link) -> Array[Place]:
 	var list_places: Array[Place] = []
-	for i in range(number_places):
+	
+	var x_dimension = abs(x1 - x2)
+	var z_dimension = abs(z1 - z2)
+	var ratio = x_dimension / z_dimension
+	
+	var x_lines = sqrt(number_places / ratio)
+	var z_lines = x_lines * ratio
+	
+	var x_move = x_dimension / x_lines
+	var z_move = z_dimension / z_lines
+	
+	var x_actual = x1 - x_move /2
+	var z_actual = z1 - z_move / 2
+	
+	for i in range(x_lines):
+		for j in range(z_lines):
+			var position: Vector3 = get_position_place(x_actual - x_move / 2.5, z_actual - z_move / 2.5, x_actual + x_move / 2.5, z_actual - z_move / 2.5, 1, list_places)
+			list_places.append(init_place(position, false))
+			
+			z_actual -= z_move
+		#Quand toutes les lignes Z sont peuplées, passage à la ligne X suivante
+		x_actual -= x_move
+		z_actual = z1 - z_move / 2
+		
+	#for i in range(number_places):
 		# Position
-		var position: Vector3 = get_position_place(x1, z1, x2, z2, number_places, list_places)
-		list_places.append(init_place(position, false))
+		#var position: Vector3 = get_position_place(x1, z1, x2, z2, number_places, list_places)
+		#list_places.append(init_place(position, false))
 	
 	return list_places
 	
