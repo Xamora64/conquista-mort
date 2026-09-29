@@ -14,7 +14,7 @@ func add_link_path_places(list_places: Array[Place]) -> Array[PathDraw]:
 		add_child(place)
 	return list_paths
 
-func init_places(x1, z1, x2, z2, number_places, min_link, max_link) -> Array[Place]:
+func init_places(x1, z1, x2, z2, number_places, spacing) -> Array[Place]:
 	var list_places: Array[Place] = []
 	
 	var x_dimension = abs(x1 - x2)
@@ -32,7 +32,7 @@ func init_places(x1, z1, x2, z2, number_places, min_link, max_link) -> Array[Pla
 	
 	for i in range(x_lines):
 		for j in range(z_lines):
-			var position: Vector3 = get_position_place(x_actual - x_move / 2.5, z_actual - z_move / 2.5, x_actual + x_move / 2.5, z_actual - z_move / 2.5, 1, list_places)
+			var position: Vector3 = get_position_place(x_actual - x_move / spacing, z_actual - z_move / spacing, x_actual + x_move / spacing, z_actual - z_move / spacing, 1, list_places)
 			list_places.append(init_place(position, false))
 			
 			z_actual -= z_move

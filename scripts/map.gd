@@ -19,7 +19,7 @@ func _ready() -> void:
 	place_start.start = true
 	place_end.end = true
 	
-	list_places = placeCreator.init_places(6.8, 5, -13, -7, 100, 0, 0)
+	list_places = placeCreator.init_places(6.8, 5, -13, -7, 100, 3)
 	list_places.append(place_start)
 	list_places.append(place_end)
 	list_paths = placeCreator.add_link_path_places(list_places)
