@@ -1,110 +1,53 @@
 [gd_scene format=3 uid="uid://beshh12linnpj"]
 
-[ext_resource type="Script" uid="uid://d364lkvcdkmqx" path="res://scripts/hud_manager.gd" id="1_oo0fn"]
-[ext_resource type="PackedScene" uid="uid://f5gt6bb6viw1" path="res://scenes/conquistador.tscn" id="2_5ysmq"]
-[ext_resource type="Texture2D" uid="uid://c05itwkhlhjpm" path="res://assets/textures/sliders/logoNourriture.png" id="2_6fi6k"]
-[ext_resource type="Texture2D" uid="uid://c4ngcwwjub4mb" path="res://assets/textures/sliders/backgroundSlider (Copy).png" id="3_0i1j5"]
-[ext_resource type="Texture2D" uid="uid://coy5tpk5lx5pw" path="res://assets/textures/sliders/logoNbSoldats.png" id="4_hd3ao"]
-[ext_resource type="Texture2D" uid="uid://b4gwntjauxhiu" path="res://assets/textures/sliders/backgroundSlider(2).png" id="4_mphia"]
-[ext_resource type="Texture2D" uid="uid://byuci4ulx2k7y" path="res://assets/textures/sliders/logoConfiance.png" id="5_0i1j5"]
+[ext_resource type="Script" uid="uid://bx6jponuu7xmr" path="res://scripts/hud_manager.gd" id="1_oo0fn"]
+[ext_resource type="Texture2D" uid="uid://ribvdkhfrnvw" path="res://assets/textures/sliders/fondSlidersLogov2.png" id="2_0i1j5"]
+[ext_resource type="Texture2D" uid="uid://b4qo3xluu4kt2" path="res://assets/textures/sliders/logoNourriture.png" id="2_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://4q1qf3cpdo2e" path="res://assets/textures/sliders/backgroundSlider.png" id="4_047uy"]
+[ext_resource type="Texture2D" uid="uid://4vkodwyxoldp" path="res://assets/textures/sliders/backgroundSlider(2).png" id="4_mphia"]
 [ext_resource type="Texture2D" uid="uid://dx0oi8056nww3" path="res://assets/textures/sliders/backgroundSlider(1).png" id="5_0m4u7"]
-[ext_resource type="Texture2D" uid="uid://dbq460yg21yhv" path="res://assets/textures/sliders/logoRichesses.png" id="6_mphia"]
 
-[node name="HUD" type="CanvasLayer" unique_id=1561272234 node_paths=PackedStringArray("food_bar", "trust_bar", "troops_bar", "wealth_bar", "conquistador")]
+[node name="HUD" type="CanvasLayer" unique_id=1561272234]
 script = ExtResource("1_oo0fn")
-food_bar = NodePath("HUD-Conquistadors/HBoxContainer/Food/Bar")
-trust_bar = NodePath("HUD-Conquistadors/HBoxContainer/Trust/Bar")
-troops_bar = NodePath("HUD-Conquistadors/HBoxContainer/Troops/Bar")
-wealth_bar = NodePath("HUD-Conquistadors/HBoxContainer/Wealth/Bar")
-conquistador = NodePath("Conquistador")
 
-[node name="HUD-Conquistadors" type="MarginContainer" parent="." unique_id=1860071245]
-anchors_preset = 15
-anchor_right = 1.0
+[node name="ConquistadorOver" type="TextureRect" parent="." unique_id=850235951]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -921.0
+offset_top = -181.0
+offset_right = 921.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 800
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+grow_vertical = 0
+scale = Vector2(0.85, 0.875)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_0i1j5")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HUD-Conquistadors" unique_id=1867146862]
-layout_mode = 2
+[node name="ListConquistadorsStat" type="HBoxContainer" parent="." unique_id=1867146862]
+propagate_maximum_size = false
+offset_left = 160.0
+offset_top = 778.0
+offset_right = 1558.0
+offset_bottom = 853.0
 
-[node name="Food" type="HBoxContainer" parent="HUD-Conquistadors/HBoxContainer" unique_id=1467308164]
+[node name="ConquistadorsStat" type="HBoxContainer" parent="ListConquistadorsStat" unique_id=1467308164]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TextureRect" type="TextureRect" parent="HUD-Conquistadors/HBoxContainer/Food" unique_id=452650454]
+[node name="IconStat" type="TextureRect" parent="ListConquistadorsStat/ConquistadorsStat" unique_id=452650454]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 5
 texture = ExtResource("2_6fi6k")
+stretch_mode = 2
 
-[node name="Bar" type="TextureProgressBar" parent="HUD-Conquistadors/HBoxContainer/Food" unique_id=891605394]
+[node name="BarStat" type="TextureProgressBar" parent="ListConquistadorsStat/ConquistadorsStat" unique_id=891605394]
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 3000.0
 value = 2000.0
-texture_under = ExtResource("3_0i1j5")
+nine_patch_stretch = true
+texture_under = ExtResource("4_047uy")
 texture_over = ExtResource("4_mphia")
 texture_progress = ExtResource("5_0m4u7")
-tint_under = Color(0, 0, 0, 1)
-
-[node name="Troops" type="HBoxContainer" parent="HUD-Conquistadors/HBoxContainer" unique_id=144385708]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TextureRect" type="TextureRect" parent="HUD-Conquistadors/HBoxContainer/Troops" unique_id=1294500211]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("4_hd3ao")
-
-[node name="Bar" type="TextureProgressBar" parent="HUD-Conquistadors/HBoxContainer/Troops" unique_id=803743866]
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 600.0
-value = 100.0
-texture_under = ExtResource("3_0i1j5")
-texture_over = ExtResource("4_mphia")
-texture_progress = ExtResource("5_0m4u7")
-tint_under = Color(0, 0, 0, 1)
-
-[node name="Trust" type="HBoxContainer" parent="HUD-Conquistadors/HBoxContainer" unique_id=1565912194]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TextureRect" type="TextureRect" parent="HUD-Conquistadors/HBoxContainer/Trust" unique_id=1191151908]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("5_0i1j5")
-
-[node name="Bar" type="TextureProgressBar" parent="HUD-Conquistadors/HBoxContainer/Trust" unique_id=1789426187]
-layout_mode = 2
-size_flags_horizontal = 3
-value = 100.0
-texture_under = ExtResource("3_0i1j5")
-texture_over = ExtResource("4_mphia")
-texture_progress = ExtResource("5_0m4u7")
-tint_under = Color(0, 0, 0, 1)
-
-[node name="Wealth" type="HBoxContainer" parent="HUD-Conquistadors/HBoxContainer" unique_id=1113191287]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TextureRect" type="TextureRect" parent="HUD-Conquistadors/HBoxContainer/Wealth" unique_id=1751710821]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("6_mphia")
-
-[node name="Bar" type="TextureProgressBar" parent="HUD-Conquistadors/HBoxContainer/Wealth" unique_id=1332609228]
-layout_mode = 2
-size_flags_horizontal = 3
-value = 100.0
-texture_under = ExtResource("3_0i1j5")
-texture_over = ExtResource("4_mphia")
-texture_progress = ExtResource("5_0m4u7")
-tint_under = Color(0, 0, 0, 1)
-
-[node name="Conquistador" parent="." unique_id=2115321676 instance=ExtResource("2_5ysmq")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1, 0, 0)

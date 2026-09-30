@@ -15,23 +15,23 @@ signal wealth_changed(value)
 
 @export var food = 1800:
 	set(value):
-		food = clamp(value, LIMIT_FOOD[0], LIMIT_TROOPS[1])
-		food_changed.emit(value)
+		food = clamp(value, LIMIT_FOOD[0], LIMIT_FOOD[1])
+		food_changed.emit("food_stat", value)
 		
 @export var troops = 600:
 	set(value):
 		troops = clamp(value, LIMIT_TROOPS[0], LIMIT_TROOPS[1])
-		troops_changed.emit(value)
+		troops_changed.emit("troops_stat", value)
 		
 @export var trust = 70:
 	set(value):
 		trust = clamp(value, LIMIT_TRUST[0], LIMIT_TRUST[1])
-		trust_changed.emit(value)
+		trust_changed.emit("trust_stat", value)
 		
 @export var wealth = 0:
 	set(value):
 		wealth = clamp(wealth, LIMIT_WEALTH[0], LIMIT_WEALTH[1])
-		wealth_changed.emit(value)
+		wealth_changed.emit("wealth_stat", value)
 		
 var historic_places: Array[Place] = []
 

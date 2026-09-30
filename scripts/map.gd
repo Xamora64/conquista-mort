@@ -75,14 +75,14 @@ func conquis_next_place(place_to: Place):
 		if (link != null):
 			link.taken = true
 		
-		print(get_parent())
+		#print(get_parent())
 		conquis.historic_places.append(place_to)
 		
 		var list_possible_links: Array[Link] = possible_next_places(place_to)
 		
 		click_on_place.emit(place_to)
 		
-		print (list_possible_links.size())
+		#print (list_possible_links.size())
 		conquis.get_next_place(list_possible_links)
 		
 		if (conquis.food <= 0):
@@ -95,7 +95,7 @@ func conquis_next_place(place_to: Place):
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int, place_to: Place) -> void:
 	if (event.is_action_pressed("left click")):
-		print("event selectioned: ", place_to.position.x, " ", place_to.position.y, " ", place_to.position.z)
+		#print("event selectioned: ", place_to.position.x, " ", place_to.position.y, " ", place_to.position.z)
 		if (game_ui.guide):
 			conquis_next_place(place_to)
 		#print(conquis.historic_places)

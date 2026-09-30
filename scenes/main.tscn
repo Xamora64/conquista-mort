@@ -24,14 +24,11 @@ light_color = Color(1, 0.73333335, 0.3137255, 1)
 light_energy = 2.0
 spot_angle = 35.0
 
-[node name="HUD" parent="." unique_id=1561272234 instance=ExtResource("2_lquwl")]
+[node name="HUD" parent="." unique_id=1561272234 node_paths=PackedStringArray("conquistador") instance=ExtResource("2_lquwl")]
+conquistador = NodePath("../Conquistador")
 
 [node name="GameUI" parent="." unique_id=2075735181 node_paths=PackedStringArray("map", "conquistador") instance=ExtResource("3_7mycd")]
 map = NodePath("../Map")
 conquistador = NodePath("../Conquistador")
 
 [connection signal="click_on_place" from="Map" to="." method="_on_map_click_on_place"]
-[connection signal="food_changed" from="Conquistador" to="HUD" method="_on_food_changed"]
-[connection signal="troops_changed" from="Conquistador" to="HUD" method="_on_troops_changed"]
-[connection signal="trust_changed" from="Conquistador" to="HUD" method="_on_trust_changed"]
-[connection signal="wealth_changed" from="Conquistador" to="HUD" method="_on_wealth_changed"]

@@ -1,48 +1,58 @@
 extends CanvasLayer
 
-@export var food_bar: TextureProgressBar
-@export var trust_bar: TextureProgressBar
-@export var troops_bar: TextureProgressBar
-@export var wealth_bar: TextureProgressBar
-@export var conquistador: Node3D
+@onready var conquistadors_stat = get_node("ListConquistadorsStat/ConquistadorsStat")
+@export var conquistador: Conquistador # Directement assigné dans le main
+
+class Stat:
+	var id: String = ""
+	var icon: Resource = load("res://assets/textures/sliders/logoNourriture.png")
+	var max_value: int = 0
+	var container: HBoxContainer
+	var conquistador_stat # Food, Troops, ...
+	var conquistador_stat_signal: Signal
+	
+	func _init(id: String, icon_path: String, max_value: int, conquis_stat, conquis_stat_signal):
+		self.id = id
+		self.icon = load(icon_path)
+		self.max_value = max_value 
+		self.conquistador_stat = conquis_stat
+		self.conquistador_stat_signal = conquis_stat_signal
+
+# onready pour que le conquistador soit bien init
+@onready var stats: Array[Stat] = [
+	Stat.new("food_stat", "res://assets/textures/sliders/logoNourriture.png", 3000, conquistador.food, conquistador.food_changed),
+	Stat.new("troops_stat", "res://assets/textures/sliders/logoNbSoldats.png", 600, conquistador.troops, conquistador.troops_changed),
+	Stat.new("trust_stat", "res://assets/textures/sliders/logoConfiance.png", 100, conquistador.trust, conquistador.trust_changed),
+	Stat.new("wealth_stat", "res://assets/textures/sliders/logoRichesses.png", 100, conquistador.wealth, conquistador.wealth_changed),
+]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	conquistador.food_changed.connect(_on_food_changed)
-	conquistador.trust_changed.connect(_on_trust_changed)
-	conquistador.wealth_changed.connect(_on_wealth_changed)
-	conquistador.troops_changed.connect(_on_troops_changed)
 	
-	_on_food_changed(conquistador.food)
-	_on_troops_changed(conquistador.troops)
-	_on_trust_changed(conquistador.trust)
-	_on_wealth_changed(conquistador.wealth)
+	for stat in stats:
+		stat.container = conquistadors_stat.duplicate()
+		var icon: TextureRect = stat.container.get_node("IconStat")
+		icon.texture = stat.icon
+		var progress_bar: TextureProgressBar = stat.container.get_node("BarStat")
+		progress_bar.max_value = stat.max_value
+
+		#print(conquistadors_stat)
+		$ListConquistadorsStat.add_child(stat.container)
+		
+		stat.conquistador_stat_signal.connect(_on_conquistadors_value_change)
+		_on_conquistadors_value_change(stat.id, stat.conquistador_stat)
+
+	conquistadors_stat.hide() # hide template
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func _on_food_changed(value: int)-> void:
-	print(value)
-	food_bar.set_value(clamp(value, 0, food_bar.max_value))
-	_set_color(food_bar)
-
-func _on_trust_changed(value: int)-> void:
-	trust_bar.set_value(clamp(value, 0, trust_bar.max_value))
-	_set_color(trust_bar)
-
-func _on_troops_changed(value: int)-> void:
-	troops_bar.set_value(clamp(value, 0, troops_bar.max_value))
-	_set_color(troops_bar)
-
-func _on_wealth_changed(value: int)-> void:
-	wealth_bar.set_value(clamp(value, 0, wealth_bar.max_value))
-	_set_color(wealth_bar)
-	
-func _set_color(bar: TextureProgressBar)->void:
-	if bar.value>=0 && bar.value<=bar.max_value/4:
-		bar.set_tint_progress(Color.RED)
-	elif bar.value>bar.max_value/4 && bar.value<=bar.max_value/2:
-		bar.set_tint_progress(Color.ORANGE)
-	else:
-		bar.set_tint_progress(Color.GREEN)
+func _on_conquistadors_value_change(id:String, value: int)-> void:
+	print("id: ", id, " value:", value)
+	for stat in stats:
+		if (stat.id == id):
+			var progress_bar: TextureProgressBar = stat.container.get_node("BarStat")
+			progress_bar.set_value(clamp(value, 0, stat.max_value))
+			var new_color: Color = Color.RED.lerp(Color.GREEN, progress_bar.get_value() / stat.max_value)
+			progress_bar.set_tint_progress(new_color)
