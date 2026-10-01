@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://wu7bq4n7kip7"]
+
+[ext_resource type="Texture2D" uid="uid://ct317w3eujcxy" path="res://assets/textures/meshes/pionAmerindien_openPBR_shader1_AlbedoTransparency.png" id="1_xel02"]
+
+[resource]
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_xel02")
+roughness = 0.0

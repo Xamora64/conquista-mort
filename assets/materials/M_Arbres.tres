@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://t3d4vgud83nn"]
+
+[ext_resource type="Texture2D" uid="uid://dc1y0vxi6018u" path="res://assets/textures/meshes/arbres_Base_color.png" id="1_gqa00"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.87, 0.8178, 0.86304, 1)
+albedo_texture = ExtResource("1_gqa00")
+roughness = 0.0
