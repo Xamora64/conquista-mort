@@ -39,11 +39,6 @@ func init_places(x1, z1, x2, z2, number_places, spacing) -> Array[Place]:
 		#Quand toutes les lignes Z sont peuplées, passage à la ligne X suivante
 		x_actual -= x_move
 		z_actual = z1 - z_move / 2
-		
-	#for i in range(number_places):
-		# Position
-		#var position: Vector3 = get_position_place(x1, z1, x2, z2, number_places, list_places)
-		#list_places.append(init_place(position, false))
 	
 	return list_places
 	
@@ -94,7 +89,7 @@ func get_links_places(list_places: Array[Place]):
 			if (possible_link == place):
 				continue
 			var distance = place.position.distance_to(possible_link.position)
-			if (distance > 2.5 && (not place.start || not place.end)):
+			if (distance > 4 && (not place.start || not place.end)):
 				continue
 			
 			for i in range(place.links_limit):

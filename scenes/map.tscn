@@ -57,7 +57,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_kwsvg")
 script = ExtResource("4_0cso3")
 
 [node name="map2" parent="." unique_id=2102191850 instance=ExtResource("5_2klcf")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0657072, -1.9762135, -4.275607)
+transform = Transform3D(0.3, 0, 0, 0, 0.2, 0, 0, 0, 0.3, -6.292407, -1.9762135, -9.169678)
 
 [node name="map" parent="map2" index="0" unique_id=405578828]
 material_override = ExtResource("6_nakos")
