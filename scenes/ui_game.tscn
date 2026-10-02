@@ -1,12 +1,25 @@
 [gd_scene format=3 uid="uid://c7srd56h5wnmj"]
 
-[ext_resource type="Theme" uid="uid://bekmimemakhal" path="res://assets/themes/main_theme.tres" id="1_35xpy"]
+[ext_resource type="Shader" uid="uid://cchdrf0xea4w4" path="res://assets/shaders/page_flip.gdshader" id="1_a7cbq"]
+[ext_resource type="Texture2D" uid="uid://dcva7tq42nt8l" path="res://assets/textures/mainMenu.png" id="1_y6wst"]
+[ext_resource type="Texture2D" uid="uid://bxfabphttsodg" path="res://assets/textures/US.jpg" id="2_y6wst"]
 
-[node name="UIGame" type="Control" unique_id=1166119160]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_35xpy")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ba8jr"]
+shader = ExtResource("1_a7cbq")
+shader_parameter/fold_x = 0.0
+shader_parameter/fold_y = 0.0
+shader_parameter/normal_x = 0.0
+shader_parameter/normal_y = 0.0
+
+[node name="UIGame" type="CanvasLayer" unique_id=297572475]
+
+[node name="TestBackground" type="TextureRect" parent="." unique_id=248564524]
+offset_right = 950.0
+offset_bottom = 707.0
+texture = ExtResource("1_y6wst")
+
+[node name="TestShaderBurn" type="TextureRect" parent="." unique_id=881880665]
+material = SubResource("ShaderMaterial_ba8jr")
+offset_right = 1922.0
+offset_bottom = 1080.0
+texture = ExtResource("2_y6wst")

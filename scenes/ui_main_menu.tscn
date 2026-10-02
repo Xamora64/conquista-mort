@@ -13,17 +13,9 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
-[node name="UIMainMenu" type="Control" unique_id=1093993357]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_5aq7w")
+[node name="UIMainMenu" type="CanvasLayer" unique_id=1573335826]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=877837786]
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
