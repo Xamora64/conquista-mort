@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c5b3ssno3qjsc"]
 
-[ext_resource type="Texture2D" uid="uid://dg5kigqjxhmf2" path="res://assets/textures/US.jpg" id="1_c7s6e"]
-[ext_resource type="Script" uid="uid://c80ms475rst3i" path="res://scripts/map.gd" id="1_paxxb"]
-[ext_resource type="Script" uid="uid://bf37hyqhsxwoq" path="res://scripts/map_places_creator.gd" id="4_0cso3"]
-[ext_resource type="PackedScene" uid="uid://cmq2oebxey5us" path="res://assets/meshes/map2.fbx" id="5_2klcf"]
-[ext_resource type="PackedScene" uid="uid://ebrcp5jd37fk" path="res://assets/meshes/map.fbx" id="6_2lpho"]
+[ext_resource type="Texture2D" uid="uid://bxfabphttsodg" path="res://assets/textures/US.jpg" id="1_c7s6e"]
+[ext_resource type="Script" uid="uid://buf4o5a0vgtko" path="res://scripts/map.gd" id="1_paxxb"]
+[ext_resource type="Script" uid="uid://4xdk56lgvdev" path="res://scripts/map_places_creator.gd" id="4_0cso3"]
+[ext_resource type="PackedScene" uid="uid://cfgats4v8yolm" path="res://assets/meshes/map2.fbx" id="5_2klcf"]
+[ext_resource type="PackedScene" uid="uid://bpt5v14afcx81" path="res://assets/meshes/map.fbx" id="6_2lpho"]
 [ext_resource type="Material" uid="uid://dhmiwi43v0c3w" path="res://assets/materials/M_Map.tres" id="6_nakos"]
 [ext_resource type="Script" uid="uid://bnc6yxo0eyuho" path="res://scripts/candlelight_effect.gd" id="7_nakos"]
 
@@ -21,24 +21,24 @@ albedo_color = Color(0.20470001, 0.49024174, 0.89, 1)
 script = ExtResource("1_paxxb")
 
 [node name="Bordure" type="CSGBox3D" parent="." unique_id=439695729]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.54485, -0.641811, -14.950926)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.79025155, -40.54485, -0.641811, 2.4845772)
 material_override = SubResource("StandardMaterial3D_jh32y")
-size = Vector3(49.125, 5, 200)
+size = Vector3(49.125, 5, 155.87354)
 
 [node name="Bordure2" type="CSGBox3D" parent="." unique_id=1515610021]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.91557, -0.641811, -14.950926)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.29106218, 39.91557, -0.641811, 2.2175503)
 material_override = SubResource("StandardMaterial3D_jh32y")
-size = Vector3(49.125, 5, 200)
+size = Vector3(49.125, 5, 421.67334)
 
 [node name="Bordure3" type="CSGBox3D" parent="." unique_id=595917793]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.534298, -0.641811, -34.249817)
+transform = Transform3D(0.29522103, 0, 0, 0, 1, 0, 0, 0, 1, -0.29689598, -0.641811, -33.63642)
 material_override = SubResource("StandardMaterial3D_jh32y")
-size = Vector3(200, 5, 50)
+size = Vector3(106.45947, 5, 50)
 
 [node name="Bordure4" type="CSGBox3D" parent="." unique_id=2147101456]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.534298, -0.641811, 40.041565)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5283241, -0.641811, 38.58831)
 material_override = SubResource("StandardMaterial3D_jh32y")
-size = Vector3(200, 5, 50)
+size = Vector3(33.048096, 5, 50)
 
 [node name="Map2D" type="Sprite3D" parent="." unique_id=2106451994]
 transform = Transform3D(1.2, 0, 0, 0, -5.2453668e-08, 1.2, 0, -1.2, -5.2453668e-08, -0.585266, 0, -1.4327955)
@@ -49,7 +49,7 @@ texture = ExtResource("1_c7s6e")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.95738375, -1.9953706, -4.806658)
 visible = false
 
-[node name="Cube" parent="map" index="0" unique_id=386447168]
+[node name="Cube" parent="map" index="0" unique_id=992739428]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 22.241533, 0, -99.99999, -2.6513974e-06, -5.693924, 0, 3.0166245)
 surface_material_override/0 = SubResource("StandardMaterial3D_kwsvg")
 
@@ -59,7 +59,7 @@ script = ExtResource("4_0cso3")
 [node name="map2" parent="." unique_id=2102191850 instance=ExtResource("5_2klcf")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0657072, -1.9762135, -4.275607)
 
-[node name="map" parent="map2" index="0" unique_id=405578828]
+[node name="map" parent="map2" index="0" unique_id=1943423342]
 material_override = ExtResource("6_nakos")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=605876444]
@@ -69,9 +69,9 @@ light_energy = 0.0
 light_indirect_energy = 0.33
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=251532882]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10360718, -1.390358, -1.3583965)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45437622, -1.390358, 1.2590351)
 material_override = SubResource("StandardMaterial3D_lw4m4")
-size = Vector3(200, 1, 200)
+size = Vector3(141.65295, 1, 131.99365)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1723001995]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 16.549, 20, -8.283)

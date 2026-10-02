@@ -48,9 +48,10 @@ func with_values(food: int, troops: int, trust: int, wealth: int):
 	self.wealth = wealth
 	return self
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func init(place_start: Place) -> void:
+	self.place_in = place_start
+	self.historic_places.append(self.place_in)
+	self.get_next_place(self.place_in.links)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

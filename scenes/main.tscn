@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cb300e3rkwwpm" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c5b3ssno3qjsc" path="res://scenes/map.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://beshh12linnpj" path="res://scenes/hud.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://beshh12linnpj" path="res://scenes/ui_hud.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dw0jc5fh4411n" path="res://scenes/game_ui.tscn" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://yjpa04jof6bk" path="res://scenes/player.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://f5gt6bb6viw1" path="res://scenes/conquistador.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://cbki8cjdn015j" path="res://scenes/ui_main_menu.tscn" id="7_o6xl0"]
 
 [node name="Main" type="Node" unique_id=2064521053]
 script = ExtResource("1_ig7tw")
@@ -13,10 +14,11 @@ script = ExtResource("1_ig7tw")
 [node name="Map" parent="." unique_id=707007999 instance=ExtResource("2_0xm2m")]
 
 [node name="Player" parent="." unique_id=815405141 instance=ExtResource("3_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.717433, 0, 7.5184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.056, 7.058, 12.883)
 
 [node name="Conquistador" parent="." unique_id=2115321676 instance=ExtResource("6_tefeu")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1, 0, 0)
+visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Conquistador" unique_id=850475689]
 transform = Transform3D(10, 0, 0, 0, -4.371139e-07, 10, 0, -10, -4.371139e-07, 0, 15, 0)
@@ -25,10 +27,18 @@ light_energy = 2.0
 spot_angle = 35.0
 
 [node name="HUD" parent="." unique_id=1561272234 node_paths=PackedStringArray("conquistador") instance=ExtResource("2_lquwl")]
+visible = false
 conquistador = NodePath("../Conquistador")
 
 [node name="GameUI" parent="." unique_id=2075735181 node_paths=PackedStringArray("map", "conquistador") instance=ExtResource("3_7mycd")]
+visible = false
 map = NodePath("../Map")
 conquistador = NodePath("../Conquistador")
 
+[node name="UIMainMenu" parent="." unique_id=1093993357 instance=ExtResource("7_o6xl0")]
+
 [connection signal="click_on_place" from="Map" to="." method="_on_map_click_on_place"]
+[connection signal="pressed" from="UIMainMenu/VBoxContainer/ButtonStart" to="." method="start_game"]
+
+[editable path="Player"]
+[editable path="UIMainMenu"]

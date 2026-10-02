@@ -33,7 +33,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (conquis != null):
+	if (conquis != null && conquis.place_in != null):
 		conquis.place_in.show()
 		for link in conquis.place_in.links:
 			link.place.show()

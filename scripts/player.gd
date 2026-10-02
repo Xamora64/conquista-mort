@@ -3,11 +3,18 @@ extends Node3D
 var center = Vector3.ZERO
 var screen_size
 @export var LIMIT_ZOOM = [1.0, 12.0]
-@export var LIMIT_ZONE = [Vector2(-15, 30), Vector2(-15, 30)]
+# X1, X2; Z1, Z2
+@export var LIMIT_ZONE = [Vector2(-15, 10), Vector2(-15, 10)]
+
+const POSITION_MAIN_MENU = Vector3(-0.056, 7.058, 12.883)
+const POSITION_STARTING = Vector3(5.202, 1.262, 7.038)
 
 func _ready() -> void:
-	$Camera3D.position.y = 4.0
+	position = POSITION_MAIN_MENU
 	screen_size = get_viewport().get_visible_rect().size
+
+func start_game_camera() -> void:
+	position = POSITION_STARTING
 
 func _physics_process(delta: float) -> void:
 	camera_player_movement()
@@ -35,9 +42,9 @@ func camera_player_movement():
 
 func camera_player_zoom():
 	if (Input.is_action_just_released("zoom-in")):
-		$Camera3D.position.y -= 0.1
+		$Camera3D.position.y -= 0.2
 	elif (Input.is_action_just_released("zoom-out")):
-		$Camera3D.position.y += 0.1
+		$Camera3D.position.y += 0.2
 	# Mettre une limite au zomm de la caméra
 	$Camera3D.position.y = clamp($Camera3D.position.y, LIMIT_ZOOM[0], LIMIT_ZOOM[1])
 	

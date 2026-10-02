@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c7srd56h5wnmj"]
+
+[ext_resource type="Theme" uid="uid://bekmimemakhal" path="res://assets/themes/main_theme.tres" id="1_35xpy"]
+
+[node name="UIGame" type="Control" unique_id=1166119160]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_35xpy")

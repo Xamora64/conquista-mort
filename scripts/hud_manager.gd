@@ -14,7 +14,7 @@ class Stat:
 	func _init(id: String, icon_path: String, max_value: int, conquis_stat, conquis_stat_signal):
 		self.id = id
 		self.icon = load(icon_path)
-		self.max_value = max_value 
+		self.max_value = max_value
 		self.conquistador_stat = conquis_stat
 		self.conquistador_stat_signal = conquis_stat_signal
 
@@ -28,7 +28,6 @@ class Stat:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
 	for stat in stats:
 		stat.container = conquistadors_stat.duplicate()
 		var icon: TextureRect = stat.container.get_node("IconStat")
@@ -49,7 +48,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_conquistadors_value_change(id:String, value: int)-> void:
-	print("id: ", id, " value:", value)
 	for stat in stats:
 		if (stat.id == id):
 			var progress_bar: TextureProgressBar = stat.container.get_node("BarStat")

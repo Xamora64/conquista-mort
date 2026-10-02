@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cbki8cjdn015j"]
+
+[ext_resource type="Theme" uid="uid://bekmimemakhal" path="res://assets/themes/main_theme.tres" id="1_5aq7w"]
+[ext_resource type="Script" uid="uid://dshieo3pyntr1" path="res://scripts/buttons/start_button.gd" id="2_5fawq"]
+
+[sub_resource type="Gradient" id="Gradient_5aq7w"]
+offsets = PackedFloat32Array(0.29872882, 1)
+colors = PackedColorArray(1, 1, 1, 0.3137255, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1jq8j"]
+gradient = SubResource("Gradient_5aq7w")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="UIMainMenu" type="Control" unique_id=1093993357]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5aq7w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=877837786]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -432.0
+offset_right = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextMainMenu" type="Label" parent="VBoxContainer" unique_id=1215193360]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("1_5aq7w")
+theme_override_font_sizes/font_size = 148
+text = "Conquista-Mort"
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonStart" type="Button" parent="VBoxContainer" unique_id=1237627360]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = ExtResource("1_5aq7w")
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 108
+text = "Start"
+flat = true
+script = ExtResource("2_5fawq")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ButtonStart" unique_id=1821046354]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -90.5
+offset_right = 150.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_1jq8j")
+
+[connection signal="button_down" from="VBoxContainer/ButtonStart" to="VBoxContainer/ButtonStart" method="_on_button_down"]
+[connection signal="button_up" from="VBoxContainer/ButtonStart" to="VBoxContainer/ButtonStart" method="_on_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/ButtonStart" to="VBoxContainer/ButtonStart" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/ButtonStart" to="VBoxContainer/ButtonStart" method="_on_mouse_exited"]

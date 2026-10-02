@@ -1,39 +1,39 @@
 [gd_scene format=3 uid="uid://dw0jc5fh4411n"]
 
-[ext_resource type="FontFile" uid="uid://chhx8udqrm7uf" path="res://assets/fonts/GrenzeGotisch-Bold.ttf" id="1_nlan2"]
+[ext_resource type="FontFile" uid="uid://ckt1l5hl1u1nk" path="res://assets/fonts/GrenzeGotisch-Bold.ttf" id="1_nlan2"]
 [ext_resource type="Script" uid="uid://bi5q7xdrclx4a" path="res://scripts/game_ui.gd" id="1_sfun4"]
-[ext_resource type="FontFile" uid="uid://biw3sdcf71n3d" path="res://assets/fonts/GrenzeGotisch-Light.ttf" id="2_u001w"]
-[ext_resource type="Texture2D" uid="uid://ox02wxmjnk1y" path="res://assets/textures/bg2UI.png" id="3_u2dgd"]
-[ext_resource type="Texture2D" uid="uid://boepm6slg1a80" path="res://assets/textures/teteIndiens/indienNeutre.png" id="4_bt76a"]
+[ext_resource type="FontFile" uid="uid://dgmnvxp636jrd" path="res://assets/fonts/GrenzeGotisch-Light.ttf" id="2_u001w"]
+[ext_resource type="Texture2D" uid="uid://dq8ko4eltayp" path="res://assets/textures/bg2UI.png" id="3_u2dgd"]
+[ext_resource type="Texture2D" uid="uid://dotu4aaqfs4fg" path="res://assets/textures/teteIndiens/indienNeutre.png" id="4_bt76a"]
 [ext_resource type="Script" uid="uid://dd25do15j28yh" path="res://scripts/buttons/destination_button.gd" id="4_lab56"]
-[ext_resource type="Texture2D" uid="uid://ub3sy1b117ov" path="res://assets/textures/bouton.png" id="5_djwj0"]
-[ext_resource type="AudioStream" uid="uid://d2lkt1wxminsg" path="res://assets/sounds/Conquistamort-Marche-des-espagnols.ogg" id="5_x8pta"]
-[ext_resource type="AudioStream" uid="uid://vdrb73nplws0" path="res://assets/sounds/Conquistamort-Attaque-guérilla.ogg" id="6_2rmtt"]
-[ext_resource type="AudioStream" uid="uid://c0tq5mpr8thrv" path="res://assets/sounds/Conquistamort-Attaque.ogg" id="7_0dnje"]
+[ext_resource type="Texture2D" uid="uid://bj6q08n0ndf73" path="res://assets/textures/bouton.png" id="5_djwj0"]
+[ext_resource type="AudioStream" uid="uid://ba0n1nv8my0uj" path="res://assets/sounds/Conquistamort-Marche-des-espagnols.ogg" id="5_x8pta"]
+[ext_resource type="AudioStream" uid="uid://b3yn37sr85byv" path="res://assets/sounds/Conquistamort-Attaque-guérilla.ogg" id="6_2rmtt"]
+[ext_resource type="AudioStream" uid="uid://guo8h8u0g725" path="res://assets/sounds/Conquistamort-Attaque.ogg" id="7_0dnje"]
 [ext_resource type="Script" uid="uid://d4iaarvx0lmoq" path="res://scripts/buttons/place_intro_button.gd" id="7_5kjus"]
 [ext_resource type="Script" uid="uid://c8cche7vmk44o" path="res://scripts/buttons/guerilla_button.gd" id="7_gj1yn"]
-[ext_resource type="AudioStream" uid="uid://37qrrrgjf0ru" path="res://assets/sounds/Ui_Click.ogg" id="8_bj1rn"]
+[ext_resource type="AudioStream" uid="uid://bvpqh7bbo5hbr" path="res://assets/sounds/Ui_Click.ogg" id="8_bj1rn"]
 [ext_resource type="Script" uid="uid://de2ce7wjk740i" path="res://scripts/buttons/start_game_button.gd" id="8_sdeak"]
 [ext_resource type="Script" uid="uid://b2xq7ovimes2i" path="res://scripts/buttons/front_button.gd" id="9_5kjus"]
-[ext_resource type="AudioStream" uid="uid://ccom0725phd2g" path="res://assets/sounds/Ui_AttackDecision_1.ogg" id="9_lab56"]
-[ext_resource type="AudioStream" uid="uid://ch7s134abpgyd" path="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg" id="9_wbo4m"]
+[ext_resource type="AudioStream" uid="uid://7sciwnm8kdub" path="res://assets/sounds/Ui_AttackDecision_1.ogg" id="9_lab56"]
+[ext_resource type="AudioStream" uid="uid://dgifmaua5n1c1" path="res://assets/musics/Game Jam Histoire - S'Hill - Tribal Lands  - 64 bpm - Loop - v.1.ogg" id="9_wbo4m"]
 [ext_resource type="Script" uid="uid://212thwlf4m0h" path="res://scripts/buttons/end_step_button.gd" id="10_8wu16"]
-[ext_resource type="AudioStream" uid="uid://ck6diexg3kqh1" path="res://assets/sounds/Ui_AttackDecision_2.ogg" id="10_gj1yn"]
-[ext_resource type="AudioStream" uid="uid://c5bhc5jlnut7q" path="res://assets/sounds/Ui_FuiteDecision_1.ogg" id="11_5kjus"]
+[ext_resource type="AudioStream" uid="uid://bjoq378mnec6m" path="res://assets/sounds/Ui_AttackDecision_2.ogg" id="10_gj1yn"]
+[ext_resource type="AudioStream" uid="uid://dar1xust1h841" path="res://assets/sounds/Ui_FuiteDecision_1.ogg" id="11_5kjus"]
 [ext_resource type="Script" uid="uid://bwarwlhn70arq" path="res://scripts/buttons/attack_button.gd" id="12_36vcn"]
-[ext_resource type="AudioStream" uid="uid://5yd0dnob38am" path="res://assets/sounds/Ui_FuiteDecision_2.ogg" id="12_bj1rn"]
-[ext_resource type="FontFile" uid="uid://r0jnxmdk1rtl" path="res://assets/fonts/GrenzeGotisch-Regular.ttf" id="12_lsbho"]
+[ext_resource type="AudioStream" uid="uid://khv6x1ku2bne" path="res://assets/sounds/Ui_FuiteDecision_2.ogg" id="12_bj1rn"]
+[ext_resource type="FontFile" uid="uid://c77vfroueug7a" path="res://assets/fonts/GrenzeGotisch-Regular.ttf" id="12_lsbho"]
 [ext_resource type="Script" uid="uid://bh1gexbtolt5s" path="res://scripts/buttons/escape_button.gd" id="13_2yflp"]
-[ext_resource type="AudioStream" uid="uid://cxowqmjvew0ab" path="res://assets/sounds/Ui_FuiteDecision_3.ogg" id="13_36vcn"]
-[ext_resource type="AudioStream" uid="uid://cem6f6ycymhhe" path="res://assets/sounds/Conquistamort-Fuite.ogg" id="14_2yflp"]
-[ext_resource type="AudioStream" uid="uid://drp8e8sxfna1s" path="res://assets/sounds/Ui_WelcomeDecision_1.ogg" id="15_n74c5"]
-[ext_resource type="AudioStream" uid="uid://b5rs3y4wyivds" path="res://assets/sounds/Ui_WelcomeDecision_2.ogg" id="16_5v8bm"]
-[ext_resource type="AudioStream" uid="uid://60b6i1x8mrfn" path="res://assets/sounds/Ui_WelcomeDecision_3.ogg" id="17_8wu16"]
+[ext_resource type="AudioStream" uid="uid://biv8i45niu3a3" path="res://assets/sounds/Ui_FuiteDecision_3.ogg" id="13_36vcn"]
+[ext_resource type="AudioStream" uid="uid://d27bwo2jg1f1x" path="res://assets/sounds/Conquistamort-Fuite.ogg" id="14_2yflp"]
+[ext_resource type="AudioStream" uid="uid://yu27le48otc0" path="res://assets/sounds/Ui_WelcomeDecision_1.ogg" id="15_n74c5"]
+[ext_resource type="AudioStream" uid="uid://di60ysxgc5x5u" path="res://assets/sounds/Ui_WelcomeDecision_2.ogg" id="16_5v8bm"]
+[ext_resource type="AudioStream" uid="uid://c4lek0ex8b88g" path="res://assets/sounds/Ui_WelcomeDecision_3.ogg" id="17_8wu16"]
 [ext_resource type="Script" uid="uid://b13u4h0iak2ie" path="res://scripts/buttons/welcome_button.gd" id="18_n74c5"]
-[ext_resource type="Texture2D" uid="uid://civonkggha1s6" path="res://assets/textures/teteIndiens/indienColere.png" id="19_0dnje"]
-[ext_resource type="Texture2D" uid="uid://drw1niqiei23m" path="res://assets/textures/teteIndiens/indienContent.png" id="20_lab56"]
+[ext_resource type="Texture2D" uid="uid://ccjeswedr5xg1" path="res://assets/textures/teteIndiens/indienColere.png" id="19_0dnje"]
+[ext_resource type="Texture2D" uid="uid://cp82l5ismv6yb" path="res://assets/textures/teteIndiens/indienContent.png" id="20_lab56"]
 [ext_resource type="Script" uid="uid://h7jpa6ythent" path="res://scripts/buttons/first_place_intro_button.gd" id="24_36vcn"]
-[ext_resource type="AudioStream" uid="uid://binnty8svaatk" path="res://assets/musics/Conquistamort-Main-Menu.ogg" id="31_nlan2"]
+[ext_resource type="AudioStream" uid="uid://c65e8tkosl5xr" path="res://assets/musics/Conquistamort-Main-Menu.ogg" id="31_nlan2"]
 [ext_resource type="Script" uid="uid://b78yselgsvxxh" path="res://scripts/background_music.gd" id="32_sfun4"]
 [ext_resource type="Script" uid="uid://gubhu3vi4d4m" path="res://scripts/conquistador.gd" id="36_27ch3"]
 [ext_resource type="Script" uid="uid://dinyer1e8ed4u" path="res://scripts/place.gd" id="37_qleia"]
@@ -216,6 +216,8 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w3w35")
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1400.0
+offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -391,6 +393,8 @@ custom_maximum_size = Vector2(1200, -1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1200.0
+offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
