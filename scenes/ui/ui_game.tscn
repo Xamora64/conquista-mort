@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c7srd56h5wnmj"]
+
+[ext_resource type="Texture2D" uid="uid://dcva7tq42nt8l" path="res://assets/textures/mainMenu.png" id="1_k8msy"]
+[ext_resource type="Material" uid="uid://ktudrxn5sig" path="res://assets/shaders/paper_flip_shader.tres" id="2_tpt2v"]
+[ext_resource type="Texture2D" uid="uid://bxfabphttsodg" path="res://assets/textures/US.jpg" id="3_nwjs0"]
+[ext_resource type="Script" uid="uid://lmproq83s78b" path="res://scripts/ui/ui_place.gd" id="4_lymjp"]
+
+[node name="UIGame" type="CanvasLayer" unique_id=297572475]
+
+[node name="TestBackground" type="TextureRect" parent="." unique_id=248564524]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k8msy")
+
+[node name="TestShader" type="TextureRect" parent="." unique_id=881880665]
+material = ExtResource("2_tpt2v")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nwjs0")
+
+[node name="UIPlace" type="Control" parent="." unique_id=1882502673]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_lymjp")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIPlace" unique_id=472785039]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIPlace/MarginContainer" unique_id=669550503]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UIPlace/MarginContainer/VBoxContainer" unique_id=252044801]
+layout_mode = 2

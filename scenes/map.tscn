@@ -36,9 +36,9 @@ material_override = SubResource("StandardMaterial3D_jh32y")
 size = Vector3(106.45947, 5, 50)
 
 [node name="Bordure4" type="CSGBox3D" parent="." unique_id=2147101456]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5283241, -0.641811, 38.58831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28805065, -0.641811, 38.58831)
 material_override = SubResource("StandardMaterial3D_jh32y")
-size = Vector3(33.048096, 5, 50)
+size = Vector3(31.409712, 5, 50)
 
 [node name="Map2D" type="Sprite3D" parent="." unique_id=2106451994]
 transform = Transform3D(1.2, 0, 0, 0, -5.2453668e-08, 1.2, 0, -1.2, -5.2453668e-08, -0.585266, 0, -1.4327955)

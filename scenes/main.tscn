@@ -2,16 +2,17 @@
 
 [ext_resource type="Script" uid="uid://cb300e3rkwwpm" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c5b3ssno3qjsc" path="res://scenes/map.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://beshh12linnpj" path="res://scenes/ui_hud.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://beshh12linnpj" path="res://scenes/ui/ui_hud.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dw0jc5fh4411n" path="res://scenes/game_ui.tscn" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://yjpa04jof6bk" path="res://scenes/player.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://f5gt6bb6viw1" path="res://scenes/conquistador.tscn" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://cbki8cjdn015j" path="res://scenes/ui_main_menu.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://cbki8cjdn015j" path="res://scenes/ui/ui_main_menu.tscn" id="7_o6xl0"]
 
 [node name="Main" type="Node" unique_id=2064521053]
 script = ExtResource("1_ig7tw")
 
 [node name="Map" parent="." unique_id=707007999 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0013446808, 0.04045105, -0.09039116)
 
 [node name="Player" parent="." unique_id=815405141 instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.056, 7.058, 12.883)

@@ -21,8 +21,12 @@ func _on_map_click_on_place(place: Place) -> void:
 	$Conquistador.place_in = place
 	
 func start_game():
+	UIFade.transition()
+	await UIFade.on_transition_finished
+	
 	state_game = 1
 	$Conquistador.init($Map.place_start)
 	
 	$UIMainMenu.hide()
+	$HUD.show()
 	$Player.start_game_camera()
