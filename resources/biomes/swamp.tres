@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="BiomeData" format=3 uid="uid://dfo3iw4s7b5y6"]
-
-[ext_resource type="Script" uid="uid://c0rmqvgckai8j" path="res://scripts/biome_data.gd" id="1_8csxa"]
-
-[resource]
-script = ExtResource("1_8csxa")
-type = 0
-negative = true
-metadata/_custom_type_script = "uid://c0rmqvgckai8j"

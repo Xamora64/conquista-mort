@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c7srd56h5wnmj"]
 
-[ext_resource type="Texture2D" uid="uid://dcva7tq42nt8l" path="res://assets/textures/mainMenu.png" id="1_k8msy"]
+[ext_resource type="Texture2D" uid="uid://dwja1g7oq6n7i" path="res://assets/textures/mainMenu.png" id="1_k8msy"]
 [ext_resource type="Material" uid="uid://ktudrxn5sig" path="res://assets/shaders/paper_flip_shader.tres" id="2_tpt2v"]
-[ext_resource type="Texture2D" uid="uid://bxfabphttsodg" path="res://assets/textures/US.jpg" id="3_nwjs0"]
-[ext_resource type="Script" uid="uid://lmproq83s78b" path="res://scripts/ui/ui_place.gd" id="4_lymjp"]
+[ext_resource type="Texture2D" uid="uid://dg5kigqjxhmf2" path="res://assets/textures/US.jpg" id="3_nwjs0"]
+[ext_resource type="Script" uid="uid://cexd8jnpcrcfg" path="res://scripts/ui/ui_place.gd" id="4_lymjp"]
 
 [node name="UIGame" type="CanvasLayer" unique_id=297572475]
 
@@ -39,5 +39,5 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="UIPlace/MarginContainer" unique_id=669550503]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="UIPlace/MarginContainer/VBoxContainer" unique_id=252044801]
+[node name="BackgroundImage" type="TextureRect" parent="UIPlace/MarginContainer/VBoxContainer" unique_id=252044801]
 layout_mode = 2

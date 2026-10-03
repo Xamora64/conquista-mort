@@ -1,12 +1,11 @@
 [gd_resource type="Resource" script_class="EventData" format=3 uid="uid://cd4mefpthxvvq"]
 
-[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+[ext_resource type="Script" uid="uid://b0k2wk4uld73u" path="res://scripts/event_data.gd" id="1_jccg5"]
 
 [resource]
 script = ExtResource("1_jccg5")
 text = "La douceur de la forêt endort la vigilance des Espagnols. Ils cueillent baies et champignons, avant de se rendre compte que plusieurs hommes se sont empoisonnés."
 types_text = 3
-biome = 2
+biome = 1
 calcul_food = "(0.5 * troops)"
 calcul_troops = "-randi_range(9, 15)"
-metadata/_custom_type_script = "uid://qw5mo7fk0xje"

@@ -4,6 +4,7 @@ const place_scene: PackedScene = preload("res://scenes/place.tscn")
 const path_scene: PackedScene = preload("res://scenes/path_draw.tscn")
 
 const Link = Place.Link
+const TYPES_BIOMES = Biomes.TYPES_BIOMES
 
 func add_link_path_places(list_places: Array[Place]) -> Array[PathDraw]:
 	var list_paths: Array[PathDraw] = []
@@ -27,11 +28,11 @@ func init_place(position: Vector3, start_end: bool) -> Place:
 	var limit_links: int = 1
 	if (not start_end):
 		limit_links = randi_range(Place.LINKS_LIMIT[0], Place.LINKS_LIMIT[1]) 
-	var biome: BiomeData = BiomeData.generate()
+	var biome: TYPES_BIOMES = Biomes.generate()
 	if (start_end):
-		biome = BiomeData.create(BiomeData.TYPES_BIOMES.PLAIN)
+		biome = TYPES_BIOMES.PLAIN
 	var tribe: Tribe = null
-	if (biome.type != BiomeData.TYPES_BIOMES.SWAMP and not start_end):
+	if (biome != Biomes.TYPES_BIOMES.SWAMP and not start_end):
 		if (randi_range(0, 100) >= 40):
 			tribe = Tribe.new().generate()
 	

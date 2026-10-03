@@ -1,11 +1,10 @@
 [gd_resource type="Resource" script_class="EventData" format=3 uid="uid://byifww8nnukh7"]
 
-[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+[ext_resource type="Script" uid="uid://b0k2wk4uld73u" path="res://scripts/event_data.gd" id="1_jccg5"]
 
 [resource]
 script = ExtResource("1_jccg5")
 text = "La traversée de la plaine est rapide et sans danger. Les Espagnols en profitent même pour chasser du petit gibier."
 types_text = 3
-biome = 1
+biome = 2
 calcul_food = "(0.5 * troops)"
-metadata/_custom_type_script = "uid://qw5mo7fk0xje"

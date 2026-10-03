@@ -3,7 +3,7 @@ extends Area3D
 
 const NEAREST_LIMIT = 0.6
 const LINKS_LIMIT = Vector2(4, 5)
-@export var biome: BiomeData = null
+@export var biome: Biomes.TYPES_BIOMES = Biomes.TYPES_BIOMES.NONE
 
 @export var node3d_plain_tribe: Node3D
 @export var node3d_plain: Node3D
@@ -38,7 +38,7 @@ class Link:
 		self.path_draw = path_draw
 		self.distance = distance
 
-func with_values(position: Vector3, biome: BiomeData, tribe: Tribe, links: Array[Link], links_limit: int) -> Place:
+func with_values(position: Vector3, biome: Biomes.TYPES_BIOMES, tribe: Tribe, links: Array[Link], links_limit: int) -> Place:
 	self.position = position
 	self.biome = biome
 	self.tribe = tribe
@@ -54,20 +54,21 @@ func _ready() -> void:
 	if (tribe != null):
 		if (tribe.fortification):
 			current = node3d_fortification
-		elif (biome.type == biome.TYPES_BIOMES.PLAIN):
+		elif (biome == Biomes.TYPES_BIOMES.PLAIN):
 			current = node3d_plain_tribe
-		elif (biome.type == biome.TYPES_BIOMES.FOREST):
+		elif (biome == Biomes.TYPES_BIOMES.FOREST):
 			current = node3d_forest_tribe
 	else:
-		if (biome.type == biome.TYPES_BIOMES.PLAIN):
+		if (biome == Biomes.TYPES_BIOMES.PLAIN):
 			current = node3d_plain
-		elif (biome.type == biome.TYPES_BIOMES.FOREST):
+		elif (biome == Biomes.TYPES_BIOMES.FOREST):
 			current = node3d_forest
-		elif (biome.type == biome.TYPES_BIOMES.SWAMP):
+		elif (biome == Biomes.TYPES_BIOMES.SWAMP):
 			current = node3d_swamp
 	if (current != null):
 		current.set_visible(true)
-		#current.rotate(randf_range(0, 360))
+		current.rotate_y(randf_range(0, 360))
+	print(current)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -30,21 +30,21 @@ func _pressed() -> void:
 func _show_result_window(description: String):
 	descriptionLabel.set_text(description)
 	
-func _determine_action_type(tribe: Tribe, conquistador: Conquistador)-> Dictionary[String, EventData.TYPES_TEXT]:
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression==-2:
-		return {"b1":EventData.TYPES_TEXT.ALL_DEAD}
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression==-2:
-		return {"b1":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.tribe != null:
-		return {"b2a":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.PLAIN:
-		return {"b2b":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.SWAMP:
-		return {"b2c":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number< 1.5*conquistador.troops && conquistador.trust>=30 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.SWAMP:
-		return {"b2":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number< 1.5*conquistador.troops && conquistador.trust>=30 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.PLAIN:
-		return {"b2":EventData.TYPES_TEXT.CHOICE}
-	if tribe.number< 1.5*conquistador.troops && conquistador.trust<30:
-		return {"b3":EventData.TYPES_TEXT.CHOICE}
-	return {"":EventData.TYPES_TEXT.CHOICE}
+#func _determine_action_type(tribe: Tribe, conquistador: Conquistador)-> Dictionary[String, EventData.TYPES_TEXT]:
+	#if tribe.number>= 1.5*conquistador.troops && tribe.aggression==-2:
+		#return {"b1":EventData.TYPES_TEXT.ALL_DEAD}
+	#if tribe.number>= 1.5*conquistador.troops && tribe.aggression==-2:
+		#return {"b1":EventData.TYPES_TEXT.CHOICE}
+	#if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.tribe != null:
+		#return {"b2a":EventData.TYPES_TEXT.CHOICE}
+	#if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.PLAIN:
+		#return {"b2b":EventData.TYPES_TEXT.CHOICE}
+	#if tribe.number>= 1.5*conquistador.troops && tribe.aggression>-2 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.SWAMP:
+		#return {"b2c":EventData.TYPES_TEXT.CHOICE}
+	#if tribe.number< 1.5*conquistador.troops && conquistador.trust>=30 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.SWAMP:
+		#return {"b2":EventData.TYPES_TEXT.CHOICE}
+	#if tribe.number< 1.5*conquistador.troops && conquistador.trust>=30 && conquistador.place_in.biome.type==EventData.TYPES_BIOMES.PLAIN:
+		#return {"b2":EventData.TYPES_TEXT.CHOICE}
+	#if tribe.number< 1.5*conquistador.troops && conquistador.trust<30:
+		#return {"b3":EventData.TYPES_TEXT.CHOICE}
+	#return {"":EventData.TYPES_TEXT.CHOICE}

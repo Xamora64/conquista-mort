@@ -2,8 +2,8 @@ class_name EventData
 extends Resource
 
 static var event_resources: Array[EventData]
-const TYPES_BIOMES = BiomeData.TYPES_BIOMES
-const TYPES_BIOMES_TEXT = BiomeData.TYPES_BIOMES_TEXT
+const TYPES_BIOMES = Biomes.TYPES_BIOMES
+const TYPES_BIOMES_TEXT = Biomes.TYPES_BIOMES_TEXT
 
 # {tribe_name}, {biome_name}
 @export var text: String 
@@ -26,15 +26,6 @@ static func generate() -> EventData:
 	
 	return event_data
 
-static func load_folder(path: String) -> Array[EventData]:
-	for file in ResourceLoader.list_directory(path):
-		var new_path = path + file
-		if (file.ends_with("/")):
-			load_folder(new_path)
-		else:
-			event_resources.append(load(new_path).duplicate())
-	return event_resources
-
 # Return the list of valid resources
 static func ask_possible_events(type_text: TYPES_TEXT,
 							  biome: TYPES_BIOMES = TYPES_BIOMES.NONE, 
@@ -56,7 +47,7 @@ static func ask_possible_events(type_text: TYPES_TEXT,
 	return list_possible_events
 
 # {tribe_name}, {biome_name}
-static func apply_text_info_event(text_event: String, tribe: Tribe = null, biome: BiomeData = null) -> String:
+static func apply_text_info_event(text_event: String, tribe: Tribe = null, biome: Biomes = null) -> String:
 	var replace: Dictionary[String, String] = {}
 	if (tribe != null):
 		replace["tribe_name"] = tribe.tribe_name

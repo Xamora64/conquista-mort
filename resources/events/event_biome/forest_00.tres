@@ -1,12 +1,11 @@
 [gd_resource type="Resource" script_class="EventData" format=3 uid="uid://ds0mr4d4g7ky5"]
 
-[ext_resource type="Script" uid="uid://qw5mo7fk0xje" path="res://scripts/event_data.gd" id="1_jccg5"]
+[ext_resource type="Script" uid="uid://b0k2wk4uld73u" path="res://scripts/event_data.gd" id="1_jccg5"]
 
 [resource]
 script = ExtResource("1_jccg5")
 text = "La forêt est dense et difficile à parcourir. Alors que les Espagnols se disputent sur le chemin à suivre, une bagarre éclate et endommage un paquetage."
 types_text = 3
-biome = 2
+biome = 1
 calcul_food = "-50"
 calcul_wealth = "-10"
-metadata/_custom_type_script = "uid://qw5mo7fk0xje"

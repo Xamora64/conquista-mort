@@ -8,11 +8,11 @@ static func get_tribe_intro(place: Place)-> EventData:
 	return place_data
 	
 static func get_guide_result(place: Place, choice: String, type: EventData.TYPES_TEXT)-> String:
-	var	place_data: EventData = EventData.ask_possible_events(type, BiomeData.TYPES_BIOMES.NONE, choice).pick_random()
+	var	place_data: EventData = EventData.ask_possible_events(type, Biomes.TYPES_BIOMES.NONE, choice).pick_random()
 	return EventData.apply_text_info_event(place_data.text, place.tribe, place.biome)
 
 static func get_attack_result(place: Place, choice: String, type: EventData.TYPES_TEXT)-> String:
-	var	place_data: EventData = EventData.ask_possible_events(type, BiomeData.TYPES_BIOMES.NONE, choice).pick_random()
+	var	place_data: EventData = EventData.ask_possible_events(type, Biomes.TYPES_BIOMES.NONE, choice).pick_random()
 	return EventData.apply_text_info_event(place_data.text, place.tribe, place.biome)
 
 static func get_tribe_reaction_place_data(place: Place)-> EventData:
@@ -26,7 +26,7 @@ static func get_biome_reaction_place_data(place: Place)-> EventData:
 	
 # Choice a1, ...
 static func get_tribe_choice(place: Place, choice: String)-> EventData:
-	var	place_data: EventData = EventData.ask_possible_events(EventData.TYPES_TEXT.CHOICE, BiomeData.TYPES_BIOMES.NONE, choice).pick_random()
+	var	place_data: EventData = EventData.ask_possible_events(EventData.TYPES_TEXT.CHOICE, Biomes.TYPES_BIOMES.NONE, choice).pick_random()
 	return place_data
 	
 static func fill_place_intro(place_data: EventData, place: Place)-> String:

@@ -25,8 +25,8 @@ func _ready() -> void:
 	list_paths = placeCreator.add_link_path_places(list_places)
 	for place in list_places:
 		place.input_event.connect(_on_input_event.bind(place))
-	hide_place()
-	hide_path()
+	#hide_place()
+	#hide_path()
 		
 	conquis = get_node("../Conquistador")
 	game_ui = get_node("../GameUI")
