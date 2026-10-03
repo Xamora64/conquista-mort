@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bl6kj0blc7soh"]
+
+[ext_resource type="Texture2D" uid="uid://4aa2e60we10u" path="res://assets/textures/meshes/plume_albedo.png" id="1_f1w3r"]
+
+[resource]
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.99999887, 0.09684379, 0.11674126, 1)
+albedo_texture = ExtResource("1_f1w3r")
+roughness = 0.0

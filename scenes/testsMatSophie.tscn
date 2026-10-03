@@ -18,6 +18,8 @@
 [ext_resource type="Material" uid="uid://tyqcnsndrwg0" path="res://assets/materials/M_Eau.tres" id="12_ls7qd"]
 [ext_resource type="PackedScene" uid="uid://4shfkci4c2w1" path="res://assets/meshes/pionAmerindien2.fbx" id="17_dyswj"]
 [ext_resource type="Material" uid="uid://wu7bq4n7kip7" path="res://assets/materials/M_PionAmerindien.tres" id="18_ls7qd"]
+[ext_resource type="Material" uid="uid://bl6kj0blc7soh" path="res://assets/materials/M_Plumes.tres" id="19_v2idg"]
+[ext_resource type="PackedScene" uid="uid://4ecbhntjxqv8" path="res://assets/meshes/pionAmerindien.fbx" id="20_gm5l5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbnx"]
 
@@ -656,28 +658,64 @@ transform = Transform3D(14.155, 0, 0, 0, 14.155, 0, 0, 0, 14.155, -60.17256, 10.
 material_override = ExtResource("18_ls7qd")
 
 [node name="Plane_004" parent="pionAmerindien2" index="1" unique_id=563373173]
-material_override = ExtResource("18_ls7qd")
+material_override = ExtResource("19_v2idg")
 
 [node name="Plane_005" parent="pionAmerindien2" index="2" unique_id=809490991]
-material_override = ExtResource("18_ls7qd")
+material_override = ExtResource("19_v2idg")
 
 [node name="Plane_006" parent="pionAmerindien2" index="3" unique_id=1113340245]
-material_override = ExtResource("18_ls7qd")
+material_override = ExtResource("19_v2idg")
 
 [node name="Plane_007" parent="pionAmerindien2" index="4" unique_id=231186645]
-material_override = ExtResource("18_ls7qd")
+material_override = ExtResource("19_v2idg")
 
 [node name="Plane_008" parent="pionAmerindien2" index="5" unique_id=1284464237]
-material_override = ExtResource("18_ls7qd")
+material_override = ExtResource("19_v2idg")
 
 [node name="Plane_009" parent="pionAmerindien2" index="6" unique_id=1735491034]
-material_override = ExtResource("18_ls7qd")
+material_override = ExtResource("19_v2idg")
 
 [node name="Plane_010" parent="pionAmerindien2" index="7" unique_id=251405140]
-material_override = ExtResource("18_ls7qd")
+material_override = ExtResource("19_v2idg")
 
 [node name="chapo_001" parent="pionAmerindien2" index="8" unique_id=1634433090]
 material_override = ExtResource("18_ls7qd")
+
+[node name="pionAmerindien" parent="." unique_id=984781133 instance=ExtResource("20_gm5l5")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.395363, 10.101671, 9.351196)
+
+[node name="Pion" parent="pionAmerindien" index="0" unique_id=118556553]
+material_override = ExtResource("18_ls7qd")
+
+[node name="Plane" parent="pionAmerindien" index="1" unique_id=966006687]
+material_override = ExtResource("19_v2idg")
+
+[node name="Plane_001" parent="pionAmerindien" index="2" unique_id=1942689903]
+material_override = ExtResource("19_v2idg")
+
+[node name="Plane_002" parent="pionAmerindien" index="3" unique_id=1743137739]
+material_override = ExtResource("19_v2idg")
+
+[node name="Plane_003" parent="pionAmerindien" index="4" unique_id=100935593]
+material_override = ExtResource("19_v2idg")
+
+[node name="chapo" parent="pionAmerindien" index="5" unique_id=1992655909]
+material_override = ExtResource("18_ls7qd")
+
+[node name="plume1" parent="pionAmerindien" index="6" unique_id=935939101]
+material_override = ExtResource("19_v2idg")
+
+[node name="plume1_001" parent="pionAmerindien" index="7" unique_id=1361708278]
+material_override = ExtResource("19_v2idg")
+
+[node name="plume1_002" parent="pionAmerindien" index="8" unique_id=1542192810]
+material_override = ExtResource("19_v2idg")
+
+[node name="plume1_003" parent="pionAmerindien" index="9" unique_id=1027314592]
+material_override = ExtResource("19_v2idg")
+
+[node name="plume1_004" parent="pionAmerindien" index="10" unique_id=498326535]
+material_override = ExtResource("19_v2idg")
 
 [editable path="pion"]
 [editable path="plaineTribu"]
@@ -688,3 +726,4 @@ material_override = ExtResource("18_ls7qd")
 [editable path="fortificationTribu"]
 [editable path="Assets_01_JAM"]
 [editable path="pionAmerindien2"]
+[editable path="pionAmerindien"]
