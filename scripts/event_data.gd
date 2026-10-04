@@ -7,7 +7,7 @@ const TYPES_BIOMES_TEXT = Biomes.TYPES_BIOMES_TEXT
 
 # {tribe_name}, {biome_name}
 @export var text: String 
-enum TYPES_TEXT { INTRO, INTRO_REACTION, CHOICE, EVENT_BIOME, ALL_DEAD}
+enum TYPES_TEXT { INTRO, INTRO_REACTION, CHOICE, EVENT_BIOME, ALL_DEAD }
 @export var types_text: TYPES_TEXT # Obligatoire
 @export var biome: TYPES_BIOMES = TYPES_BIOMES.NONE# EVENEMENT BIOME: Swamp, Forest, Plain
 @export var type_choice: String  = ""# CHOICE: a2, b1, ...

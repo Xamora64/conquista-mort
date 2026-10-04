@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BackgroundData" format=3 uid="uid://cc0nvxw50ejtt"]
+
+[ext_resource type="Script" uid="uid://dvabfq6owicnw" path="res://scripts/background_data.gd" id="1_sefd5"]
+
+[resource]
+script = ExtResource("1_sefd5")
+background_path = "res://assets/textures/backgrounds_place/start00.jpg"
+metadata/_custom_type_script = "uid://dvabfq6owicnw"

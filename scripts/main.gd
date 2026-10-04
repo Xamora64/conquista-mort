@@ -11,7 +11,8 @@ const place_scene: PackedScene = preload("res://scenes/place.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Load Event Data
-	LibResources.load_folder("res://resources/events/")
+	EventData.event_resources.assign(LibResources.load_folder("res://resources/events/"))
+	BackgroundData.background_resources.assign(LibResources.load_folder("res://resources/backgrounds/"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,11 +1,19 @@
-extends Node
+class_name BackgroundData
+extends Resource
 
+static var background_resources: Array[BackgroundData]
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var background_path: String
+enum TYPES_BACKGROUND {START, TRIBE, TRIBE_FORTIFIED, FRONT, GUERILLA, WINNING, LOSING}
+@export var type: TYPES_BACKGROUND
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# Return the list of valid resources
+static func get_possible_background_resources(type_background: TYPES_BACKGROUND) -> Array[BackgroundData]:
+	var list_possible_background: Array[BackgroundData] = []
+	print(background_resources.size())
+	for background in background_resources:
+		print(background.type, " ", type_background, " ", background.type == type_background)
+		if (background.type == type_background):
+			list_possible_background.append(background)
+	print(list_possible_background.size())
+	return list_possible_background

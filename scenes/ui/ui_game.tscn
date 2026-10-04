@@ -4,10 +4,23 @@
 [ext_resource type="Material" uid="uid://ktudrxn5sig" path="res://assets/shaders/paper_flip_shader.tres" id="2_tpt2v"]
 [ext_resource type="Texture2D" uid="uid://dg5kigqjxhmf2" path="res://assets/textures/US.jpg" id="3_nwjs0"]
 [ext_resource type="Script" uid="uid://cexd8jnpcrcfg" path="res://scripts/ui/ui_place.gd" id="4_lymjp"]
+[ext_resource type="Texture2D" uid="uid://cd74anb6elbj4" path="res://assets/textures/backgrounds_place/start00.jpg" id="6_lymjp"]
+[ext_resource type="Texture2D" uid="uid://ox02wxmjnk1y" path="res://assets/textures/bg2UI.png" id="6_nwjs0"]
+[ext_resource type="Theme" uid="uid://bekmimemakhal" path="res://assets/themes/main_theme.tres" id="7_rxmiy"]
+[ext_resource type="Shader" uid="uid://cdrfl6k4i7s71" path="res://assets/shaders/shadow.gdshader" id="8_gys02"]
+[ext_resource type="Texture2D" uid="uid://ub3sy1b117ov" path="res://assets/textures/bouton.png" id="8_q8qwe"]
+[ext_resource type="Texture2D" uid="uid://civonkggha1s6" path="res://assets/textures/teteIndiens/indienColere.png" id="9_38f3s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kwsvg"]
+shader = ExtResource("8_gys02")
+shader_parameter/shadow_offset = Vector2(0, 0)
+shader_parameter/shadow_scale = Vector2(1.2, 1.2)
+shader_parameter/shadow_color = Color(0, 0, 0, 0.5882353)
 
 [node name="UIGame" type="CanvasLayer" unique_id=297572475]
 
 [node name="TestBackground" type="TextureRect" parent="." unique_id=248564524]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -16,6 +29,7 @@ grow_vertical = 2
 texture = ExtResource("1_k8msy")
 
 [node name="TestShader" type="TextureRect" parent="." unique_id=881880665]
+visible = false
 material = ExtResource("2_tpt2v")
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,18 +40,130 @@ texture = ExtResource("3_nwjs0")
 
 [node name="UIPlace" type="Control" parent="." unique_id=1882502673]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("4_lymjp")
 
-[node name="MarginContainer" type="MarginContainer" parent="UIPlace" unique_id=472785039]
+[node name="BackgroundImage" type="TextureRect" parent="UIPlace" unique_id=252044801]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1600.0
+offset_bottom = 900.0
+texture = ExtResource("6_lymjp")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UIPlace" unique_id=472785039]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UIPlace/MarginContainer" unique_id=669550503]
 layout_mode = 2
+theme_override_constants/separation = 20
 
-[node name="BackgroundImage" type="TextureRect" parent="UIPlace/MarginContainer/VBoxContainer" unique_id=252044801]
+[node name="NinePatchRect" type="NinePatchRect" parent="UIPlace/MarginContainer/VBoxContainer" unique_id=298551041]
+visible = false
 layout_mode = 2
+texture = ExtResource("6_nwjs0")
+patch_margin_left = 159
+patch_margin_top = 248
+patch_margin_right = 168
+patch_margin_bottom = 241
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIPlace/MarginContainer/VBoxContainer" unique_id=771024818]
+layout_mode = 2
+
+[node name="BackgroundText" type="TextureRect" parent="UIPlace/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1876362234]
+custom_minimum_size = Vector2(900, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_nwjs0")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UIPlace/MarginContainer/VBoxContainer/HBoxContainer/BackgroundText" unique_id=1460169526]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UIPlace/MarginContainer/VBoxContainer/HBoxContainer/BackgroundText/MarginContainer" unique_id=731210573]
+layout_mode = 2
+theme = ExtResource("7_rxmiy")
+
+[node name="Text" type="Label" parent="UIPlace/MarginContainer/VBoxContainer/HBoxContainer/BackgroundText/MarginContainer/ScrollContainer" unique_id=1790229329]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("7_rxmiy")
+theme_override_constants/outline_size = 0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In odio purus, aliquam sed velit in, tristique fringilla mauris. Sed in lectus dui. Etiam condimentum imperdiet dui, sed malesuada arcu. Vivamus aliquet augue vitae arcu pulvinar, vel accumsan neque imperdiet. Aenean vel leo tincidunt purus eleifend pulvinar sed rhoncus sem. Vestibulum a ligula at nulla luctus sodales. In iaculis nec est sit amet varius. Proin vitae odio dolor. Suspendisse nec tortor ut justo luctus vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin massa diam, malesuada et interdum nec, blandit ut mauris. Sed ligula massa, consectetur accumsan quam vel, posuere lacinia ante. "
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIPlace/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2013913199]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="tribeNumber" type="Label" parent="UIPlace/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=198350373]
+layout_mode = 2
+theme = ExtResource("7_rxmiy")
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "Nombre Indien:"
+
+[node name="tribeHead" type="TextureRect" parent="UIPlace/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1830550049]
+material = SubResource("ShaderMaterial_kwsvg")
+layout_mode = 2
+texture = ExtResource("9_38f3s")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIPlace/MarginContainer/VBoxContainer" unique_id=1900127932]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+
+[node name="ListButtons" type="VBoxContainer" parent="UIPlace/MarginContainer/VBoxContainer/MarginContainer" unique_id=1938192119]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ChoiceButton" type="TextureButton" parent="UIPlace/MarginContainer/VBoxContainer/MarginContainer/ListButtons" unique_id=664070918]
+modulate = Color(0.9, 0.81, 0.68399996, 1)
+custom_maximum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("8_q8qwe")
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="UIPlace/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton" unique_id=1684294156]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ButtonText" type="Label" parent="UIPlace/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton/MarginContainer" unique_id=593983638]
+layout_mode = 2
+theme = ExtResource("7_rxmiy")
+theme_override_constants/outline_size = 0
+text = "Lorem Ipsum"
+horizontal_alignment = 1
+vertical_alignment = 1

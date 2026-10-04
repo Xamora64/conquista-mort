@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://k4pim7kiqy82"]
 
-[ext_resource type="Shader" uid="uid://22mn5d3fu6fk" path="res://assets/shaders/burn_effect.gdshader" id="1_awqn7"]
+[ext_resource type="Shader" uid="uid://bouviak8j4wgc" path="res://assets/shaders/burn_effect.gdshader" id="1_awqn7"]
 
 [sub_resource type="Gradient" id="Gradient_tnlik"]
 offsets = PackedFloat32Array(0.45260665, 0.59952605, 0.7180095, 0.8744076, 1)
@@ -23,5 +23,5 @@ shader_parameter/width = 0.400000019
 shader_parameter/noise = SubResource("NoiseTexture2D_64lfe")
 shader_parameter/colorCurve = SubResource("GradientTexture2D_a7cbq")
 shader_parameter/timed = true
-shader_parameter/speed = 1.5000000712500001
+shader_parameter/speed = 1.0
 shader_parameter/angle = 0.0
