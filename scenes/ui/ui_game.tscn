@@ -9,7 +9,7 @@
 [ext_resource type="Theme" uid="uid://bekmimemakhal" path="res://assets/themes/main_theme.tres" id="7_rxmiy"]
 [ext_resource type="Shader" uid="uid://cdrfl6k4i7s71" path="res://assets/shaders/shadow.gdshader" id="8_gys02"]
 [ext_resource type="Texture2D" uid="uid://ub3sy1b117ov" path="res://assets/textures/bouton.png" id="8_q8qwe"]
-[ext_resource type="Texture2D" uid="uid://civonkggha1s6" path="res://assets/textures/teteIndiens/indienColere.png" id="9_38f3s"]
+[ext_resource type="Texture2D" uid="uid://civonkggha1s6" path="res://assets/textures/teteIndiens/tribeHead-2.png" id="9_38f3s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kwsvg"]
 shader = ExtResource("8_gys02")
