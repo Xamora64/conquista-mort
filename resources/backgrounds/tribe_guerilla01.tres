@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_nkok0")
-background_path = "res://assets/textures/backgrounds_place/tribe_guerilla00.jpg"
+background_path = "res://assets/textures/backgrounds_place/tribe_guerilla01.jpg"
 type = 4

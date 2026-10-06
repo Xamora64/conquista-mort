@@ -4,6 +4,5 @@
 
 [resource]
 script = ExtResource("1_vvntp")
-background_path = "res://assets/textures/backgrounds_place/tribe_losing01.jpg"
-type = 6
-metadata/_custom_type_script = "uid://dvabfq6owicnw"
+background_path = "res://assets/textures/backgrounds_place/tribe_winning00.jpg"
+type = 5
