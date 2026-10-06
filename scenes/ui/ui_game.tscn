@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://c7srd56h5wnmj"]
 
-[ext_resource type="Texture2D" uid="uid://dwja1g7oq6n7i" path="res://assets/textures/mainMenu.png" id="1_k8msy"]
+[ext_resource type="Texture2D" uid="uid://dcva7tq42nt8l" path="res://assets/textures/mainMenu.png" id="1_k8msy"]
 [ext_resource type="Material" uid="uid://ktudrxn5sig" path="res://assets/shaders/paper_flip_shader.tres" id="2_tpt2v"]
-[ext_resource type="Texture2D" uid="uid://dg5kigqjxhmf2" path="res://assets/textures/US.jpg" id="3_nwjs0"]
-[ext_resource type="Script" uid="uid://cexd8jnpcrcfg" path="res://scripts/ui/ui_place.gd" id="4_lymjp"]
-[ext_resource type="Texture2D" uid="uid://cd74anb6elbj4" path="res://assets/textures/backgrounds_place/start00.jpg" id="6_lymjp"]
-[ext_resource type="Texture2D" uid="uid://ox02wxmjnk1y" path="res://assets/textures/bg2UI.png" id="6_nwjs0"]
+[ext_resource type="Texture2D" uid="uid://bxfabphttsodg" path="res://assets/textures/US.jpg" id="3_nwjs0"]
+[ext_resource type="Script" uid="uid://lmproq83s78b" path="res://scripts/ui/ui_place.gd" id="4_lymjp"]
+[ext_resource type="Texture2D" uid="uid://ceu2l5siox10u" path="res://assets/textures/backgrounds_place/start00.jpg" id="6_lymjp"]
+[ext_resource type="Texture2D" uid="uid://dq8ko4eltayp" path="res://assets/textures/bg2UI.png" id="6_nwjs0"]
 [ext_resource type="Theme" uid="uid://bekmimemakhal" path="res://assets/themes/main_theme.tres" id="7_rxmiy"]
-[ext_resource type="Shader" uid="uid://cdrfl6k4i7s71" path="res://assets/shaders/shadow.gdshader" id="8_gys02"]
-[ext_resource type="Texture2D" uid="uid://ub3sy1b117ov" path="res://assets/textures/bouton.png" id="8_q8qwe"]
-[ext_resource type="Texture2D" uid="uid://civonkggha1s6" path="res://assets/textures/teteIndiens/tribeHead-2.png" id="9_38f3s"]
+[ext_resource type="Shader" uid="uid://bagkr7hcrpsbf" path="res://assets/shaders/shadow.gdshader" id="8_gys02"]
+[ext_resource type="Texture2D" uid="uid://bj6q08n0ndf73" path="res://assets/textures/bouton.png" id="8_q8qwe"]
+[ext_resource type="Texture2D" uid="uid://b5d5k70qsqlo5" path="res://assets/textures/teteIndiens/tribeHead-2.png" id="9_38f3s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kwsvg"]
 shader = ExtResource("8_gys02")

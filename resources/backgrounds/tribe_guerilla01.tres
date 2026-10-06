@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BackgroundData" format=3 uid="uid://qaffjb1b0t4c"]
+
+[ext_resource type="Script" uid="uid://ulaymeg31s4y" path="res://scripts/background_data.gd" id="1_nkok0"]
+
+[resource]
+script = ExtResource("1_nkok0")
+background_path = "res://assets/textures/backgrounds_place/tribe_guerilla00.jpg"
+type = 4

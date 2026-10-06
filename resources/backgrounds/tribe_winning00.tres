@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BackgroundData" format=3 uid="uid://brurjrec2moo8"]
+
+[ext_resource type="Script" uid="uid://ulaymeg31s4y" path="res://scripts/background_data.gd" id="1_vvntp"]
+
+[resource]
+script = ExtResource("1_vvntp")
+background_path = "res://assets/textures/backgrounds_place/tribe_losing01.jpg"
+type = 6
+metadata/_custom_type_script = "uid://dvabfq6owicnw"
