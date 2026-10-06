@@ -84,7 +84,6 @@ func get_links_places(list_places: Array[Place]):
 		
 		for near in nearest:
 			links.append(near)
-		#print(links.size())
 		place.links = links
 		
 

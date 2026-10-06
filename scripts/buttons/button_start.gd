@@ -1,6 +1,7 @@
 extends Button
 
 func _on_mouse_entered() -> void:
+	print("coucou")
 	self.remove_theme_constant_override("outline_size")
 
 func _on_mouse_exited() -> void:

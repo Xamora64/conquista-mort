@@ -1,3 +1,4 @@
+class_name Main
 extends Node
 
 const TYPES_TEXT = EventData.TYPES_TEXT
@@ -31,3 +32,32 @@ func start_game():
 	$UIMainMenu.hide()
 	$HUD.show()
 	$Player.start_game_camera()
+
+func going_in_place(place_to: Place):
+	
+	var place_from: Place = $Conquistador.place_in
+	#Animation
+	$Conquistador.place_to = place_to
+	$Conquistador.moving = true
+	await($Conquistador.finish_moving)
+	print($Conquistador.moving)
+	
+	if (place_to.tribe != null):
+		tribe_place(place_to)
+	else:
+		biome_place(place_to)
+
+func tribe_place(place: Place):
+	var tribe: Tribe = place.tribe
+	var event_data: EventData = EventData.ask_possible_events(TYPES_TEXT.INTRO, TYPES_BIOMES.NONE, "", 0).pick_random()
+	# Set value in UIGame
+	$UIGame/UIPlaceTribe.create_scene(tribe, event_data)
+	
+	# Player zoom in the event + Fade
+	# When Black screen => UI GAME show
+	# Black screen fade out
+	$UIGame.show()
+
+	
+func biome_place(place: Place):
+	var event_data: EventData = EventData.ask_possible_events(TYPES_TEXT.EVENT_BIOME, place.biome).pick_random()

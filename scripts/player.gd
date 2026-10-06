@@ -1,3 +1,4 @@
+class_name Player
 extends Node3D
 
 var center = Vector3.ZERO

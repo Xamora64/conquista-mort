@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c5b3ssno3qjsc" path="res://scenes/map.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://beshh12linnpj" path="res://scenes/ui/ui_hud.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://yjpa04jof6bk" path="res://scenes/player.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c7srd56h5wnmj" path="res://scenes/ui/ui_game.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://f5gt6bb6viw1" path="res://scenes/conquistador.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://cbki8cjdn015j" path="res://scenes/ui/ui_main_menu.tscn" id="7_o6xl0"]
 
@@ -12,6 +13,10 @@ script = ExtResource("1_ig7tw")
 
 [node name="Map" parent="." unique_id=707007999 instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0013446808, 0.04045105, -0.09039116)
+
+[node name="CSGBox3D" parent="Map" index="9" unique_id=251532882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41549873, -1.390358, -0.39838982)
+size = Vector3(37.20265, 1, 29.383514)
 
 [node name="Player" parent="." unique_id=815405141 instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.056, 7.058, 12.883)
@@ -22,9 +27,12 @@ visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Conquistador" unique_id=850475689]
 transform = Transform3D(10, 0, 0, 0, -4.371139e-07, 10, 0, -10, -4.371139e-07, 0, 15, 0)
-light_color = Color(1, 0.73333335, 0.3137255, 1)
+light_color = Color(1, 0.908, 0.76, 1)
 light_energy = 2.0
 spot_angle = 35.0
+
+[node name="UIGame" parent="." unique_id=297572475 instance=ExtResource("5_o6xl0")]
+visible = false
 
 [node name="HUD" parent="." unique_id=1561272234 node_paths=PackedStringArray("conquistador") instance=ExtResource("2_lquwl")]
 visible = false
@@ -35,5 +43,8 @@ conquistador = NodePath("../Conquistador")
 [connection signal="click_on_place" from="Map" to="." method="_on_map_click_on_place"]
 [connection signal="pressed" from="UIMainMenu/VBoxContainer/ButtonStart" to="." method="start_game"]
 
+[editable path="Map"]
+[editable path="Map/map"]
+[editable path="Map/map2"]
 [editable path="Player"]
 [editable path="UIMainMenu"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://f5gt6bb6viw1"]
 
-[ext_resource type="Script" uid="uid://gubhu3vi4d4m" path="res://scripts/conquistador.gd" id="1_7lpee"]
+[ext_resource type="Script" uid="uid://d1pft5d8iqubn" path="res://scripts/conquistador.gd" id="1_7lpee"]
 [ext_resource type="PackedScene" uid="uid://v2ohf8mmvwbs" path="res://assets/meshes/pion.fbx" id="2_24k2q"]
 [ext_resource type="Material" uid="uid://cev0smjojenw7" path="res://assets/materials/M_Casque.tres" id="3_3bonr"]
 [ext_resource type="Material" uid="uid://w8e6ahgx6wcf" path="res://assets/materials/M_Pion.tres" id="4_ehi4v"]
@@ -22,10 +22,10 @@ visible = false
 [node name="pion" parent="." unique_id=156203434 instance=ExtResource("2_24k2q")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -0.24030104, 0, 0)
 
-[node name="Casque" parent="pion" index="0" unique_id=539953345]
+[node name="Casque" parent="pion" index="0" unique_id=59198612]
 material_override = ExtResource("3_3bonr")
 
-[node name="Pion" parent="pion" index="1" unique_id=1584982018]
+[node name="Pion_001" parent="pion" index="1" unique_id=2026549163]
 material_override = ExtResource("4_ehi4v")
 
 [editable path="pion"]

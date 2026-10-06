@@ -2,8 +2,9 @@ class_name Map
 extends Node3D
 
 @onready var placeCreator = $MapEventsCreator
-var conquis
-var game_ui
+@onready var conquis: Conquistador = get_node("../Conquistador")
+#@onready var game_ui: UIGame  = get_node("../UIGame")
+@onready var main: Main = get_parent()
 const Link = Place.Link
 
 @export var place_start: Place
@@ -27,9 +28,6 @@ func _ready() -> void:
 		place.input_event.connect(_on_input_event.bind(place))
 	#hide_place()
 	#hide_path()
-		
-	conquis = get_node("../Conquistador")
-	game_ui = get_node("../GameUI")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -95,9 +93,12 @@ func conquis_next_place(place_to: Place):
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int, place_to: Place) -> void:
 	if (event.is_action_pressed("left click")):
+		if (conquis.next_link.place == place_to):
+			main.going_in_place(place_to)
+			
 		#print("event selectioned: ", place_to.position.x, " ", place_to.position.y, " ", place_to.position.z)
-		if (game_ui.guide):
-			conquis_next_place(place_to)
+		#if (game_ui.guide):
+			#conquis_next_place(place_to)
 		#print(conquis.historic_places)
 	
 # De Droite à Gauche x: 7.03 => -6.41

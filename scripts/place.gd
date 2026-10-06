@@ -12,18 +12,15 @@ const LINKS_LIMIT = Vector2(4, 5)
 @export var node3d_swamp: Node3D
 @export var node3d_fortification: Node3D
 var current: Node3D = node3d_plain
-#var array_node3d: Array[Node3D] = [
-	#node3d_plain_tribe,
-	#node3d_plain,
-	#node3d_forest_tribu,
-	#node3d_swamp,
-	#node3d_fortification
-#]
 
 @export var tribe: Tribe = null
 @export var links_limit: = 3
 @export var start: bool = false
 @export var end: bool = false
+
+var is_focus: bool = false
+@export var focus_material: Material
+@export var hover_material: Material
 
 var links: Array[Link] = []
 
@@ -48,7 +45,6 @@ func with_values(position: Vector3, biome: Biomes.TYPES_BIOMES, tribe: Tribe, li
 
 signal display_event_popup()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	current = node3d_plain
 	if (tribe != null):
@@ -68,8 +64,25 @@ func _ready() -> void:
 	if (current != null):
 		current.set_visible(true)
 		current.rotate_y(randf_range(0, 360))
-	print(current)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func apply_border():
+	for mesh in find_children("*", "MeshInstance3D", true, false):
+		mesh.material_overlay = focus_material
+
+func remove_material():
+	is_focus = false
+	for mesh in find_children("*", "MeshInstance3D", true, false):
+		mesh.material_overlay = null
+
+func _on_mouse_entered() -> void:
+	if (is_focus):
+		current.scale += Vector3(0.025, 0.025, 0.025)
+		for mesh in current.find_children("*", "MeshInstance3D", true, false):
+			mesh.material_overlay = hover_material
+
+func _on_mouse_exited() -> void:
+	if (is_focus):
+		current.scale -= Vector3(0.025, 0.025, 0.025)
+		apply_border()
+	else:
+		remove_material()

@@ -53,15 +53,29 @@ func init(place_start: Place) -> void:
 	self.historic_places.append(self.place_in)
 	self.get_next_place(self.place_in.links)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var time_moving = 2.0
+var moving: bool = false
+var place_to: Place = null
+var t: float = 0.0
+signal finish_moving
+
 func _physics_process(delta: float) -> void:
-	if place_in != null:
-		show()
-		position = place_in.position
-		position.y += 0.5
+	show()
+	position.y += 0.5
+	if moving and place_to != null:
+		t += 1.0 * delta / time_moving
+		t = clamp(t, 0.0, 1.0)
+		position = place_in.position.lerp(place_to.position, t)
+		if (t >= 1.0):
+			moving = false
+			t = 0
+			finish_moving.emit()
 	else:
-		hide()
-		
+		if place_in != null:
+			position = place_in.position
+		else:
+			hide()
+
 var next_link: Link = null
 
 # To find the best next place for conquistador
@@ -70,6 +84,8 @@ var next_link: Link = null
 # Ils évite au maximun les marais
 # Si possible aller vers la haut gauche
 func get_next_place(list_possible_links: Array[Link]) -> Link:
+	if (next_link != null):
+		next_link.place.remove_material()
 	var list_links = place_in.links
 	var best_link: Link = null
 	for link in list_links:
@@ -94,4 +110,6 @@ func get_next_place(list_possible_links: Array[Link]) -> Link:
 			if (place.biome.type > best_place.biome.type): # Plaine > forest > marais
 				best_link = link
 	next_link = best_link
+	next_link.place.apply_border()
+	next_link.place.is_focus = true
 	return best_link

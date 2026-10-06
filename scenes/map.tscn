@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c5b3ssno3qjsc"]
 
-[ext_resource type="Texture2D" uid="uid://bxfabphttsodg" path="res://assets/textures/US.jpg" id="1_c7s6e"]
-[ext_resource type="Script" uid="uid://buf4o5a0vgtko" path="res://scripts/map.gd" id="1_paxxb"]
-[ext_resource type="Script" uid="uid://4xdk56lgvdev" path="res://scripts/map_places_creator.gd" id="4_0cso3"]
-[ext_resource type="PackedScene" uid="uid://cfgats4v8yolm" path="res://assets/meshes/map2.fbx" id="5_2klcf"]
-[ext_resource type="PackedScene" uid="uid://bpt5v14afcx81" path="res://assets/meshes/map.fbx" id="6_2lpho"]
+[ext_resource type="Texture2D" uid="uid://dg5kigqjxhmf2" path="res://assets/textures/US.jpg" id="1_c7s6e"]
+[ext_resource type="Script" uid="uid://diq0ebqc4bnht" path="res://scripts/map.gd" id="1_paxxb"]
+[ext_resource type="Script" uid="uid://bf37hyqhsxwoq" path="res://scripts/map_places_creator.gd" id="4_0cso3"]
+[ext_resource type="PackedScene" uid="uid://cmq2oebxey5us" path="res://assets/meshes/map2.fbx" id="5_2klcf"]
+[ext_resource type="PackedScene" uid="uid://ebrcp5jd37fk" path="res://assets/meshes/map.fbx" id="6_2lpho"]
 [ext_resource type="Material" uid="uid://dhmiwi43v0c3w" path="res://assets/materials/M_Map.tres" id="6_nakos"]
-[ext_resource type="Script" uid="uid://bnc6yxo0eyuho" path="res://scripts/candlelight_effect.gd" id="7_nakos"]
+[ext_resource type="Script" uid="uid://cyjl1jf0olkm5" path="res://scripts/candlelight_effect.gd" id="7_nakos"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jh32y"]
 albedo_color = Color(0.37213257, 0.15919474, 0.03065409, 1)
@@ -49,7 +49,7 @@ texture = ExtResource("1_c7s6e")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.95738375, -1.9953706, -4.806658)
 visible = false
 
-[node name="Cube" parent="map" index="0" unique_id=992739428]
+[node name="Cube" parent="map" index="0" unique_id=27669361]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 22.241533, 0, -99.99999, -2.6513974e-06, -5.693924, 0, 3.0166245)
 surface_material_override/0 = SubResource("StandardMaterial3D_kwsvg")
 
@@ -59,7 +59,7 @@ script = ExtResource("4_0cso3")
 [node name="map2" parent="." unique_id=2102191850 instance=ExtResource("5_2klcf")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0657072, -1.9762135, -4.275607)
 
-[node name="map" parent="map2" index="0" unique_id=1943423342]
+[node name="map" parent="map2" index="0" unique_id=1398547000]
 material_override = ExtResource("6_nakos")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=605876444]

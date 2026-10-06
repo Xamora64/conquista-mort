@@ -5,12 +5,25 @@
 [ext_resource type="Material" uid="uid://olgbf8ev72ve" path="res://assets/materials/M_Props.tres" id="3_1tupt"]
 [ext_resource type="Material" uid="uid://s0i7qj1itodh" path="res://assets/materials/M_Herbe.tres" id="4_41yoo"]
 [ext_resource type="PackedScene" uid="uid://dkld1r1p3vh0o" path="res://assets/meshes/plaine.fbx" id="5_hn5ta"]
+[ext_resource type="Shader" uid="uid://qcqjt1fxyyl6" path="res://assets/shaders/hover_3D.gdshader" id="6_hn5ta"]
 [ext_resource type="PackedScene" uid="uid://v42q46cnrrh6" path="res://assets/meshes/foretTribu.fbx" id="6_jh388"]
 [ext_resource type="PackedScene" uid="uid://b8cr3oylg35im" path="res://assets/meshes/foret.fbx" id="7_12vl7"]
 [ext_resource type="PackedScene" uid="uid://ca1waspvob8x7" path="res://assets/meshes/marais.fbx" id="8_6dkwy"]
 [ext_resource type="Material" uid="uid://byy08l2fqamv8" path="res://assets/materials/M_solMarais.tres" id="9_gyfyg"]
 [ext_resource type="Material" uid="uid://tyqcnsndrwg0" path="res://assets/materials/M_Eau.tres" id="10_f55dr"]
 [ext_resource type="PackedScene" uid="uid://i3mwmievb3s2" path="res://assets/meshes/fortificationTribu.fbx" id="11_chsdv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1tupt"]
+render_priority = 0
+shader = ExtResource("6_hn5ta")
+shader_parameter/couleur = Color(1, 1, 1, 1)
+shader_parameter/epaisseur = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1tdiu"]
+render_priority = 0
+shader = ExtResource("6_hn5ta")
+shader_parameter/couleur = Color(1, 1, 1, 1)
+shader_parameter/epaisseur = 3.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kwsvg"]
 
@@ -26,6 +39,8 @@ node3d_forest_tribe = NodePath("ForestTribe")
 node3d_forest = NodePath("Forest")
 node3d_swamp = NodePath("Swamp")
 node3d_fortification = NodePath("FortificationTribe")
+focus_material = SubResource("ShaderMaterial_1tupt")
+hover_material = SubResource("ShaderMaterial_1tdiu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1432115435]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -619,6 +634,9 @@ material_override = ExtResource("3_1tupt")
 [node name="Pic_03_low_003" parent="FortificationTribe" index="16" unique_id=1030499829]
 transform = Transform3D(0.0058591533, 0.006604972, 0.004695175, 0.005473461, 0.0010470354, -0.008303309, -0.0059759147, 0.007434922, -0.0030017316, -0.60907555, 1.6749115, 4.897662)
 material_override = ExtResource("3_1tupt")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 
 [editable path="PlainTribe"]
 [editable path="Plain"]

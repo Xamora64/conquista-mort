@@ -1,16 +1,22 @@
 extends Control
 
-@onready var background = $MarginContainer/VBoxContainer/BackgroundImage
+@onready var background: TextureRect = $BackgroundImage
 
-@onready var tribe_number = $MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/tribeNumber
-@onready var tribe_head = $MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/tribeHead
+@onready var event_text: Label = %eventText
+
+@onready var tribe_number: Label = %tribeNumber
+@onready var tribe_head: TextureRect = %tribeHead
 var list_heads = {
-	0: "",
+	-2: "res://assets/textures/teteIndiens/tribeHead-2.png",
+	-1: "res://assets/textures/teteIndiens/tribeHead-1.png",
+	0: "res://assets/textures/teteIndiens/tribeHead0.png",
+	1: "res://assets/textures/teteIndiens/tribeHead1.png",
+	2: "res://assets/textures/teteIndiens/tribeHead2.png",
 }
 
-@onready var list_buttons = $MarginContainer/VBoxContainer/MarginContainer/ListButtons
-@onready var choice_button = $MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton
-@onready var choice_button_text = $MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton/MarginContainer/ButtonText
+@onready var list_buttons = %ListButtons
+@onready var choice_button = %ChoiceButton
+@onready var choice_button_text = %ButtonText
 
 func _ready() -> void:
 	if (BackgroundData.background_resources.is_empty()):
@@ -20,7 +26,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-#func create_scene(tribe: Tribe, event: EventData) -> void:
-	#match(tribe.aggression):
-		#0:
-			#tribe_head.texture = load()
+func create_scene(tribe: Tribe, event: EventData) -> void:
+	print(event_text)
+	tribe_head.texture = load(list_heads[tribe.aggression])
+	event_text.set_text(event.text)
+	tribe_number.set_text("Nombre Indien: " + str(tribe.number))
+	
+
+func _on_toggle_ui_place_toggled(toggled_on: bool) -> void:
+	if (toggled_on):
+		background.hide()
+		$HBoxContainer/MarginContainer.hide()
+	else:
+		background.show()
+		$HBoxContainer/MarginContainer.show()

@@ -23,5 +23,5 @@ shader_parameter/width = 0.400000019
 shader_parameter/noise = SubResource("NoiseTexture2D_64lfe")
 shader_parameter/colorCurve = SubResource("GradientTexture2D_a7cbq")
 shader_parameter/timed = true
-shader_parameter/speed = 1.0
+shader_parameter/speed = 0.50000002375
 shader_parameter/angle = 0.0

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbki8cjdn015j"]
 
 [ext_resource type="Theme" uid="uid://bekmimemakhal" path="res://assets/themes/main_theme.tres" id="1_5aq7w"]
-[ext_resource type="Script" uid="uid://dshieo3pyntr1" path="res://scripts/buttons/start_button.gd" id="2_5fawq"]
+[ext_resource type="Script" uid="uid://c6lq0deu5s0m6" path="res://scripts/buttons/button_start.gd" id="2_sa4t0"]
 
 [sub_resource type="Gradient" id="Gradient_5aq7w"]
 offsets = PackedFloat32Array(0.29872882, 1)
@@ -43,7 +43,7 @@ theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 108
 text = "Start"
 flat = true
-script = ExtResource("2_5fawq")
+script = ExtResource("2_sa4t0")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/ButtonStart" unique_id=1821046354]
 z_index = -1

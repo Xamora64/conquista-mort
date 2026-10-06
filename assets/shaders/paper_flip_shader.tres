@@ -1,13 +1,13 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://ktudrxn5sig"]
 
-[ext_resource type="Shader" uid="uid://cchdrf0xea4w4" path="res://assets/shaders/page_flip.gdshader" id="1_tpw3q"]
+[ext_resource type="Shader" uid="uid://d0iawl7t38abb" path="res://assets/shaders/page_flip.gdshader" id="1_tpw3q"]
 
 [resource]
 shader = ExtResource("1_tpw3q")
 shader_parameter/fold_x = 0.0
 shader_parameter/fold_y = 0.0
-shader_parameter/normal_x = 0.0999999977648
-shader_parameter/normal_y = 1.0
+shader_parameter/normal_x = 0.10999997518927995
+shader_parameter/normal_y = 0.9999999552959999
 shader_parameter/next_shadow_size = 0.2999999932944
 shader_parameter/next_shadow_power = 0.5
 shader_parameter/back_shadow_size = 2.0

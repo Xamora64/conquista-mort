@@ -33,6 +33,7 @@ static func ask_possible_events(type_text: TYPES_TEXT,
 							  aggression: int = 0) -> Array[EventData]:
 	var list_possible_events: Array[EventData] = []
 	for event in event_resources:
+		#print(event.text)
 		#print(event.types_text, " ", type_text, " ", event.types_text == type_text)
 		#print(event.biome, " ", biome, " ", event.biome == biome)
 		#print(event.type_choice, " ", type_choice, " ", event.type_choice == type_choice)
@@ -43,7 +44,7 @@ static func ask_possible_events(type_text: TYPES_TEXT,
 			event.aggression == aggression
 		):
 			list_possible_events.append(event)
-	#print(list_possible_events.size())
+	print(list_possible_events.size())
 	return list_possible_events
 
 # {tribe_name}, {biome_name}
