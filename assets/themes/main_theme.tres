@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://bekmimemakhal"]
 
-[ext_resource type="FontFile" uid="uid://c77vfroueug7a" path="res://assets/fonts/GrenzeGotisch-Regular.ttf" id="1_3f3va"]
+[ext_resource type="FontFile" uid="uid://r0jnxmdk1rtl" path="res://assets/fonts/GrenzeGotisch-Regular.ttf" id="1_3f3va"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f3va"]
 bg_color = Color(0.1, 0.1, 0.1, 0.3)

@@ -1,12 +1,9 @@
-[gd_scene format=3 uid="uid://evb56quga65v"]
+[gd_scene format=4 uid="uid://evb56quga65v"]
 
 [ext_resource type="Material" uid="uid://dhmiwi43v0c3w" path="res://assets/materials/M_Map.tres" id="1_gj52n"]
 [ext_resource type="PackedScene" uid="uid://v2ohf8mmvwbs" path="res://assets/meshes/pion.fbx" id="1_tbbnx"]
-[ext_resource type="ArrayMesh" uid="uid://bvrcf2j3lsgxd" path="res://assets/meshes/map.obj" id="2_gj52n"]
 [ext_resource type="Material" uid="uid://cev0smjojenw7" path="res://assets/materials/M_Casque.tres" id="2_u1hiq"]
-[ext_resource type="PackedScene" uid="uid://c1wlubuav5q0l" path="res://assets/meshes/Assets_01_JAM.fbx" id="3_bsi0v"]
 [ext_resource type="Material" uid="uid://w8e6ahgx6wcf" path="res://assets/materials/M_Pion.tres" id="3_fx70h"]
-[ext_resource type="PackedScene" uid="uid://dkld1r1p3vh0o" path="res://assets/meshes/plaine.fbx" id="4_dy7j5"]
 [ext_resource type="PackedScene" uid="uid://v42q46cnrrh6" path="res://assets/meshes/foretTribu.fbx" id="4_hsjgk"]
 [ext_resource type="PackedScene" uid="uid://bw5ehqtwufck4" path="res://assets/meshes/plaineTribu.fbx" id="4_isj1y"]
 [ext_resource type="Material" uid="uid://olgbf8ev72ve" path="res://assets/materials/M_Props.tres" id="5_7o0rv"]
@@ -14,14 +11,40 @@
 [ext_resource type="PackedScene" uid="uid://b8cr3oylg35im" path="res://assets/meshes/foret.fbx" id="9_fx70h"]
 [ext_resource type="PackedScene" uid="uid://ca1waspvob8x7" path="res://assets/meshes/marais.fbx" id="10_rm2v8"]
 [ext_resource type="PackedScene" uid="uid://i3mwmievb3s2" path="res://assets/meshes/fortificationTribu.fbx" id="11_5kws7"]
-[ext_resource type="Material" uid="uid://byy08l2fqamv8" path="res://assets/materials/M_solMarais.tres" id="11_dyswj"]
-[ext_resource type="Material" uid="uid://tyqcnsndrwg0" path="res://assets/materials/M_Eau.tres" id="12_ls7qd"]
 [ext_resource type="PackedScene" uid="uid://4shfkci4c2w1" path="res://assets/meshes/pionAmerindien2.fbx" id="17_dyswj"]
-[ext_resource type="Material" uid="uid://wu7bq4n7kip7" path="res://assets/materials/M_PionAmerindien.tres" id="18_ls7qd"]
-[ext_resource type="Material" uid="uid://bl6kj0blc7soh" path="res://assets/materials/M_Plumes.tres" id="19_v2idg"]
 [ext_resource type="PackedScene" uid="uid://4ecbhntjxqv8" path="res://assets/meshes/pionAmerindien.fbx" id="20_gm5l5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbnx"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_whu84"]
+_surfaces = [{
+"aabb": AABB(-80.702126, -10.820761, -44.689667, 155.9985, 20.687729, 116.22763),
+"format": 34896613377,
+"index_count": 828,
+"index_data": PackedByteArray("RwBIAEkAJgBHAEkARwAlAEgASgBHACYASwAlAEcASgBLAEcASwBMACUAJABLAEoAJQBNAEgATgBMAEsAJABOAEsATABPACUAJQBPAE0ATABOACcATwBMAAUABQBMACcAJwBOAAYAKAAFACcABgAoACcAUABOACQATgBQAAYAUQBQACQAQwBPAAUAUgBQAFEABgBQABoAUABSABoAUQAkAC4ALgAkAEoAUgBRABEAGgBSABEAUQAuACwAEQBRACwALgBKAFMAAwAaABEALAAuABUALgBTABUAUwBKACYAGQARACwAAwARABkALQAsABUAGQAsAC0AFQBTABIAUwAmAFQAUwBUABIAVAAmAFUAVQAmAFYAVABVAFcAVQBWAFcAEgBUADEAVABXADEAFAAVABIALQAVABQAMAASADEAFAASADAAMQBXAAQAFABYAC0AMAAxAAcABwAxAAQAMABZABQAWQBYABQABwBaADAAWgBZADAAVwBbAAQAVwBWAFsAXABaAAcABwAEADIAMgBcAAcABABbADMAMgAEADMAWwBWAF0AWwBdADMALwBZAFoALwBaAFwAXgBcADIAGABZAC8AGABYAFkALwBcAF8ALwBfABgAYABcAF4AXwBcAGAAFwBeADIAYABeABcAMgAzABcAYQBfAGAAYQAYAF8AAgBgABcAYQBgAAIAFwAzABYAFgACABcAMwBdABYACwACABYAXQALABYAYQACAGIAYgAYAGEAAgALADQAYgACADQAYwALAF0AVgBjAF0ANAALADUAVgBJAGMAJgBJAFYAYwBkAAsACwBkADUAYwBJAGQAZABlADUAZABJAGUANgA0ADUANQBlADYAZQBJAGYASQBIAGYASABnAGYASABNAGcAZgBoAGUAZgBnAGgAZQBoAGkAZQBpADYAZwBqAGgATQBrAGcAZwBrAGoATQBsAGsATwBsAE0AbABPAEMAaAA4AGkAaABqADgACgBsAEMAbABtAGsAbQBsAAoAawATAGoAawBtABMAagBuADgAagATAG4AOABuADsAbQBvABMAEwBwAG4AEwBvAHAAbwBtAEIAQgBtAAoAcABvAAgACABvAEIAbgBwAHEAbgBxADsAcgBwAAgAcQBwAHIAHgAIAEIACgAeAEIAQQByAAgAQQAIAB4APQBxAHIAPwByAEEAPwA9AHIAcwBxAD0AOwBxAHMAHwA9AD8AIQBzAD0AHwAhAD0APABzACEAPAA7AHMADwAhAB8ADgA8ACEADwAOACEAIAA8AA4AIAA7ADwAOgAOAA8AIwA7ACAAOAA7ACMAaQA4ACMAIgAgAA4AIwAgACIAOgAiAA4AaQAjAAkACQAjACIANgBpAAkAEAAiADoAEAAJACIAAAA2AAkAAAAJABAANwA2AAAANwA0ADYANwBiADQAAAB0ADcAdABiADcAEAB1AAAAdQB0AAAAdAB2AGIAdQB2AHQAdwB1ABAAOgB3ABAAdwAcAHUAHAB2AHUAeAB3ADoADwB4ADoAOQAcAHcAeAA5AHcAeQB4AA8AHwB5AA8AegA5AHgAeQB6AHgAPgB5AB8APgB6AHkAPwA+AB8AQAA+AD8AQQBAAD8APgB7AHoAQAB7AD4AfABAAEEAHgB8AEEAQAAdAHsAfAAdAEAAewB9AHoAegB9ADkAfgB8AB4AfAB+AB0ADAB+AB4ADAAeAAoAHQB+AH8AfwB+AAwADAAKAEQARAB/AAwARAAKAEMAfwBFAB0ARQB/AEQAHQCAAHsAHQBFAIAAewCAAH0ARABDAAEAAQBFAEQAAQBDAAUAAQAFACgARgBFAAEARQBGAIAAKABGAAEAgAApAH0AgABGACkAgQBGACgARgCBACkADQCBACgADQAoAAYAfQApAIIAfQCCADkAOQCCABwAKQCDAIIAKQCBAIMAggCEABwAggCDAIQAHACEAHYAhQCBAA0AgQCFAIMADQAGACoAKgCFAA0AKgAGABoAKgAaAAMAhgCFACoAAwCGACoAgwCFABsAhQCGABsAgwAbAIQAhwCGAAMAGQCHAAMAGwCGACsAhgCHACsAhAAbAIgAGwArAIgAhACIAHYAiQCHABkAKwCHAIkALQCJABkAWACJAC0AKwCJAIoAigCJAFgAiAArAIoAigBYABgAdgCIAIsAiACKAIsAiwCKABgAYgB2AIsAiwAYAGIA"),
+"lods": [3.8751802, PackedByteArray("JAAlACYAJAAnACUAJwAFACUAKAAFACcABgAnACQABgAoACcADQAoAAYAKAANACkADQAGACoAAQAFACgAKQANABsADQAqABsAKgAGABoAGgAGACQAGwAqACsAKgAaAAMAKgADACsAAwAaABEALAAaACQAEQAaACwAAwARABkAKwADABkAGQARACwAKwAZAC0AGQAsAC0ALAAkAC4AKwAtABgAGwArABgALQAsABUALAAuABUALgAkABIALgASABUALQAVABQAFAAVABIAGAAtABQAEgAkACYAGAAUAC8AFAASADAALwAUADAAMAASADEAEgAmADEALwAwAAcAMAAxAAcALwAHABgABwAxAAQAMQAmAAQABwAEADIAMgAEADMAJgAzAAQAFwAHADIAMgAzABcAGAAHABcAFwAzABYAAgAYABcAFgACABcAMwALABYACwACABYAMwAmAAsANAAYAAIAAgALADQACwAmADUANAALADUANQAmADYANgA0ADUANAAcABgAHAAbABgANwA0ADYANwAcADQANgAmADgANwA2AAAAAAAcADcAKQAbABwAAAA2AAkANgA4AAkAEAAcAAAAAAAJABAAOQApABwAOQAcABAAJgAlADgACQA4ACMAEAAJACIACQAjACIAEAAiADoAOgA5ABAAIwAgACIAOAA7ACMAIwA7ACAAIgAgAA4AOgAiAA4AIAA8AA4AIAA7ADwAOgAOAA8ADwA5ADoADgA8ACEADwAOACEAPAA7AD0APAA9ACEADwAhAB8AHwAhAD0APgA5AA8APgAPAB8APgAdADkAHQApADkAPwA+AB8AHwA9AD8AQAA+AD8AQAAdAD4APwA9AAgAOwAIAD0AQQBAAD8APwAIAEEAQQAdAEAAEwAIADsAOAATADsAJQATADgAEwBCAAgAJQAKABMACgBCABMAQQAIAB4AHgAIAEIAQQAeAB0ACgAeAEIAQwAKACUABQBDACUADAAeAAoAHQAeAAwAAQBDAAUARAAKAEMARABDAAEADAAKAEQARQAMAEQADABFAB0AAQBFAEQARQBGAB0ARgBFAAEAHQBGACkAKABGAAEARgAoACkA"), 15.842756, PackedByteArray("BgATAAsAEgAGAAsAEgALAAQAFAASAAQAFQAGABIAFAAVABIAFAAEAAcABwAEABYACwAWAAQABwAWABcACwACABYAFgACABcAGAAHABcAGAAUAAcAAgAYABcAGQAVABQAGAAZABQAGQARABUAEQAaABUAFQAaAAYAAwARABkAAwAaABEAGwAZABgAGwADABkADQAaAAMADQADABsADQAGABoAHAAbABgAAgAcABgAHQANABsAHQAbABwADQABAAYAAQANAB0ABgABAAUABgAFABMADAABAB0ADAAFAAEADAAKAAUABQAKABMAHQAeAAwADAAeAAoAHgAdAB8AHwAdABwAHgAIAAoAHwAIAB4AEwAKAAgAHwAcAA8AEwAIACAAHwAhAAgADwAhAB8AIAAIACEACwATACAADwAOACEADgAgACEACQALACAAEAAOAA8ADwAcABAACQACAAsAAAAcAAIAEAAcAAAAAAACAAkAAAAJABAAEAAiAA4AIgAgAA4AEAAJACIACQAgACMAIwAgACIACQAjACIA"), 24.434095, PackedByteArray("BgAKAAsABgAFAAoADAAKAAUABgABAAUADAAFAAEADQABAAYAAQANAAwADAAIAAoACgAIAA4ACwAKAA4ADwAIAAwADwAOAAgADAANAAAADwAMAAAAEAAOAA8ADwAAABAAEAAJAA4AAAAJABAACQALAA4AAAACAAkAAAANAAIACQACAAsADQADAAIADQAGAAMABwALAAIAAgADAAcABwAEAAsAAwAGABEABwASAAQAAwASAAcAEgALAAQAAwARABIAEgAGAAsAEQAGABIA"), 63.838276, PackedByteArray("BgAFAAQABgABAAUAAwAGAAQAAQAGAAMAAwAEAAcAAQAIAAUAAgADAAcAAQADAAIABwAEAAIAAAAIAAEAAAABAAIABQAIAAkAAAAJAAgABAAFAAkAAAACAAkACQACAAQA"), 122.76962, PackedByteArray("AAABAAIAAQADAAIAAAACAAQAAwAEAAIAAAAFAAEAAQAFAAMAAAAEAAUAAwAFAAQA")],
+"name": "map",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 140,
+"vertex_data": PackedByteArray("GH6k/en6AAAKfaT9nRYAANvOpP0H2QAA//+k/bUHAAAq78QCCu8AAAp9xAKdFgAALtbEAhUuAAAq76T9Cu8AABADxAL9RAAAGH7EAun6AAB8NMQCqxUAACHMxAJC1QAAfDSk/asVAAAu1qT9FS4AAC9TxAI70QAA9huk/QTFAAA7daT95P8AAP//xAK1BwAAR9zEAsKzAADnI2kA/UQAAEfcpP3CswAAKPDEAvtwAAAs3MQC//8AACzcpP3//wAAT9H+/7+2AAAK6qT9A0wAAMD2xAIAAAAAJMD+/5ZIAADBZv7/T58AAOcj/v/9RAAAUBKk/a0MAACtCKT9p5sAAP9SaQB3zwAA9hvEAgTFAAA7dcQC5P8AAOZ0aQD+/QAAsc9pAARJAABuhGkAlkgAAPrQaQCAtgAAAZ3EAkErAAABnaT9QSsAANRj/v/JRgAAwPak/QAAAACxz/7/BEkAAArqxAIDTAAAKPCk/ftwAAAT72kA13AAADTf/v9E0AAAB+Wk/XHPAAAZ5cQCcc8AADbppP2J/gAANunEAon+AAB+uaT9Qc0AAH65xAJBzQAA/4jEAjfYAAD/iKT9N9gAAIRKaQCqngAAhEr+/6qeAAAvU6T9O9EAAIsuaQAEngAA5BxpAGXDAACtCMQCp5sAAC0K/v+2mwAAAACk/T1wAAB5Af7/PXAAABADpP39RAAAUBLEAq0MAABQWMQCzBgAAFBYpP3MGAAAXFj+/9EaAAAKff7/pRgAAH65aQDWcwAAboRpANZzAACLvmkAZKEAAO3RaQBEcQAAJMBpAJZIAAAWnWkAYC0AANRjaQDJRgAA+NVpADcwAAAKfWkApRgAAKn2aQDlAQAA6+hpAMtLAACT/mkAqwkAAEXbaQAasgAATORpAKzPAADK3mkAtM8AAHXVaQBL1AAA/ewAAPfsAAAT7/7/13AAAEXb/v8asgAAJ+T+/3vPAAAO6GkAAPwAAKrt/v/d7QAAQNxpALb9AAAO6P//APwAAOnV/v9I1gAAQNz//7b9AAC2z/7/utcAAH65/v+1ygAAZs1pAIfUAAB+uWkAtcoAALmIaQCk1QAAJYdpAG+fAADUY2kACXIAAMFmaQBPnwAAoH1pAOH4AACQR2kAI3EAAJBHaQDjRQAAXFhpANEaAACUNGkArhcAAOEhaQA9cAAAdBNpAMwOAACIBGkA/UQAAHkBaQA9cAAAAADEAj1wAAAtCmkAtpsAALmI/v+k1QAAoH3//+H4AAAlh/7/b58AAOZ0///+/QAA/1L+/3fPAADkHP7/ZcMAAIsu/v8EngAA4SH+/z1wAACIBP7//UQAAJBH/v8jcQAAdBP+/8wOAACUNP7/rhcAAJBH/v/jRQAAFp3+/2AtAADUY/7/CXIAAG6E/v+WSAAAboT+/9ZzAAD41f7/NzAAAKn2/v/lAQAAk/7+/6sJAAB+uf7/1nMAAOvo/v/LSwAA7dH+/0RxAACLvv7/ZKEAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0w5ko"]
+_surfaces = [{
+"aabb": AABB(-80.702126, -10.820761, -44.689667, 155.9985, 20.687729, 116.22763),
+"attribute_data": PackedByteArray("VS0ajohfVI08NHanPWTJtA0AyixwLLBjGgDrdBYAqpJfLAYABgANAF8s+P8GAPL/YVzGwI5fRNzvL5C4VS2Q25hUN//tLwixFwC4Y2QsgRtwLLGSZize0jlfZvEUNQnDrjXl5wE9ab0yZNa0mTnCcSlfM3iALFqLZlzYqG4sclVnLMMsdCz9dQoAiBsVAIOVbSz3oxEAibQJAGbqYyxt6rVUsPVDNtTnpznp9xgtUN6ALFHeQzbU54As470DTbi4xGW5tydCPWykVO5zX0HRh99fp27PVSuiTFWVr0c8faiALMar/Tw9rBAAOT1rLI9FFAB5VWYsiSlyLGtrGABza28sipVrLI+0DwBQvwoAE+DeVavC0FSP2Vs8Q8H9Xt/m/VuX0kdVDroNTT+5nTYsu7UsQ7r9NpPIPTSc121Ba+ojOon3OUJq/b1BfvLzX/L6OELSbGNBO3+oNcWBTkuraVRLQGqDVGhqOzQKkvU2BKFYXsKC8l66gu9eU437WwOX0VRuhs9l5bHhVfSmBU3tsLYsYq9iNoqsljZ3rhEAl0VqLDI9FQAeXG8sGVwXAJJnDQCQKXEsimcHAJIKYSyKChkAxHtzLMt7cSxfihcAWYoTAPGjaSxXvw4APskMANfSZCwa4AcADPVhLBL1xksiyTNLO9k/QTHHajWKwrY3j8j2NMjXiTUOwCItv71XLaW6WDBbuYg2O71+NqO7Wj37va5MrMFXVZu6JmWut7VjerW2W7rAzlVzx1tbj9L1Xkbc2lQv42Je1+bRVHProV5Y8V5L6uJjQT/YZUHT4fAtyNtsS0DrZV+K+o5Uov4YLVDegEsk9mdLZP9KQtX8IzqJ91ZLt4YuS2WQXkFjkfEt4Y0YLVqL9DTekas3CKE9NtWBsEEodxU6InJhS2J+cUt/c3pU/mpRXxBvkl5BeMVUK35YWwyXy1QOkLpb5KjFS36gMGXwsb9jJbRcVQevrkz2pw9NZrA7QW+iVj2rq68016eCNvutKTBwsBE1uqkgLeurVy3/rlo9+71+NqO7WDBbuQ1NP7lXLaW6V1WbuiItv721Y3q1JmWut2o1isK2N4/Itlu6wPY0yNdbW4/S8C3I2/VeRtxiXtfmoV5Y8WVfivpKQtX8jlSi/mJL+P9nS2T/Vj2rqw9NZrBcVQevgjb7rb9jJbQpMHCwMGXwsVct/666W+SoIC3rq1hbDJevNNenqzcIoe9eU41YXsKC9DTekZJeQXjxLeGNUV8QbxgtWot6VP5qPTbVgVRLQGoVOiJyOELSbGcsRcm6W+SoMGXwsc9VK6I="),
+"format": 34896613399,
+"index_count": 828,
+"index_data": PackedByteArray("ewB8AH0AfgB9AH8AfwB9AIAAgQB9AH4AgQB+AIIAgwCBAIIAhACBAIMAhQCBAIQAhgCFAIQAhQBGAIEAhgBGAIUARgB9AIEAhwBGAIYARgB7AH0AhwCIAEYAiAB7AEYASgCIAIcASgBEAIgAiQBEAEoAiQCKAEQAiwCKAIkAigCMAEQARACNAIgARACMAI0AiACNAHsAjACOAI0AjQBFAHsAjQCOAEUAjgCPAEUAewBFAHwARQCPAJAARQCQAHwAjwCRAJAAkACRAJIAkQCTAJIAfACQAJQAkACSAJQAfACUAJUAfQB8AJUAgAB9AJUAlQCWAIAAlQCUAJYAgACWAJcAlACSAJgAlACYAJYAkgCTACgAkgAoAJgAkwCZACgAKACZAJoAlgBPAJcAlgCYAE8AlwBPAJsAmAAoAJwAKACaAJwAmACcAE8AnACaAJ0ATwBSAJsATwCcAFIAnACdAFIAmwBSACkAUgCdAJ4AKQBSAJ8AnwBSAJ4AoAChADMAMwChAKIAMwCiAKMApAAzAKMAowCiAKUApQCiAKYAVQAzAKQAVQCgADMApwBVAKQAqABVAKcAqQCoAKcAVACoAKkAqACqAFUAqgCgAFUAVACrAKgAqwCqAKgAWACrAFQAWAAyAKsArAAyAFgArACtADIAMgCtAK4ArgBcADIAMgCvAKsAMgBcAK8AqwCvAKoAXABeAK8ArwBgAKoArwBeAGAAqgBgAKAAXgCwAGAAYACxAKAAYACwALEAsACyALEAoACxAKEAsQCyADUAsQA1AKEAoQA1ALMAoQCzAKIANQBiALMANQC0AGIAtAC1AGIAYgC1ALYAYgC2ALcAswBiALcAtwC2ALgAogCzALkAswC3ALkApgCiALkAtwC4ADcAuQC3ADcAuQA3AKYANwC4ALoApgA3ALsANwC6AGUAZQC6ALwAZQC8AL0AZQC+ADcAuwA3AL4AZQC9AL4AuwC+AL8AvgC9AL8AvwC9AMAAwQDCABkAGQDCAEsALwDBABkAwgDDAEsAxADBAC8ASwDDAA4ASQDEAC8AwwDFAA4AxgDEAEkADgDFAEwAGgDGAEkAxQDHAEwAyADGABoATADHAC4AMADIABoAxwAXAC4AyQDIADAAygAXAMcADADJADAAygDLABcAzADJAAwAFwDLAE0ASADMAAwAywDNAE0AzgDMAEgATQDNAE4ADQDOAEgAzQDPAE4A0ADOAA0ATgDPAA8ARwDQAA0AzwArAA8A0QDQAEcADwArACwAFgDRAEcAKwAtACwA0gDRABYALAAtABgAUwDSABYALQBQABgA0wDSAFMAGABQACoAEADTAFMAUADUACoA1QDTABAAKgDUAFEA1gDVABAA1ADXAFEA1wDVANYAUQDXANYA2ADZADkAOQDZAGMAZgDYADkA2QDaAGMA2wDYAGYAYwDaADYAEQDbAGYA2gDcADYA3QDbABEANgDcAAMAZADdABEA3ADeAAMA3wDdAGQAAwDeAGEAOADfAGQA3gDgAGEA4QDfADgAYQDgAB4AAgDhADgA4ADiAB4A4wDhAAIAHgDiAF8A4wACAOQA4gDlAF8A5AACAFsAXwDlAAEAWgDkAFsA5QDmAAEA5wDkAFoAAQDmAF0AAADnAFoA5gDoAF0A6QDnAAAAXQDoABwAHQDpAAAA6ADqABwA6wDpAB0AHADqADQAVgDrAB0A6gDsADQA7QDrAFYANADsAFkAGwDtAFYA7ADuAFkA7wDtABsAWQDuAFcAMQDvABsA7gDwAFcA8ADvADEAVwDwADEAZwA7ADwAPAA7AB8AZwBoADsAPAAfAGkAOgBoAGcAaQAfAGoAOgAgAGgAaQBqABIABAAgADoAEgBqAAUABAA9ACAAEgAFAGsAbAA9AAQAawAFAG0AbAATAD0AawBtAD8AIgATAGwAPwBtAD4AIgBuABMAPgAGAD8AEwBuAG8AbgAIAG8ACQAIAG4AIQAGAD4ABgAhAHAAcAAhAHEAcgBwAHEAcwBwAHIAcwByAAcABwByABQABwAUACMAIwAUAEAAIwBAAHQAdABAACQAdAAkACUAJQAkAEEAJQBBAEIAQgBBAHUAQgB1AHYAdgB1APEAdgDxAHcAdwDxABUAdwAVAEMAQwAVAHgAJwBDAHgAJgBDACcAJgAnAHkAeQAnAHoAeQB6AAsACwB6AAoA8gDzAPQA"),
+"lods": [3.8751802, PackedByteArray("RABFAEYADQBHAEUARwAWAEUASAANAEUARABIAEUADABIAEQAMAAMAEQASQAwAEQAGgAwAEkASQBEAEoASQBKAC8ASgAZAC8ASgBEABkAGQBEAEYAGQBGAEsASwBGAA4ARgBMAA4ATAAXAC4ATABGABcAFwBGAE0ATQBGAE4ATgBGAE8ARgBFAE8ATgBPAA8ADwBPACsADwArACwAKwAtACwALAAtABgALQBQABgAGABQACoAUABRACoAUABSAFEATwBSACsAKQBSAFAAKwBSACkAUgAQAFEATwAoAFIAKAAQAFIARQAoAE8AKABTABAARQAWACgAFgBTACgAVAAyAFUAVABVABsAVAAbADEAGwBVAFYAVwBUADEAVgBVAB0AWABUAFcAWAAyAFQAWQBYAFcAWQAyAFgAWQA0ADIAMgA0ABwAVQAzAB0AHQAzAAAAAAAzAFoAWgAzAFsAHABcADIAXAAcAF0AAQBcAF0AXgBcAAEAXABeADIAXwBeAAEAMgBeAGAAXgBfAGAAMgBgAFUAVQBgADMAXwAeAGAAYAAeADUAYAA1ADMAHgBhADUAWwAzADcAMwA1ADcAWwA3AAIAAgA3ADgANQBhAGIANQBiADcAYQADAGIAYgADADYAYgA2AGMAYgBjADcANwBjADkANwARADgAOAARAGQANwA5AGUAZQARADcAZQA5AGYAZQBmABEAZwA7ADwAPAA7AB8AZwBoADsAPAAfAGkAOgBoAGcAaQAfAGoAOgAgAGgAaQBqABIABAAgADoAEgBqAAUABAA9ACAAEgAFAGsAbAA9AAQAawAFAG0AbAATAD0AawBtAD8AIgATAGwAPwBtAD4AIgBuABMAPgAGAD8AEwBuAG8AbgAIAG8ACQAIAG4AIQAGAD4ABgAhAHAAcAAhAHEAcgBwAHEAcwBwAHIAcwByAAcABwByABQABwAUACMAIwAUAEAAIwBAAHQAdABAACQAdAAkACUAJQAkAEEAJQBBAEIAQgBBAHUAQgB1AHYAdgB1ABUAdgAVAHcAdwAVAEMAQwAVAHgAJwBDAHgAJgBDACcAJgAnAHkAeQAnAHoAeQB6AAsACwB6AAoA"), 15.842756, PackedByteArray("DAAoABcADAANACgADQAWACgAKAAWABAAKAAQACkAFwAoACkAKQAQACoAGAApACoADwAXACkADwApACsADwArACwALAAtABgAKwAtACwAFwAuAA4AGQAXAA4AGQAMABcALwAMABkALwAwAAwAGgAwAC8AMQAyADMAMQAzABsANAAyADEAGwAzAB0AMgA0ABwAHAABADIAAQAeADIAHQAzAAAAAAAzAAIAMgAeADUAMgA1ADMAHgADADUANQADADYAMwA1ADcAAgAzADcANQA2ADcAAgA3ADgANwA2ADkANwARADgANwA5ABEAOgA7ADwAPAA7AB8AOgAgADsAPAAfAAUABAAgADoAPAAFABIABAA9ACAAEgAFAD4AIgA9AAQAEgA+AD8AIgATAD0AIgAJABMAEwAJAAgAPgAGAD8AIQAGAD4AFAAGACEABwAGABQABwAUACMAIwAUAEAAIwBAACQAIwAkACUAJQAkAEEAJQBBAEIAQgBBABUAQgAVAEMAQwAVACcAJgBDACcAJgAnAAoAJgAKAAsA"), 24.434095, PackedByteArray("DAAWABcADAANABYAFwAWABgAFgAQABgADwAXABgAGQAMABcAGgAMABkAGQAXAA4AGwAcAAAAGwAAAB0AHAAeAAAAAQAeABwAAAAeAAIAHgADAAIAAgADABEABAAfABIAEgAfAAUABAAgAB8AEgAFACEABAATACAAEgAhAAYAIgATAAQAIgAJABMAEwAJAAgAFAAGACEABwAGABQABwAUACMAIwAUACQAIwAkACUAJQAkABUAJQAVACYAJgAVACcAJgAnAAoAJgAKAAsA"), 63.838276, PackedByteArray("DAANAA4ADgANAA8ADQAQAA8AAAABAAIAAQADAAIAAgADABEABAAFABIAEgAFAAYABAATAAUACQATAAQAEwAJAAgAFAAGAAUABwAGABQABwAUABUABwAVAAsACwAVAAoA"), 122.76962, PackedByteArray("AAABAAIAAQADAAIABAAFAAYABwAGAAUABAAIAAUACQAIAAQABwAFAAoABwAKAAsA")],
+"name": "map",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 245,
+"vertex_data": PackedByteArray("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")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_whu84")
 
 [sub_resource type="Environment" id="Environment_dfipr"]
 background_energy_multiplier = 6.59
@@ -39,541 +62,41 @@ adjustment_saturation = 0.97
 [node name="pion" parent="." unique_id=1876555084 instance=ExtResource("1_tbbnx")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -64.20332, 10.16748, 16.444708)
 
-[node name="Casque" parent="pion" index="0" unique_id=1899774266]
+[node name="Casque" parent="pion" index="0" unique_id=1341534784]
 material_override = ExtResource("2_u1hiq")
 
-[node name="Pion_001" parent="pion" index="1" unique_id=2056369898]
+[node name="Pion_001" parent="pion" index="1" unique_id=116197040]
 material_override = ExtResource("3_fx70h")
 
 [node name="plaineTribu" parent="." unique_id=987055540 instance=ExtResource("4_isj1y")]
 transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 12.647415, 9.900838, 14.93087)
 
-[node name="maison_02_low_002" parent="plaineTribu" index="0" unique_id=2074510622]
+[node name="maison_02_low_002" parent="plaineTribu" index="2" unique_id=860579827]
 material_override = ExtResource("5_7o0rv")
 
-[node name="pCube12_001" parent="plaineTribu" index="1" unique_id=2019796206]
+[node name="pCube12_002" parent="plaineTribu" index="3" unique_id=626625411]
 material_override = ExtResource("5_7o0rv")
 
-[node name="pCube12_002" parent="plaineTribu" index="2" unique_id=314147781]
+[node name="pCube13_003" parent="plaineTribu" index="4" unique_id=1510445542]
 material_override = ExtResource("5_7o0rv")
 
-[node name="pCube12_003" parent="plaineTribu" index="3" unique_id=1873555689]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube12_004" parent="plaineTribu" index="4" unique_id=458383752]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube13_001" parent="plaineTribu" index="5" unique_id=245105730]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube13_003" parent="plaineTribu" index="6" unique_id=336741796]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube14_001" parent="plaineTribu" index="7" unique_id=1783012982]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube14_002" parent="plaineTribu" index="8" unique_id=747752522]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube14_003" parent="plaineTribu" index="9" unique_id=905683247]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube14_004" parent="plaineTribu" index="10" unique_id=708624063]
-material_override = ExtResource("5_7o0rv")
-
-[node name="polySurface11" parent="plaineTribu" index="11" unique_id=210877257]
+[node name="polySurface11_006" parent="plaineTribu" index="12" unique_id=1297362487]
 material_override = ExtResource("6_isj1y")
 
-[node name="polySurface11_001" parent="plaineTribu" index="12" unique_id=179489836]
+[node name="polySurface12_006" parent="plaineTribu" index="19" unique_id=159016245]
 material_override = ExtResource("6_isj1y")
 
-[node name="polySurface11_002" parent="plaineTribu" index="13" unique_id=1070694411]
+[node name="polySurface13_006" parent="plaineTribu" index="26" unique_id=1522157308]
 material_override = ExtResource("6_isj1y")
 
-[node name="polySurface11_003" parent="plaineTribu" index="14" unique_id=1417495850]
+[node name="polySurface5_001" parent="plaineTribu" index="33" unique_id=1816117442]
 material_override = ExtResource("6_isj1y")
 
-[node name="polySurface11_004" parent="plaineTribu" index="15" unique_id=373115840]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface11_005" parent="plaineTribu" index="16" unique_id=112070018]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface11_006" parent="plaineTribu" index="17" unique_id=2023286377]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12" parent="plaineTribu" index="18" unique_id=1240208789]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_001" parent="plaineTribu" index="19" unique_id=1094674746]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_002" parent="plaineTribu" index="20" unique_id=27251835]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_003" parent="plaineTribu" index="21" unique_id=1572586652]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_004" parent="plaineTribu" index="22" unique_id=1936705217]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_005" parent="plaineTribu" index="23" unique_id=1022853210]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_006" parent="plaineTribu" index="24" unique_id=515596681]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13" parent="plaineTribu" index="25" unique_id=1727948952]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_001" parent="plaineTribu" index="26" unique_id=1987791323]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_002" parent="plaineTribu" index="27" unique_id=1284584545]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_003" parent="plaineTribu" index="28" unique_id=2140214065]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_004" parent="plaineTribu" index="29" unique_id=431236774]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_005" parent="plaineTribu" index="30" unique_id=1527695083]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_006" parent="plaineTribu" index="31" unique_id=114063189]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface5" parent="plaineTribu" index="32" unique_id=2071122533]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface5_001" parent="plaineTribu" index="33" unique_id=967361984]
-material_override = ExtResource("6_isj1y")
-
-[node name="plaine" parent="." unique_id=252168272 instance=ExtResource("4_dy7j5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0140476, 7.921337, 17.726637)
-
-[node name="pCube12_001" parent="plaine" index="0" unique_id=1776797511]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube13_001" parent="plaine" index="1" unique_id=525795253]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube13_002" parent="plaine" index="2" unique_id=408739902]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube14_001" parent="plaine" index="3" unique_id=1912971799]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube14_002" parent="plaine" index="4" unique_id=2095713294]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube14_003" parent="plaine" index="5" unique_id=1885491162]
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube14_004" parent="plaine" index="6" unique_id=813635663]
-material_override = ExtResource("5_7o0rv")
-
-[node name="polySurface11" parent="plaine" index="7" unique_id=1301728362]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface11_001" parent="plaine" index="8" unique_id=259643168]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface11_002" parent="plaine" index="9" unique_id=1142827670]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface11_003" parent="plaine" index="10" unique_id=283234767]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface11_004" parent="plaine" index="11" unique_id=232734496]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12" parent="plaine" index="12" unique_id=1869088520]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_001" parent="plaine" index="13" unique_id=1599464795]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_002" parent="plaine" index="14" unique_id=1070449865]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_003" parent="plaine" index="15" unique_id=1044890605]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface12_004" parent="plaine" index="16" unique_id=461031539]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13" parent="plaine" index="17" unique_id=78763420]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_001" parent="plaine" index="18" unique_id=1447114665]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_002" parent="plaine" index="19" unique_id=106467281]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_003" parent="plaine" index="20" unique_id=583900285]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13_004" parent="plaine" index="21" unique_id=155587106]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface5" parent="plaine" index="22" unique_id=788436727]
-material_override = ExtResource("6_isj1y")
-
-[node name="foretTribu" parent="." unique_id=1612660823 instance=ExtResource("4_hsjgk")]
-transform = Transform3D(0.022598833, 0, 0.99974465, 0, 1, 0, -0.99974465, 0, 0.022598833, -29.241745, 9.908955, 12.033884)
-
-[node name="Arbre" parent="foretTribu" index="0" unique_id=464320638]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_001" parent="foretTribu" index="1" unique_id=476308692]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_002" parent="foretTribu" index="2" unique_id=318152187]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_003" parent="foretTribu" index="3" unique_id=1227096267]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_004" parent="foretTribu" index="4" unique_id=732916561]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_005" parent="foretTribu" index="5" unique_id=964997569]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_006" parent="foretTribu" index="6" unique_id=947483995]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_007" parent="foretTribu" index="7" unique_id=1487408562]
-material_override = ExtResource("5_7o0rv")
-
-[node name="maison_02_low_001" parent="foretTribu" index="8" unique_id=205393339]
-material_override = ExtResource("5_7o0rv")
-
-[node name="foret" parent="." unique_id=562051554 instance=ExtResource("9_fx70h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.63288, 9.861566, 21.619614)
-
-[node name="Arbre" parent="foret" index="0" unique_id=692548085]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_001" parent="foret" index="1" unique_id=143333512]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_002" parent="foret" index="2" unique_id=1370502343]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_003" parent="foret" index="3" unique_id=118060552]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_004" parent="foret" index="4" unique_id=132210800]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Arbre_005" parent="foret" index="5" unique_id=792922991]
-material_override = ExtResource("5_7o0rv")
+[node name="fortificationTribu2" parent="." unique_id=1564542159 instance=ExtResource("11_5kws7")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -18.173613, 0, 15.007301)
 
 [node name="marais" parent="." unique_id=334565909 instance=ExtResource("10_rm2v8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.080448, 6.0783844, 21.725662)
-
-[node name="Barque_01_low1" parent="marais/group2" parent_id_path=PackedInt32Array(334565909, 1992671164) index="0" unique_id=312808729]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low" parent="marais/group31" parent_id_path=PackedInt32Array(334565909, 1775943449) index="0" unique_id=110239970]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_02_low" parent="marais/group31" parent_id_path=PackedInt32Array(334565909, 1775943449) index="1" unique_id=565210195]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low_001" parent="marais/group32" parent_id_path=PackedInt32Array(334565909, 279187931) index="0" unique_id=1144124122]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_02_low_001" parent="marais/group32" parent_id_path=PackedInt32Array(334565909, 279187931) index="1" unique_id=885325866]
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_03_low_001" parent="marais/group32" parent_id_path=PackedInt32Array(334565909, 279187931) index="2" unique_id=1002917054]
-material_override = ExtResource("5_7o0rv")
-
-[node name="polySurface13regdsefds3" parent="marais/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="0" unique_id=1694875324]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4" parent="marais/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="1" unique_id=1921557148]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7" parent="marais/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="2" unique_id=2125309418]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8" parent="marais/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="3" unique_id=1091141710]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9" parent="marais/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="4" unique_id=1388179637]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19" parent="marais/herbe" parent_id_path=PackedInt32Array(334565909, 1095590582) index="5" unique_id=2096175936]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_001" parent="marais/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="0" unique_id=1457858109]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_001" parent="marais/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="1" unique_id=641397039]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_001" parent="marais/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="2" unique_id=860887670]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_001" parent="marais/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="3" unique_id=617318564]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_001" parent="marais/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="4" unique_id=1966299810]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_001" parent="marais/herbe1" parent_id_path=PackedInt32Array(334565909, 452815185) index="5" unique_id=1330724068]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_010" parent="marais/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="0" unique_id=509786064]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_010" parent="marais/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="1" unique_id=1435765498]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_010" parent="marais/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="2" unique_id=900461830]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_010" parent="marais/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="3" unique_id=1376169129]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_010" parent="marais/herbe10" parent_id_path=PackedInt32Array(334565909, 1308763596) index="4" unique_id=2026796335]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_011" parent="marais/herbe11" parent_id_path=PackedInt32Array(334565909, 855143753) index="0" unique_id=1966409527]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_011" parent="marais/herbe11" parent_id_path=PackedInt32Array(334565909, 855143753) index="1" unique_id=563030642]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_011" parent="marais/herbe11" parent_id_path=PackedInt32Array(334565909, 855143753) index="2" unique_id=195021030]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_012" parent="marais/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="0" unique_id=824648014]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_012" parent="marais/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="1" unique_id=731567430]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_012" parent="marais/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="2" unique_id=2146404820]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_012" parent="marais/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="3" unique_id=644024396]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_012" parent="marais/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="4" unique_id=1620666863]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_012" parent="marais/herbe12" parent_id_path=PackedInt32Array(334565909, 205647632) index="5" unique_id=406328349]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_013" parent="marais/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="0" unique_id=1721573328]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_013" parent="marais/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="1" unique_id=572015947]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_013" parent="marais/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="2" unique_id=243353451]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_013" parent="marais/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="3" unique_id=1367251498]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_013" parent="marais/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="4" unique_id=783476619]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_013" parent="marais/herbe13" parent_id_path=PackedInt32Array(334565909, 1108983956) index="5" unique_id=992107096]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_014" parent="marais/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="0" unique_id=528182112]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_014" parent="marais/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="1" unique_id=1745881234]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_014" parent="marais/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="2" unique_id=1331669045]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_014" parent="marais/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="3" unique_id=1789768498]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_014" parent="marais/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="4" unique_id=648847087]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_014" parent="marais/herbe14" parent_id_path=PackedInt32Array(334565909, 835838104) index="5" unique_id=1513958395]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_015" parent="marais/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="0" unique_id=1833007842]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_015" parent="marais/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="1" unique_id=696509008]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_015" parent="marais/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="2" unique_id=356163065]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_015" parent="marais/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="3" unique_id=998530775]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_015" parent="marais/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="4" unique_id=2057107822]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_015" parent="marais/herbe15" parent_id_path=PackedInt32Array(334565909, 2023721602) index="5" unique_id=1002993427]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_016" parent="marais/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="0" unique_id=824726255]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_016" parent="marais/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="1" unique_id=132108153]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_016" parent="marais/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="2" unique_id=1118240984]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_016" parent="marais/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="3" unique_id=38216036]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_016" parent="marais/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="4" unique_id=1893840414]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_016" parent="marais/herbe16" parent_id_path=PackedInt32Array(334565909, 247644893) index="5" unique_id=328203265]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_002" parent="marais/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="0" unique_id=1735840790]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_002" parent="marais/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="1" unique_id=1055660230]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_002" parent="marais/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="2" unique_id=1798913212]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_002" parent="marais/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="3" unique_id=1635007375]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_002" parent="marais/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="4" unique_id=1653272262]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_002" parent="marais/herbe2" parent_id_path=PackedInt32Array(334565909, 782431555) index="5" unique_id=1192873539]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_003" parent="marais/herbe3" parent_id_path=PackedInt32Array(334565909, 488623165) index="0" unique_id=1531938604]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_003" parent="marais/herbe3" parent_id_path=PackedInt32Array(334565909, 488623165) index="1" unique_id=1642569601]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_003" parent="marais/herbe3" parent_id_path=PackedInt32Array(334565909, 488623165) index="2" unique_id=166027833]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_004" parent="marais/herbe4" parent_id_path=PackedInt32Array(334565909, 309177716) index="0" unique_id=1900453673]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_005" parent="marais/herbe5" parent_id_path=PackedInt32Array(334565909, 1377792425) index="0" unique_id=1667112140]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds3_006" parent="marais/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="0" unique_id=375903212]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds4_006" parent="marais/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="1" unique_id=1967534476]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_006" parent="marais/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="2" unique_id=551864544]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds8_006" parent="marais/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="3" unique_id=1899041791]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds9_006" parent="marais/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="4" unique_id=1595497602]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface19_006" parent="marais/herbe6" parent_id_path=PackedInt32Array(334565909, 1833614338) index="5" unique_id=1146603024]
-material_override = ExtResource("6_isj1y")
-
-[node name="polySurface13regdsefds7_007" parent="marais/herbe7" parent_id_path=PackedInt32Array(334565909, 1512337435) index="0" unique_id=494869322]
-material_override = ExtResource("6_isj1y")
-
-[node name="pCube46" parent="marais" index="18" unique_id=51036364]
-material_override = ExtResource("11_dyswj")
-
-[node name="pPlane2" parent="marais" index="19" unique_id=956005479]
-material_override = ExtResource("12_ls7qd")
-
-[node name="fortificationTribu" parent="." unique_id=413521059 instance=ExtResource("11_5kws7")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.916856, 9.347418, 20.141357)
-
-[node name="Maison_Toit_001" parent="fortificationTribu" index="0" unique_id=2131793054]
-transform = Transform3D(0.01, 0, 0, 0, -1.1920929e-09, -0.009999999, 0, 0.009999999, -1.1920929e-09, 0.5655308, 2.9122944, 0.09560871)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Maison_Toit_002" parent="fortificationTribu" index="1" unique_id=1161223352]
-transform = Transform3D(0.007074398, -0.0035438244, -4.716147e-10, 1.1790369e-10, 9.432295e-10, -0.007912382, 0.0035438242, 0.007074398, 9.432294e-10, 2.2379465, 2.2906713, -2.8556795)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Maison_Toit_003" parent="fortificationTribu" index="2" unique_id=1327097208]
-transform = Transform3D(0.0065443204, 0.004447208, 0, 0, 0, -0.007912382, -0.004447208, 0.0065443204, 0, 2.6904144, 2.2906713, 2.8688002)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low_001" parent="fortificationTribu" index="3" unique_id=31992346]
-transform = Transform3D(0.0073654163, -0.004072762, 0.005400301, 0.0057002227, -0.00056045287, -0.008197155, 0.0036411681, 0.009115837, 0.0019087683, -1.8795862, 1.9705648, -3.9772978)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low_002" parent="fortificationTribu" index="4" unique_id=1296939314]
-transform = Transform3D(0.008102291, -0.00088153494, 0.005794459, 0.0058111576, -8.002758e-05, -0.008137816, 0.00076374796, 0.009960747, 0.00044743295, -2.8411741, 1.8258018, -1.1946478)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low_003" parent="fortificationTribu" index="5" unique_id=1172843681]
-transform = Transform3D(0.0061367224, -0.0062985634, 0.0047611687, 0.0055152476, -0.0008955395, -0.0082933735, 0.005650016, 0.0077153156, 0.002924246, -0.6272011, 2.1591063, -5.242635)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low_004" parent="fortificationTribu" index="6" unique_id=1945094683]
-transform = Transform3D(0.007182281, 0.0044407155, 0.0053567598, 0.005672653, 0.0007212155, -0.00820371, -0.0040293727, 0.008930839, -0.0020010662, -2.820531, 1.8289099, 1.9296885)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low_005" parent="fortificationTribu" index="7" unique_id=1377840665]
-transform = Transform3D(0.003551777, 0.008655304, 0.0035313712, 0.0051260954, 0.0013557052, -0.008478513, -0.007817162, 0.004821594, -0.0039552758, -0.04879284, 2.2461834, 5.6096754)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low_006" parent="fortificationTribu" index="8" unique_id=947238113]
-transform = Transform3D(0.0058591533, 0.006604972, 0.004695175, 0.005473461, 0.0010470354, -0.008303309, -0.0059759147, 0.007434922, -0.0030017316, -2.1798677, 1.9253588, 3.5986223)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_02_low_001" parent="fortificationTribu" index="9" unique_id=1085966605]
-transform = Transform3D(0.0073654163, -0.004072762, 0.005400301, 0.0057002227, -0.00056045287, -0.008197155, 0.0036411681, 0.009115837, 0.0019087683, -2.3408117, 2.0312843, -3.1926336)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_02_low_002" parent="fortificationTribu" index="10" unique_id=66503781]
-transform = Transform3D(0.008102291, -0.00088153494, 0.005794459, 0.0058111576, -8.002758e-05, -0.008137816, 0.00076374796, 0.009960747, 0.00044743295, -3.0225801, 1.9286461, -0.30659962)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_02_low_003" parent="fortificationTribu" index="11" unique_id=1377212560]
-transform = Transform3D(0.0061367224, -0.0062985634, 0.0047611687, 0.0055152476, -0.0008955395, -0.0082933735, 0.005650016, 0.0077153156, 0.002924246, -1.2767773, 2.1914701, -4.603013)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_02_low_004" parent="fortificationTribu" index="12" unique_id=1367438289]
-transform = Transform3D(0.007182281, 0.0044407155, 0.0053567598, 0.005672653, 0.0007212155, -0.00820371, -0.0040293727, 0.008930839, -0.0020010662, -2.5147696, 2.0050955, 2.7708654)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_02_low_005" parent="fortificationTribu" index="13" unique_id=579340594]
-transform = Transform3D(0.0058591533, 0.006604972, 0.004695175, 0.005473461, 0.0010470354, -0.008303309, -0.0059759147, 0.007434922, -0.0030017316, -1.6669531, 2.1327305, 4.3238993)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_03_low_001" parent="fortificationTribu" index="14" unique_id=950115093]
-transform = Transform3D(0.0073654163, -0.004072762, 0.005400301, 0.0057002227, -0.00056045287, -0.008197155, 0.0036411681, 0.009115837, 0.0019087683, -2.3796759, 1.4083557, -2.0664206)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_03_low_002" parent="fortificationTribu" index="15" unique_id=307538973]
-transform = Transform3D(0.008102291, -0.00088153494, 0.005794459, 0.0058111576, -8.002758e-05, -0.008137816, 0.00076374796, 0.009960747, 0.00044743295, -2.687913, 1.3619518, 0.80009174)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_03_low_003" parent="fortificationTribu" index="16" unique_id=852299097]
-transform = Transform3D(0.0058591533, 0.006604972, 0.004695175, 0.005473461, 0.0010470354, -0.008303309, -0.0059759147, 0.007434922, -0.0030017316, -0.60907555, 1.6749115, 4.897662)
-material_override = ExtResource("5_7o0rv")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8176117, 9.817169, 16.052845)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1315518064]
 transform = Transform3D(0.42447186, 0.83713895, 0.3449954, 0.7846073, -0.5302456, 0.32129592, 0.45190167, 0.13430482, -0.8818998, -67.69301, 88.590034, 106.95702)
@@ -581,69 +104,9 @@ light_energy = 2.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 
-[node name="Assets_01_JAM" parent="." unique_id=451443645 instance=ExtResource("3_bsi0v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 126.91414, 76.58555)
-visible = false
-
-[node name="Barque_01_low" parent="Assets_01_JAM" index="1" unique_id=2049061438]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69417, -116.58771, -91.85366)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Barque_02_low" parent="Assets_01_JAM" index="2" unique_id=899774268]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7056828, -116.63376, -88.56046)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Maison_01_low" parent="Assets_01_JAM" index="3" unique_id=172940682]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0228386, -114.75917, -97.31512)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Maison_Toit" parent="Assets_01_JAM" index="4" unique_id=1861372620]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0755806, -114.470505, -87.041084)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_01_low" parent="Assets_01_JAM" index="5" unique_id=1208784650]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.225788, -115.26764, -104.69603)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_02_low" parent="Assets_01_JAM" index="6" unique_id=1097079650]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2160606, -115.26764, -103.638245)
-material_override = ExtResource("5_7o0rv")
-
-[node name="Pic_03_low" parent="Assets_01_JAM" index="7" unique_id=182294304]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.225788, -115.26764, -102.7113)
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCylinder66" parent="Assets_01_JAM/Poterie" parent_id_path=PackedInt32Array(451443645, 1784715991) index="0" unique_id=151660517]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 0, -25.706955, -23.165174)
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCylinder67" parent="Assets_01_JAM/Poterie" parent_id_path=PackedInt32Array(451443645, 1784715991) index="1" unique_id=2145719662]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 0, -25.70823, -23.267727)
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCylinder68" parent="Assets_01_JAM/Poterie" parent_id_path=PackedInt32Array(451443645, 1784715991) index="2" unique_id=775927641]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 0, -25.681217, -23.388746)
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube12" parent="Assets_01_JAM/Rocher" parent_id_path=PackedInt32Array(451443645, 227044319) index="0" unique_id=1861089516]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, -13.380931, -12.259496)
-material_override = ExtResource("5_7o0rv")
-
-[node name="pCube13" parent="Assets_01_JAM/Rocher" parent_id_path=PackedInt32Array(451443645, 227044319) index="1" unique_id=958971312]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, -13.36324, -12.198333)
-surface_material_override/0 = SubResource("StandardMaterial3D_tbbnx")
-
-[node name="pCube14" parent="Assets_01_JAM/Rocher" parent_id_path=PackedInt32Array(451443645, 227044319) index="2" unique_id=1789239510]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, -13.391094, -12.321615)
-material_override = ExtResource("5_7o0rv")
-
-[node name="maison_02_low" parent="Assets_01_JAM" index="12" unique_id=1388460291]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.434929, -114.94417, -77.89475)
-material_override = ExtResource("5_7o0rv")
-
 [node name="Map" type="MeshInstance3D" parent="." unique_id=1166969331]
 material_override = ExtResource("1_gj52n")
-mesh = ExtResource("2_gj52n")
+mesh = SubResource("ArrayMesh_0w5ko")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1892391484]
 environment = SubResource("Environment_dfipr")
@@ -651,79 +114,21 @@ environment = SubResource("Environment_dfipr")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=103486996]
 transform = Transform3D(0.563263, 0, -0.82627773, 0, 1, 0, 0.82627773, 0, 0.563263, -11.960833, 13.4484005, -2.1871815)
 
-[node name="pionAmerindien2" parent="." unique_id=273506413 instance=ExtResource("17_dyswj")]
-transform = Transform3D(14.155, 0, 0, 0, 14.155, 0, 0, 0, 14.155, -60.17256, 10.190996, 8.931845)
+[node name="fortificationTribu" parent="." unique_id=927892252 instance=ExtResource("11_5kws7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.646241, 9.968803, 19.198648)
 
-[node name="Pion_001" parent="pionAmerindien2" index="0" unique_id=1865763625]
-material_override = ExtResource("18_ls7qd")
+[node name="foretTribu2" parent="." unique_id=741202546 instance=ExtResource("4_hsjgk")]
+transform = Transform3D(-0.03307947, 0, 0.9994527, 0, 1, 0, -0.9994527, 0, -0.03307947, -33.625546, 11.243563, 9.8251705)
 
-[node name="Plane_004" parent="pionAmerindien2" index="1" unique_id=563373173]
-material_override = ExtResource("19_v2idg")
+[node name="foret2" parent="." unique_id=903214126 instance=ExtResource("9_fx70h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.335075, 9.697622, 19.99583)
 
-[node name="Plane_005" parent="pionAmerindien2" index="2" unique_id=809490991]
-material_override = ExtResource("19_v2idg")
+[node name="pionAmerindien2" parent="." unique_id=466266357 instance=ExtResource("17_dyswj")]
+transform = Transform3D(12.645, 0, 0, 0, 12.645, 0, 0, 0, 12.645, -59.843506, 9.873459, 6.2122974)
 
-[node name="Plane_006" parent="pionAmerindien2" index="3" unique_id=1113340245]
-material_override = ExtResource("19_v2idg")
-
-[node name="Plane_007" parent="pionAmerindien2" index="4" unique_id=231186645]
-material_override = ExtResource("19_v2idg")
-
-[node name="Plane_008" parent="pionAmerindien2" index="5" unique_id=1284464237]
-material_override = ExtResource("19_v2idg")
-
-[node name="Plane_009" parent="pionAmerindien2" index="6" unique_id=1735491034]
-material_override = ExtResource("19_v2idg")
-
-[node name="Plane_010" parent="pionAmerindien2" index="7" unique_id=251405140]
-material_override = ExtResource("19_v2idg")
-
-[node name="chapo_001" parent="pionAmerindien2" index="8" unique_id=1634433090]
-material_override = ExtResource("18_ls7qd")
-
-[node name="pionAmerindien" parent="." unique_id=984781133 instance=ExtResource("20_gm5l5")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.395363, 10.101671, 9.351196)
-
-[node name="Pion" parent="pionAmerindien" index="0" unique_id=118556553]
-material_override = ExtResource("18_ls7qd")
-
-[node name="Plane" parent="pionAmerindien" index="1" unique_id=966006687]
-material_override = ExtResource("19_v2idg")
-
-[node name="Plane_001" parent="pionAmerindien" index="2" unique_id=1942689903]
-material_override = ExtResource("19_v2idg")
-
-[node name="Plane_002" parent="pionAmerindien" index="3" unique_id=1743137739]
-material_override = ExtResource("19_v2idg")
-
-[node name="Plane_003" parent="pionAmerindien" index="4" unique_id=100935593]
-material_override = ExtResource("19_v2idg")
-
-[node name="chapo" parent="pionAmerindien" index="5" unique_id=1992655909]
-material_override = ExtResource("18_ls7qd")
-
-[node name="plume1" parent="pionAmerindien" index="6" unique_id=935939101]
-material_override = ExtResource("19_v2idg")
-
-[node name="plume1_001" parent="pionAmerindien" index="7" unique_id=1361708278]
-material_override = ExtResource("19_v2idg")
-
-[node name="plume1_002" parent="pionAmerindien" index="8" unique_id=1542192810]
-material_override = ExtResource("19_v2idg")
-
-[node name="plume1_003" parent="pionAmerindien" index="9" unique_id=1027314592]
-material_override = ExtResource("19_v2idg")
-
-[node name="plume1_004" parent="pionAmerindien" index="10" unique_id=498326535]
-material_override = ExtResource("19_v2idg")
+[node name="pionAmerindien" parent="." unique_id=1640589813 instance=ExtResource("20_gm5l5")]
+transform = Transform3D(14.475, 0, 0, 0, 14.475, 0, 0, 0, 14.475, -54.80172, 9.816485, 4.694707)
 
 [editable path="pion"]
 [editable path="plaineTribu"]
-[editable path="plaine"]
-[editable path="foretTribu"]
-[editable path="foret"]
 [editable path="marais"]
-[editable path="fortificationTribu"]
-[editable path="Assets_01_JAM"]
-[editable path="pionAmerindien2"]
-[editable path="pionAmerindien"]

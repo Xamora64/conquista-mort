@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://s0i7qj1itodh"]
 
-[ext_resource type="Texture2D" uid="uid://wmqjjwmha4l6" path="res://assets/textures/meshes/herbe_M_Herbe_BaseColor.jpg" id="1_4f3p2"]
+[ext_resource type="Texture2D" uid="uid://di28uv7dgjx6f" path="res://assets/textures/meshes/M_Herbe_Base_color.png" id="1_4f3p2"]
 
 [resource]
 cull_mode = 2
