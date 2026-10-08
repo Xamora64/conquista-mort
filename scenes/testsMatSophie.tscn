@@ -3,7 +3,7 @@
 [ext_resource type="Material" uid="uid://dhmiwi43v0c3w" path="res://assets/materials/M_Map.tres" id="1_gj52n"]
 [ext_resource type="PackedScene" uid="uid://v2ohf8mmvwbs" path="res://assets/meshes/pion.fbx" id="1_tbbnx"]
 [ext_resource type="Material" uid="uid://cev0smjojenw7" path="res://assets/materials/M_Casque.tres" id="2_u1hiq"]
-[ext_resource type="Material" uid="uid://w8e6ahgx6wcf" path="res://assets/materials/M_Pion.tres" id="3_fx70h"]
+[ext_resource type="Material" uid="uid://w8e6ahgx6wcf" path="res://assets/materials/M_PionEspagnol.tres" id="3_fx70h"]
 [ext_resource type="PackedScene" uid="uid://v42q46cnrrh6" path="res://assets/meshes/foretTribu.fbx" id="4_hsjgk"]
 [ext_resource type="PackedScene" uid="uid://bw5ehqtwufck4" path="res://assets/meshes/plaineTribu.fbx" id="4_isj1y"]
 [ext_resource type="Material" uid="uid://olgbf8ev72ve" path="res://assets/materials/M_Props.tres" id="5_7o0rv"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b8cr3oylg35im" path="res://assets/meshes/foret.fbx" id="9_fx70h"]
 [ext_resource type="PackedScene" uid="uid://ca1waspvob8x7" path="res://assets/meshes/marais.fbx" id="10_rm2v8"]
 [ext_resource type="PackedScene" uid="uid://i3mwmievb3s2" path="res://assets/meshes/fortificationTribu.fbx" id="11_5kws7"]
+[ext_resource type="PackedScene" uid="uid://cyoi2ol4s125p" path="res://assets/meshes/cadreBougies.fbx" id="14_isj1y"]
 [ext_resource type="PackedScene" uid="uid://4shfkci4c2w1" path="res://assets/meshes/pionAmerindien2.fbx" id="17_dyswj"]
 [ext_resource type="PackedScene" uid="uid://4ecbhntjxqv8" path="res://assets/meshes/pionAmerindien.fbx" id="20_gm5l5"]
 
@@ -60,7 +61,7 @@ adjustment_saturation = 0.97
 [node name="Node3D" type="Node3D" unique_id=1155538843]
 
 [node name="pion" parent="." unique_id=1876555084 instance=ExtResource("1_tbbnx")]
-transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -64.20332, 10.16748, 16.444708)
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 30.15316, 10.167473, 27.40537)
 
 [node name="Casque" parent="pion" index="0" unique_id=1341534784]
 material_override = ExtResource("2_u1hiq")
@@ -124,10 +125,13 @@ transform = Transform3D(-0.03307947, 0, 0.9994527, 0, 1, 0, -0.9994527, 0, -0.03
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.335075, 9.697622, 19.99583)
 
 [node name="pionAmerindien2" parent="." unique_id=466266357 instance=ExtResource("17_dyswj")]
-transform = Transform3D(12.645, 0, 0, 0, 12.645, 0, 0, 0, 12.645, -59.843506, 9.873459, 6.2122974)
+transform = Transform3D(12.645, 0, 0, 0, 12.645, 0, 0, 0, 12.645, 34.512978, 9.873451, 17.17296)
 
 [node name="pionAmerindien" parent="." unique_id=1640589813 instance=ExtResource("20_gm5l5")]
-transform = Transform3D(14.475, 0, 0, 0, 14.475, 0, 0, 0, 14.475, -54.80172, 9.816485, 4.694707)
+transform = Transform3D(14.475, 0, 0, 0, 14.475, 0, 0, 0, 14.475, 39.554764, 9.816478, 15.65537)
+
+[node name="cadreBougies" parent="." unique_id=1774090628 instance=ExtResource("14_isj1y")]
+transform = Transform3D(5.51, 0, 0, 0, 5.51, 0, 0, 0, 5.51, 10.123379, -3.6399574, 19.624073)
 
 [editable path="pion"]
 [editable path="plaineTribu"]

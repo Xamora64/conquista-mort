@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://iiwi0p4dc2ku"]
+
+[ext_resource type="Texture2D" uid="uid://mncx60iw07fd" path="res://assets/textures/meshes/cadreBois_M_Wood_BaseColor.png" id="1_ijrls"]
+
+[resource]
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_ijrls")
+roughness = 0.0

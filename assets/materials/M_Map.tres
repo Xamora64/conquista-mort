@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dhmiwi43v0c3w"]
 
-[ext_resource type="Texture2D" uid="uid://d2cdlfuaqb6wm" path="res://assets/textures/meshes/DefaultMaterial_Base_color.png" id="1_utfrk"]
+[ext_resource type="Texture2D" uid="uid://d2cdlfuaqb6wm" path="res://assets/textures/meshes/Map_Base_color.png" id="1_utfrk"]
 
 [resource]
 diffuse_mode = 3

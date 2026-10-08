@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6md8qdn2t7y7"]
+
+[ext_resource type="Texture2D" uid="uid://bn7s27cxnj1wi" path="res://assets/textures/meshes/M_Candle_Base_color.png" id="1_2cl30"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_2cl30")
+roughness = 0.0
