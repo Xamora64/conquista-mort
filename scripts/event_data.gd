@@ -48,11 +48,11 @@ static func ask_possible_events(type_text: TYPES_TEXT,
 	return list_possible_events
 
 # {tribe_name}, {biome_name}
-static func apply_text_info_event(text_event: String, tribe: Tribe = null, biome: Biomes = null) -> String:
+static func apply_text_info_event(text_event: String, tribe: Tribe = null, biome: TYPES_BIOMES = TYPES_BIOMES.NONE) -> String:
 	var replace: Dictionary[String, String] = {}
 	if (tribe != null):
 		replace["tribe_name"] = tribe.tribe_name
-	replace["biome_name"] = TYPES_BIOMES_TEXT[biome.type]
+	replace["biome_name"] = TYPES_BIOMES_TEXT[biome]
 	return text_event.format(replace)
 
 static var expression = Expression.new()

@@ -6,8 +6,8 @@
 shader = ExtResource("1_tpw3q")
 shader_parameter/fold_x = 0.0
 shader_parameter/fold_y = 0.0
-shader_parameter/normal_x = 0.10999997518927995
-shader_parameter/normal_y = 0.9999999552959999
+shader_parameter/normal_x = 0.10999997518927997
+shader_parameter/normal_y = 0.999999955296
 shader_parameter/next_shadow_size = 0.2999999932944
 shader_parameter/next_shadow_power = 0.5
 shader_parameter/back_shadow_size = 2.0

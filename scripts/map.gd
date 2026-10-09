@@ -26,8 +26,8 @@ func _ready() -> void:
 	list_paths = placeCreator.add_link_path_places(list_places)
 	for place in list_places:
 		place.input_event.connect(_on_input_event.bind(place))
-	#hide_place()
-	#hide_path()
+	hide_place()
+	hide_path()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -93,8 +93,16 @@ func conquis_next_place(place_to: Place):
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int, place_to: Place) -> void:
 	if (event.is_action_pressed("left click")):
-		if (conquis.next_link.place == place_to):
-			main.going_in_place(place_to)
+		print(conquis.lead_by_tribe)
+		if ((conquis.next_link.place == place_to && conquis.can_move) || conquis.lead_by_tribe):
+			conquis.lead_by_tribe = false
+			conquis.place_to = place_to
+			await(conquis.start_animation())
+			if (place_to != place_end):
+				conquis_next_place(place_to)
+				main.show_event(place_to)
+			else:
+				print("Finish")
 			
 		#print("event selectioned: ", place_to.position.x, " ", place_to.position.y, " ", place_to.position.z)
 		#if (game_ui.guide):

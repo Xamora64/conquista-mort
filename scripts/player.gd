@@ -3,12 +3,14 @@ extends Node3D
 
 var center = Vector3.ZERO
 var screen_size
-@export var LIMIT_ZOOM = [1.0, 12.0]
+@export var LIMIT_ZOOM = [1.0, 8.0]
 # X1, X2; Z1, Z2
 @export var LIMIT_ZONE = [Vector2(-15, 10), Vector2(-15, 10)]
 
 const POSITION_MAIN_MENU = Vector3(-0.056, 7.058, 12.883)
 const POSITION_STARTING = Vector3(5.202, 1.262, 7.038)
+
+@onready var main: Node = get_parent()
 
 func _ready() -> void:
 	position = POSITION_MAIN_MENU
@@ -18,8 +20,9 @@ func start_game_camera() -> void:
 	position = POSITION_STARTING
 
 func _physics_process(delta: float) -> void:
-	camera_player_movement()
-	camera_player_zoom()
+	if (main.state_game == 1):
+		camera_player_movement()
+		camera_player_zoom()
 	
 	#if (Input.is_action_just_pressed("left click")):
 		#print (get_mouse_world_position())

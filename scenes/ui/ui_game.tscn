@@ -130,7 +130,7 @@ layout_mode = 2
 theme = ExtResource("7_rxmiy")
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 32
-text = "Nombre Indien:"
+text = "Population:"
 
 [node name="tribeHead" type="TextureRect" parent="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1830550049]
 unique_name_in_owner = true
@@ -151,7 +151,7 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="ChoiceButton" type="TextureButton" parent="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons" unique_id=664070918]
+[node name="ChoiceButton" type="TextureButton" parent="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons" unique_id=2091406553]
 unique_name_in_owner = true
 modulate = Color(0.9, 0.81, 0.68399996, 1)
 custom_maximum_size = Vector2(200, 80)
@@ -160,8 +160,10 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 texture_normal = ExtResource("8_q8qwe")
 stretch_mode = 0
+script = ExtResource("11_38f3s")
+metadata/_custom_type_script = "uid://bdrh0h2rojf24"
 
-[node name="MarginContainer" type="MarginContainer" parent="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton" unique_id=1684294156]
+[node name="MarginContainer" type="MarginContainer" parent="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton" unique_id=1526492635]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -173,7 +175,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ButtonText" type="Label" parent="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton/MarginContainer" unique_id=593983638]
+[node name="ButtonText" type="Label" parent="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton/MarginContainer" unique_id=1237601828]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_rxmiy")
@@ -188,7 +190,10 @@ size_flags_horizontal = 10
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25
 
-[node name="ToggleUIPlace" type="TextureButton" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle" unique_id=1686812881]
+[node name="VBoxContainer" type="VBoxContainer" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle" unique_id=192042579]
+layout_mode = 2
+
+[node name="ToggleUIPlace" type="TextureButton" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle/VBoxContainer" unique_id=1686812881]
 modulate = Color(0.9, 0.81, 0.68399996, 1)
 custom_maximum_size = Vector2(200, 80)
 layout_mode = 2
@@ -200,7 +205,7 @@ stretch_mode = 0
 script = ExtResource("11_38f3s")
 metadata/_custom_type_script = "uid://bdrh0h2rojf24"
 
-[node name="MarginContainer" type="MarginContainer" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle/ToggleUIPlace" unique_id=1921942911]
+[node name="MarginContainer" type="MarginContainer" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle/VBoxContainer/ToggleUIPlace" unique_id=1921942911]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -212,7 +217,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ToggleText" type="Label" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle/ToggleUIPlace/MarginContainer" unique_id=1543772553]
+[node name="ToggleText" type="Label" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle/VBoxContainer/ToggleUIPlace/MarginContainer" unique_id=1543772553]
 layout_mode = 2
 theme = ExtResource("7_rxmiy")
 theme_override_constants/outline_size = 0
@@ -220,4 +225,40 @@ text = "Toggle"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="toggled" from="UIPlaceTribe/HBoxContainer/MarginContainerToggle/ToggleUIPlace" to="UIPlaceTribe" method="_on_toggle_ui_place_toggled"]
+[node name="ToggleUIPlace2" type="TextureButton" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle/VBoxContainer" unique_id=1834824048]
+visible = false
+modulate = Color(0.9, 0.81, 0.68399996, 1)
+custom_maximum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("8_q8qwe")
+stretch_mode = 0
+script = ExtResource("11_38f3s")
+metadata/_custom_type_script = "uid://bdrh0h2rojf24"
+
+[node name="MarginContainer" type="MarginContainer" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle/VBoxContainer/ToggleUIPlace2" unique_id=1794347765]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ToggleText" type="Label" parent="UIPlaceTribe/HBoxContainer/MarginContainerToggle/VBoxContainer/ToggleUIPlace2/MarginContainer" unique_id=1917597289]
+layout_mode = 2
+theme = ExtResource("7_rxmiy")
+theme_override_constants/outline_size = 0
+text = "Toggle"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton" to="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton" method="_on_pressed"]
+[connection signal="pressed_id" from="UIPlaceTribe/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ListButtons/ChoiceButton" to="UIPlaceTribe" method="_on_choice_button_pressed_id"]
+[connection signal="toggled" from="UIPlaceTribe/HBoxContainer/MarginContainerToggle/VBoxContainer/ToggleUIPlace" to="UIPlaceTribe" method="_on_toggle_ui_place_toggled"]
+[connection signal="toggled" from="UIPlaceTribe/HBoxContainer/MarginContainerToggle/VBoxContainer/ToggleUIPlace2" to="UIPlaceTribe" method="_on_toggle_ui_place_toggled"]

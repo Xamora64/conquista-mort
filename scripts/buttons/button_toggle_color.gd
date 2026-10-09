@@ -1,4 +1,4 @@
-class_name ToggleColorButton
+class_name TextureColorButton
 extends TextureButton
 
 @export var normal_color := Color.WHITE
@@ -6,6 +6,8 @@ extends TextureButton
 @export var pressed_color := Color(0.6, 0.6, 0.6)
 @export var hover_pressed_color := Color(0.7, 0.7, 0.7)
 @export var disabled_color := Color(0.5, 0.5, 0.5, 0.6)
+
+signal pressed_id(id: String)
 
 func _ready() -> void:
 	for sig in [mouse_entered, mouse_exited, toggled, button_down, button_up]:
@@ -24,3 +26,6 @@ func update_color() -> void:
 			self_modulate = hover_pressed_color
 		DRAW_DISABLED:
 			self_modulate = disabled_color
+
+func _on_pressed() -> void:
+	pressed_id.emit(get_child(0).get_child(0).text)

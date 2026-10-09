@@ -22,6 +22,8 @@ var is_focus: bool = false
 @export var focus_material: Material
 @export var hover_material: Material
 
+var conquis: Conquistador
+
 var links: Array[Link] = []
 
 class Link:

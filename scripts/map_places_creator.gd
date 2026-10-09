@@ -33,8 +33,8 @@ func init_place(position: Vector3, start_end: bool) -> Place:
 		biome = TYPES_BIOMES.PLAIN
 	var tribe: Tribe = null
 	if (biome != Biomes.TYPES_BIOMES.SWAMP and not start_end):
-		if (randi_range(0, 100) >= 40):
-			tribe = Tribe.new().generate()
+		#if (randi_range(0, 100) >= 40):
+		tribe = Tribe.new().generate()
 	
 	var place: Place = place_scene.instantiate().with_values(position, biome, tribe, [] as Array[Link], limit_links)
 	return place

@@ -53,6 +53,8 @@ func init(place_start: Place) -> void:
 	self.historic_places.append(self.place_in)
 	self.get_next_place(self.place_in.links)
 
+var lead_by_tribe: bool = false
+var can_move: bool = false
 var time_moving = 2.0
 var moving: bool = false
 var place_to: Place = null
@@ -61,7 +63,6 @@ signal finish_moving
 
 func _physics_process(delta: float) -> void:
 	show()
-	position.y += 0.5
 	if moving and place_to != null:
 		t += 1.0 * delta / time_moving
 		t = clamp(t, 0.0, 1.0)
@@ -75,6 +76,7 @@ func _physics_process(delta: float) -> void:
 			position = place_in.position
 		else:
 			hide()
+	position.y += 0.5
 
 var next_link: Link = null
 
@@ -107,9 +109,15 @@ func get_next_place(list_possible_links: Array[Link]) -> Link:
 			if (place.tribe.number > best_place.tribe.number):
 				best_link = link
 		elif (place.tribe == null): # Aucune tribu en vu
-			if (place.biome.type > best_place.biome.type): # Plaine > forest > marais
+			if (place.biome > best_place.biome): # Plaine > forest > marais
 				best_link = link
 	next_link = best_link
 	next_link.place.apply_border()
 	next_link.place.is_focus = true
 	return best_link
+	
+func start_animation() -> void:
+	place_to = place_to
+	moving = true
+	await(finish_moving)
+	place_in = place_to

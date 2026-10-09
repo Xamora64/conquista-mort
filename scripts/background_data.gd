@@ -17,3 +17,9 @@ static func get_possible_background_resources(type_background: TYPES_BACKGROUND)
 			list_possible_background.append(background)
 	#print(list_possible_background.size())
 	return list_possible_background
+
+static func get_background_resources(name: String) -> BackgroundData:
+	for background in background_resources:
+		if (background.background_path.to_lower().contains(name.to_lower())):
+			return background
+	return null

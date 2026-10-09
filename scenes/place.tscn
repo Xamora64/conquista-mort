@@ -17,13 +17,13 @@
 render_priority = 0
 shader = ExtResource("6_hn5ta")
 shader_parameter/couleur = Color(1, 1, 1, 1)
-shader_parameter/epaisseur = 1.0
+shader_parameter/epaisseur = 0.5
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1tdiu"]
 render_priority = 0
 shader = ExtResource("6_hn5ta")
 shader_parameter/couleur = Color(1, 1, 1, 1)
-shader_parameter/epaisseur = 3.0
+shader_parameter/epaisseur = 2.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kwsvg"]
 
